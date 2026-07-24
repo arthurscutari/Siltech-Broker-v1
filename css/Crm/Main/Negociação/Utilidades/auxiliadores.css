@@ -1,0 +1,64 @@
+.verde {
+    color: #22C55e;
+}
+.verde-titulo {
+    color: #15803d;
+}
+.azul {
+    color: #2232c5;
+}
+.laranja {
+    color: #c58422;
+}
+.amarelo{
+
+      color: #c2c522;
+
+}
+.vermelho {
+
+      color: #c52222;
+}
+.azul-titulo {
+
+    color: #171580;
+    
+}
+.branco {
+
+    color: white;
+}
+.aumentar-input {
+
+    height: 35px;
+    box-sizing: border-box;
+}
+.borda-pagamento {
+
+    height: 70%;
+    width: 0.1%;
+    background-color: rgb(221, 221, 221);
+    margin:  0 10px;
+}
+.fundo-verde{
+    background-color: #ECFDF3;
+    border: 2px solid #d9ffd9;
+}
+.fundo-azul {
+    background-color: #ececfd;
+    border: 2px solid #d9dfff;
+}
+.fundo-laranja {
+
+     background-color: #fdf2ec;
+    border: 2px solid #fff0d9;
+}
+.fundo-vermelho {
+
+     background-color: #fdecec;
+    border: 2px solid #ffd9d9;
+}
+.fundo-amarelo {
+     background-color: #fdfdec;
+    border: 2px solid #f9ffd9;
+}

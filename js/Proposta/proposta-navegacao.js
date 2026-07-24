@@ -1,9 +1,17 @@
-const cancelarProposta = document.getElementById('btn-voltar-proposta');
+const novaProposta = document.getElementById('btn-nova-proposta');
+const moverNegociar = document.getElementById('btn-negociar-proposta')
 
 
-cancelarProposta.addEventListener('click', ()=> {
+novaProposta.addEventListener('click', ()=> {
 
-    localStorage.removeItem("proposta");
-    window.location.href = "plataforma.html"
+    propostaSelecionado()
+    localStorage.removeItem('propostaGerada')
+    limparCamposProposta()
+    limparCamposResumo() 
+})
+
+moverNegociar.addEventListener('click', ()=> {
+
+    negociacaoSelecionado()
 
 })

@@ -1,0 +1,27 @@
+@import "css/app.css";
+@import "css/cabecalho.css";
+@import "css/fontes.css";
+@import "css/paginas.css";
+@import "css/tabela.css";
+@import "css/variavel.css";
+@import "css/modal.css";
+:root {
+
+    --cor-primaria:#273c75;
+    --cor-secundaria:#8395a7;
+    --cor-terciaria:#ffb200;
+    --cor-sucesso: #2ecc71;
+    --cor-erro: #e74c3c;
+    --cor-fundo: #bdc3c7;
+    --cor-texto-primaria: #8395a7;
+    --cor-texto-secundaria: #ecf0f1;
+    
+    --cor-fundo:#F7FBFD;
+    --cor-borda:#C8D0DA;
+    --cor-fundo-card:#EAEEF3;
+
+     --cor-primaria-escuro:#213261;
+     --cor-preto: #535c68;
+     --cor-dica:#23395B;
+     
+}

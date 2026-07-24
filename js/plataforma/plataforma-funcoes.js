@@ -1,315 +1,333 @@
-function geracaoEnergia() {
+const contribuicao = 0.37
+const comissao = 0.05
+const impostos = 0.06
+const retorno = 550
+const inflacao = 0.01
 
-const moduloPlataforma = document.getElementById('modulo-proposta').value
+function calcularArea() {
 
-    
-    if (moduloPlataforma === "575Wp Tier 1"){
+    const placas = Number(proposta.placas)
+    return proposta.area = placas * 3;
+  }
+function gerarIdProposta() {
+    const hoje = new Date();
 
-        const placas = Number(quantidadePlaca.textContent)
-        return (Number((hspPlataforma.textContent * 575 * 30 * 0.8) / 1000)) * placas
+    const data =
+      hoje.getFullYear() +
+      String(hoje.getMonth() + 1).padStart(2, "0") +
+      String(hoje.getDate()).padStart(2, "0");
+
+    const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+
+    let codigo = "";
+
+    for (let i = 0; i < 3; i++) {
+      codigo += caracteres[Math.floor(Math.random() * caracteres.length)];
     }
-     if (moduloPlataforma === "585Wp Tier 1"){
-                const placas = Number(quantidadePlaca.textContent)
 
-        return (Number((hspPlataforma.textContent * 585 * 30 * 0.8) / 1000)) * placas
-    }
-     if (moduloPlataforma === "610Wp Tier 1"){
-                const placas = Number(quantidadePlaca.textContent)
+    return `PROP${data}${codigo}`;
+  }
+function gerarDataProposta() {
+    const hoje = new Date();
 
-              return (Number((hspPlataforma.textContent * 610 * 30 * 0.8) / 1000)) * placas
+    const dia = String(hoje.getDate()).padStart(2, '0');
+    const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+    const ano = hoje.getFullYear();
 
-    }
-     if (moduloPlataforma === "700Wp Tier 1"){
-                const placas = Number(quantidadePlaca.textContent)
-
-             return (Number((hspPlataforma.textContent * 700 * 30 * 0.8) / 1000)) * placas
-
-    }
-
+    return `${dia}/${mes}/${ano}`;
 }
-function calcularPlaca() {
+  //OK
+  function custoEquipamento() {
+    const inversor3kw = 1450;
+    const inversor6kw = 2450;
 
-    if (consumoEscolha.value == "1") {
+    const potencia3kw = 3;
+    const potencia6kw = 6;
 
-    const energiaGenarada = document.getElementById('modulo-proposta')
-    let energia = 0
-      if (energiaGenarada.value === '575Wp Tier 1'){
-        energia = 575
-      }
-      if (energiaGenarada.value === '585Wp Tier 1'){
-
-        energia = 585
-      }
-      if (energiaGenarada.value === '610Wp Tier 1'){
-
-        energia = 610
-      }
-      if (energiaGenarada.value === '700Wp Tier 1'){
-
-        energia = 700
-      }
-        const consumo = Number(consumokwh.value)
-        const hsp = document.getElementById('input-hsp').textContent
-        const eficiencia = 0.8
-        const geracaoMensal = Number(hsp * energia * 30 * eficiencia) / 1000
-        const resultado =  Math.ceil(consumo / geracaoMensal)
-        quantidadePlaca.textContent =  resultado
-    }
-
-    else if (consumoEscolha.value == "2") {
-
-        quantidadePlaca.textContent = consumoPlaca.value
-    }
-  
-}
-function gerarId() {
-
-    return Math.floor(100000 + Math.random() * 900000)
-
-}
-function lucroQuinze () {
-
-    return economiaAnual() * (((1 + inflacao) ** 15) - 1) / inflacao
-}
-function economiaAnual() {
-
-    return (geracaoEnergia() * custoEnergia() * 12) - (solucao()*12) 
-} 
-function custoMercadoriaVendida() {
-
-    return (Number(custoEquipamento().valorTotal + custoEstrutura() + custoHomologacao() + custoInstalacao() + custoRetorno ) + (custoExpansao()))
-}
-function custoEstrutura(){
-
-    if (telhadoPlataforma.value === "Cerâmico") {
-        return 0
-    }
-    if (telhadoPlataforma.value === "Fibrocimento") {
-        return 0
-    }
-    if (telhadoPlataforma.value === "Laje") {
-
-        return 3000
-    }
-    if (telhadoPlataforma.value ===  "Metálico") {
-        return 0
-    }
-
-}
-function custoEquipamento() {
-
-    const inversor3kw = 1450
-    const inversor6kw = 2450
-
-    const potencia3kw = 3
-    const potencia6kw = 6
-
-    
-    const expansao = expansaoPlaca()
-    const placaTotal = Number(quantidadePlaca.textContent) + Number(expansaoPlaca())
+    const expansao = Number(proposta.qtdExpansao);
+    const placas = Number(proposta.placas);
+    const placaTotal = placas + expansao;
 
     if (placaTotal >= 4 && placaTotal <= 8) {
+      let valorPlaca = 825;
+      let potenciaTotal = 0;
 
-        let valorPlaca = 825
-        return {
-        valorTotal: inversor3kw + (valorPlaca * quantidadePlaca.textContent),
-        potenciaTotal: potencia3kw,
-        inversor:"1x 3kw"
-        }
+
+      proposta.custoEquipamento = inversor3kw + valorPlaca * placas
+      proposta.inversor = "1x 3kw"
+      potenciaTotal = potencia3kw
+      return potenciaTotal
+      // return {
+      //   valorTotal: inversor3kw + valorPlaca * placas,
+      //   potenciaTotal: potencia3kw,
+      //   inversor: "1x 3kw",
+      // };
     }
     if (placaTotal >= 9 && placaTotal <= 15) {
+      let valorPlaca = 800;
+      let potenciaTotal = 0;
 
-        let valorPlaca = 800
-        return {
-        valorTotal: inversor6kw + (valorPlaca * quantidadePlaca.textContent),
-        potenciaTotal: potencia6kw,
-        inversor:"1x 6kw"
-        }
+       proposta.custoEquipamento = inversor6kw + valorPlaca * placas
+      potenciaTotal = potencia6kw
+      proposta.inversor = "1x 6kw"
+       return potenciaTotal
+      // return {
+      //   valorTotal: inversor6kw + valorPlaca * placas,
+      //   potenciaTotal: potencia6kw,
+      //   inversor: "1x 6kw",
+      // };
     }
     if (placaTotal >= 16 && placaTotal <= 23) {
+      let valorPlaca = 775;
+      let potenciaTotal = 0;
 
-         let valorPlaca = 775
-        return {
-        valorTotal: inversor6kw + inversor3kw + (valorPlaca * quantidadePlaca.textContent),
-        potenciaTotal: potencia6kw + potencia3kw,
-        inversor:"1x 6kw + 1x 3kw"
-        }
+      proposta.custoEquipamento = inversor6kw + inversor3kw + valorPlaca * placas
+      potenciaTotal = potencia6kw + potencia3kw
+      proposta.inversor = "1x 6kw + 1x 3kw"
+       return potenciaTotal
+      // return {
+      //   valorTotal: inversor6kw + inversor3kw + valorPlaca * placas,
+      //   potenciaTotal: potencia6kw + potencia3kw,
+      //   inversor: "1x 6kw + 1x 3kw",
+      // };
     }
     if (placaTotal >= 24 && placaTotal <= 30) {
-
-        let valorPlaca = 750
-        return {
-        valorTotal: (inversor6kw * 2) + (valorPlaca * quantidadePlaca.textContent),
-        potenciaTotal: potencia6kw * 2,
-        inversor:"2x 6kw"
-        }
-
+      let valorPlaca = 750;
+      let potenciaTotal = 0;
+      proposta.custoEquipamento = inversor6kw * 2 + valorPlaca * placas
+      proposta.inversor = "2x 6kw"
+      potenciaTotal = potencia6kw * 2
+       return potenciaTotal
+      // return {
+      //   valorTotal: inversor6kw * 2 + valorPlaca * placas,
+      //   potenciaTotal: potencia6kw * 2,
+      //   inversor: "2x 6kw",
+      // };
     }
     if (placaTotal >= 31 && placaTotal <= 45) {
+      let valorPlaca = 725;
+      let potenciaTotal = 0;
 
-         let valorPlaca = 725
-        return {
-        valorTotal: (inversor6kw * 3) + (valorPlaca * quantidadePlaca.textContent),
-        potenciaTotal: potencia6kw *3,
-        inversor:"3x 6kw"
-    }
+      proposta.custoEquipamento = inversor6kw * 3 + valorPlaca * placas
+      proposta.inversor = "3x 6kw"
+      potenciaTotal = potencia6kw * 3
+       return potenciaTotal
+      // return {
+      //   valorTotal: inversor6kw * 3 + valorPlaca * placas,
+      //   potenciaTotal: potencia6kw * 3,
+      //   inversor: "3x 6kw",
+      // };
     }
     if (placaTotal >= 46 && placaTotal <= 60) {
+      let valorPlaca = 700;
+      let potenciaTotal = 0;
+      proposta.custoEquipamento = inversor6kw * 4 + valorPlaca * placas
+      proposta.inversor = potencia6kw * 4
+      potenciaTotal = potencia6kw * 4
+       return potenciaTotal
 
-        let valorPlaca = 700
-        return {
-        valorTotal: (inversor6kw * 4) + (valorPlaca * quantidadePlaca.textContent),
-        potenciaTotal: potencia6kw *4,
-          inversor:"4x 6kw"
-    } 
+      // return {
+      //   valorTotal: inversor6kw * 4 + valorPlaca * placas,
+      //   potenciaTotal: potencia6kw * 4,
+      //   inversor: "4x 6kw",
+      // };
     }
-    return {
-    valorTotal: 0,
-    potenciaTotal: 0,
-    inversor: "Não definido"
-}
-}
-function expansaoPlaca(){
+  }
+  //OK
+  function custoTelhado() {
+    const telhado = proposta.telhado;
 
-    const expansaoPlacasPlataforma = document.getElementById('qtd-expansao-proposta')
-
-    if (expansaoPlacasPlataforma.value > 0){
-
-        return expansaoPlacasPlataforma.value
+    if (telhado === "Cerâmico") {
+      return proposta.custoTelhado = 0;
     }
-    else {
-
-        return 0
+    if (telhado === "Fibrocimento") {
+      return proposta.custoTelhado = 0;
     }
-}
-function custoEnergia (){
+    if (telhado === "Laje") {
+      return proposta.custoTelhado = 3000;
+    }
+    if (telhado === "Metálico") {
+      return proposta.custoTelhado = 0;
+    }
+  }
+  //OK
+  function custoHomologacao() {
+    const potencia = custoEquipamento();
 
-    const kwhPlataforma = document.getElementById('valor-kwh-proposta')
+    if (potencia <= 10) {
+      return proposta.custoHomologacao =  450;
+    }
+    if (potencia <= 20) {
+      return proposta.custoHomologacao = 650;
+    }
+    if (potencia <= 50) {
+      return proposta.custoHomologacao = 800;
+    }
+    if (potencia <= 75) {
+      return proposta.custoHomologacao = 1000;
+    }
+  }
+  //OK
+  function custoInstalacao() {
+    const placas = Number(proposta.placas);
 
-        if (kwhPlataforma.value !== "") {
+    if (placas <= 13) {
+      return proposta.custoInstalacao =  placas * 205;
+    }
+    if (placas <= 26) {
+      return proposta.custoInstalacao =  placas * 180;
+    }
+    if (placas <= 32) {
+      return proposta.custoInstalacao =  placas * 165;
+    }
+    if (placas <= 48) {
+      return proposta.custoInstalacao =  placas * 155;
+    }
+    if (placas <= 62) {
+      return proposta.custoInstalacao =  placas * 125;
+    }
+  }
+  //OK
+  function calcularEnergia() {
+    const modulo = proposta.modulo;
+    const placas = Number(proposta.placas);
+    const hsp = Number(proposta.hsp);
 
-            return parseFloat(kwhPlataforma.value);
-        }
-        else {
+    if (modulo === "575Wp Tier 1") {
+      return proposta.energiaGerada = Number((hsp * 575 * 30 * 0.8) / 1000) * placas;
+    }
+    if (modulo === "585Wp Tier 1") {
+      return proposta.energiaGerada = Number((hsp * 585 * 30 * 0.8) / 1000) * placas;
+    }
+    if (modulo === "610Wp Tier 1") {
+      return  proposta.energiaGerada = Number((hsp * 610 * 30 * 0.8) / 1000) * placas;
+    }
+    if (modulo === "700Wp Tier 1") {
+      return proposta.energiaGerada = Number((hsp * 700 * 30 * 0.8) / 1000) * placas;
+    }
+  }
+  //OK
+  function contaComSiltech() {
+    const instalacao = proposta.instalacao;
 
-            return 0.95
-        }
+    if (instalacao === "Bifásico") {
+      return proposta.contaComSiltech = 70;
+    }
 
-}
-function custoHomologacao() {
+    if (instalacao === "Trifásico") {
+      return proposta.contaComSiltech = 110;
+    }
 
+  }
+  //OK
+  function contaSemSiltech() {
+    const custoEnergia = Number(proposta.precoKwh);
+
+    return proposta.contaSemSiltech = calcularEnergia() * custoEnergia;
+  }
+  //OK
+  function custoMercadoriaVendida() {
     
-    if (custoEquipamento().potenciaTotal <= 10) {
+       proposta.cmv = proposta.custoEquipamento + proposta.custoTelhado + proposta.custoHomologacao + proposta.custoInstalacao + retorno 
+      // custoExpansao()
+    return proposta.cmv
+  }
+  //OK
+  function valorFinalProposta() {
+    return proposta.valorFinalProposta = (
+      proposta.cmv / (1 - (contribuicao + impostos + comissao))
+    );
+  }
+  //OK
+  function calcularPotencia() {
+    const energiaGerada = proposta.modulo;
 
-        return 450
+    if (energiaGerada === "575Wp Tier 1") {
+      return 575;
     }
-    if (custoEquipamento().potenciaTotal <= 20){
-        return 650
-    } 
-    if (custoEquipamento().potenciaTotal <= 50) {
-        return 800
+    if (energiaGerada === "585Wp Tier 1") {
+      return 585;
     }
-    if (custoEquipamento().potenciaTotal <= 75) {
-        
-        return 1000
+    if (energiaGerada === "610Wp Tier 1") {
+      return 610;
     }
+    if (energiaGerada === "700Wp Tier 1") {
+      return 700;
+    }
+  }
+  //OK
+  function custoExpansao() {
+    const expansao = Number(proposta.qtdExpansao);
+
+    if (expansao > 0) {
+      return proposta.custoExpansao = 1000;
+    } else {
+      return proposta.custoExpansao =  0;
+    }
+  }
+  //OK
+  function economiaEm15Anos() {
+    return proposta.economiaEm15Anos = (proposta.economiaAnual * ((1 + inflacao) ** 15 - 1)) / inflacao;
+  }
+  //OK
+  function economiaAnual() {
+    const custoEnergia = proposta.precoKwh;
+    return proposta.economiaAnual = calcularEnergia() * custoEnergia * 12 - contaComSiltech() * 12;
+  }
+
+function custoRetorno(){
+
+  return proposta.custoRetorno = 550
 }
-function custoInstalacao() {
-
-    const placa = Number(quantidadePlaca.textContent)
-
-    if ( placa <= 13) {
-         return placa * 205
-    }
-    if ( placa  <= 26) {
-         return placa * 180
-    }
-    if ( placa  <= 32) {
-         return placa * 165
-    }
-    if ( placa  <= 48) {
-         return placa * 155
-    }
-    if ( placa  <= 62) {
-         return placa * 125
-    }
-
-}   
-function solucao() {
-
-    const instalacaoPlataforma = document.getElementById('instalacao-proposta')
-
-    if (instalacaoPlataforma.value === "Bifásico") {
-        return 70
-    }
-
-    if (instalacaoPlataforma.value === "Trifásico") {
-        return 110
-    }
-
-    return 0
+function formatarMoeda(valor) {
+    return new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    }).format(valor);
 }
-function valorEnergiaSemSiltech () {
 
-    return geracaoEnergia() * custoEnergia()
-}
-function custoFinalProposta () {
-    
-    return custoMercadoriaVendida() /( 1 -(contribuicao + deducaoImposto + comissaoVenda))
-} 
-function propostaTeste(){
+function limparCamposProposta() {
 
-    const teste = document.getElementById('teste-proposta')
-    if (teste.checked){
+  const nomeProposta = document.getElementById('nome-proposta')
+  const telefoneProposta = document.getElementById('telefone-proposta')
+  const testeProposta = document.querySelector('.teste-proposta')
+  const canalProposta = document.getElementById('canal-proposta')
+  const localProposta = document.getElementById('local-proposta')
+  const moduloProposta = document.getElementById('modulo-proposta')
+  const inversorProposta = document.getElementById('inversor-proposta')
+  const promocaoProposta = document.getElementById('promocao-proposta')
+  const consumoEnergiaProposta = document.getElementById('consumo-energia-proposta')
+  const consumoPlacaProposta = document.getElementById('consumo-placa-proposta')
+  const expansaoProposta = document.querySelector('.expansao-proposta')
+  const qtdExpansaoProposta = document.getElementById('qtd-expansao-proposta')
+  const precoProposta = document.getElementById('preco-kwh-proposta')
+  const instalacaoProposta = document.getElementById('instalacao-proposta')
+  const telhadoProposta = document.getElementById('telhado-proposta')
 
-        return "Sim"
-    }
-    else {
+  nomeProposta.value = ""
+  telefoneProposta.value = ""
+  testeProposta.checked = testeProposta.defaultValue;
+  canalProposta.value = ""
+  localProposta.value = ""
+  moduloProposta.value = ""
+  inversorProposta.value = ""
+  promocaoProposta.value = ""
+  consumoEnergiaProposta.value = ""
+  consumoPlacaProposta.value = ""
+  expansaoProposta.checked = expansaoProposta.defaultChecked;
+  qtdExpansaoProposta.value = ""
+  precoProposta.value = ""
+  instalacaoProposta.value = ""
+  telhadoProposta.value = ""
 
-        return "Não"
-    }
-}
-function canalTeste(){
-
-    const campoTeste = document.getElementById('teste-proposta')
-    const campoLocalizacao = document.getElementById('canal-proposta')
-    if( campoTeste.checked) {
-
-        return "Teste"
-    }
-    else {
-        return campoLocalizacao.value
-    }
-}
-function calcularPotencia () {
-
-    const energiaGenarada = document.getElementById('modulo-proposta')
-      if (energiaGenarada.value === '575Wp Tier 1'){
-       return energia = 575
-      }
-      if (energiaGenarada.value === '585Wp Tier 1'){
-
-       return energia = 585
-      }
-      if (energiaGenarada.value === '610Wp Tier 1'){
-
-      return energia = 610
-      }
-      if (energiaGenarada.value === '700Wp Tier 1'){
-
-      return energia = 700
-      }
+  localStorage.removeItem('propostaGerada')
 
 }
-function custoExpansao() {
-        const quantidadeExpansao = document.getElementById('qtd-expansao-proposta')
 
-        if (quantidadeExpansao > 0 ) {
+function limparCamposResumo() {
+  const textos = document.querySelectorAll('.p-resumo-resultado');
 
-            return 1000
-        }
-        else {
-
-            return 0
-        }
+  textos.forEach(texto => {
+    texto.textContent = "";
+  });
 }

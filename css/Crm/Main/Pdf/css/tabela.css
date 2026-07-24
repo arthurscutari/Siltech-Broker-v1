@@ -1,0 +1,25 @@
+.section-tabela-pdf {
+
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    height: 50%;
+    width: 100%;
+     padding: 1rem;
+}
+.tabela-pdf{
+   
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+.tabela-linha-pdf {
+
+    height: 20px;
+    width: 240px;
+}
+.tabela-pdf td{
+    border: 1px solid #0b3b82;
+    
+}
+

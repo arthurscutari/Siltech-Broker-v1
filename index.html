@@ -4,40 +4,48 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="img/logo-siltech.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/login/indexLogin.css" />
+    <link rel="stylesheet" href="css/login/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Plataforma - Siltech</title>
   </head>
 <body>
+    
     <section class="app-login">
-        <div class="div-img-login">
-          <img src="img/login-img.png" alt="Imagem Login" class="img-login">
+    <div class="overlay"></div>
+    <section class="container-login">
+      <img src="img/logo-siltech.png" alt="Logo Siltech" class="logo-login">
+          <h1 class="h1-login">Siltech Broker</h5>
+          <h3 class="h3-login">Acelere o processo de vendas, organize propostas e conduza negociações com mais eficiência</h3>
+      <form action="submit" class="formulario-login">
+        <div class="container-input">
+          <label for="input-usuario-login" class="label-login">Usuário</label>
+          <div class="container-input-icon-login">
+            <i class="bi bi-person icon"></i>
+            <input type="text" id="input-usuario-login" class="input-login" placeholder="Digite o nome do usuário"required>
+          </div>
         </div>
-        <form action="" class="form-login">
-          <img src="img/logo-siltech.png" alt="Logo Siltech" class="logo-login">
-            <h1 class="h1-login">GESTÃO COMERCIAL SOLAR</h5>
-            <p class="p-login">Plataforma para criação, registro e gerenciamento de propostas</p>
-              <div class="campo-login-grupo">
-                <label class="label-login" for="input-usuario-login">Login</label>
-                <div class="input-login">
-                  <i class="bi bi-person icon-input-login"></i>
-                  <input id="input-usuario-login" type="text" class="campo-login" placeholder="Digite seu login"/>               
-                </div>
-              </div>
-              <div class="campo-login-grupo">
-                <label class="label-login" for="input-senha-login">Senha</label>
-                <div class="input-login">
-                  <i class="bi bi-lock icon-input-login"></i>
-                  <input id="input-senha-login"type="password" class="campo-login" placeholder="Digite sua senha"/>               
-                  <i class="bi bi-eye-slash icon-input-login" id="mostrar-senha" style="cursor: pointer;"></i>
-                </div>
-              </div>
-              <p class="p-error apagar" id="p-error">Usuário ou senha invalidos</p>
-              <button id="btn-acessar" class="botao-login-acessar">Acessar</button>
-        </form>
+        <div class="container-input">
+          <label for="input-senha-login" class="label-login">Senha</label>
+          <div class="container-input-icon-login">
+            <i class="bi bi-key icon"></i>
+            <input type="password" id="input-senha-login" autocomplete="current-password" class="input-login" placeholder="Digite a senha do usuário" required>
+            <i class="bi bi-eye-slash icon" style="cursor: pointer;" id="mostrar-senha"></i>
+          </div>
+        </div>
+        
+        <p class="p-erro hidden" id="p-error"><i class="bi bi-x-circle"></i>Credenciais inválidas. Tente novamente.</p>
+        <button class="botao-acessar-plataforma" id="btn-acessar">
+          Acessar plataforma
+          <i class="bi bi-box-arrow-in-right icone-botao"></i>
+        </button>
+      </form>
+      <div class="container-footer">
+        <i class="bi bi-shield-check icon-footer"></i>
+        <p class="p-login">Seus dados estão protegidos e seguros</p>
+      </div>
+       </section>
     </section>
     <script src="js/Index/login.js"></script>
     <script src="js/Index/index.js"></script>

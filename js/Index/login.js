@@ -3,6 +3,18 @@ const senha = document.getElementById('input-senha-login')
 const botaoAcessar = document.getElementById('btn-acessar');
 const pError = document.getElementById('p-error');
 
+usuario.addEventListener('input',() =>{
+
+    pError.classList.add('hidden')
+
+})
+senha.addEventListener('input',() =>{
+
+    pError.classList.add('hidden')
+
+})
+
+
 const mostrarSenha = document.getElementById('mostrar-senha')
 let usuarioAtivo = 0
 
@@ -48,25 +60,35 @@ else if(usuario.value === "gabriel.sato@siltechsolar.com.br" && senha.value === 
 }
 else if (usuario.value === "" && senha.value === ""){
 
-        pError.classList.remove('apagar')
+        pError.classList.remove('hidden')
 }
 else {
-                pError.classList.remove('apagar')
+        pError.classList.remove('hidden')
 
 
     }
 })
 
+usuario.addEventListener('input',()=>{
+
+    pError.classList.remove('mostrar')
+
+})
+senha.addEventListener('input',()=>{
+
+    pError.classList.remove('mostrar')
+
+})
 mostrarSenha.addEventListener('click', ()=>{
 
     if (senha.type === "password"){
 
         senha.type = "text"
-        mostrarSenha.className = "bi bi-eye icon-input-login"
+        mostrarSenha.className = "bi bi-eye icon"
     }
     else {
 
-        mostrarSenha.className = "bi bi-eye-slash icon-input-login"
+        mostrarSenha.className = "bi bi-eye-slash icon"
             senha.type = 'password' 
     }
    

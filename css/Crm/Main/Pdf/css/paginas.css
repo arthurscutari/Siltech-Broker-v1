@@ -1,0 +1,165 @@
+.pg-pdf{
+    width: 210mm;
+    height: 297mm;
+    background: white;
+    position: relative;
+    box-sizing: border-box;
+    padding: 66px;
+}
+
+.pg-pdf:not(:last-child){
+
+    break-after: page;
+
+}
+.corpo-pdf {
+  
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+    z-index: 0;
+    box-sizing: border-box;
+
+}
+.img-background-pdf {
+
+    z-index: 0;
+    position: absolute;
+    object-fit: contain;
+    height: 80%;
+    width: 80%;
+
+}
+.valores-pg-pdf {
+
+    z-index: 999;
+    position: relative;
+
+    
+}
+.pg-capa-pdf{
+    display: flex;
+    padding: 0;
+}
+.capa-pdf {
+
+ min-height: 297mm;
+    width: 50%;
+    padding: 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+
+}
+.capa-2-pdf {
+
+  min-height: 297mm;
+    width: 50%;
+
+    
+    
+}
+
+.img-capa-pdf {
+  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.h1-capa-pdf {
+
+    font-size: 35pt;
+    color: #083f7a;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+@page{
+    size: A4;
+    margin: 0;
+}
+
+/* ===========================
+   IMPRESSÃO
+=========================== */
+
+@page{
+    size: A4;
+    margin: 0;
+}
+
+@media print{
+
+    html,
+    body{
+        width: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+        background: #fff !important;
+    }
+
+    /* Esconde tudo */
+    body *{
+        visibility: hidden;
+    }
+
+    /* Mostra apenas a proposta */
+    #section-pdf,
+    #section-pdf *{
+        visibility: visible;
+    }
+
+    /* A seção da proposta ocupa toda a tela */
+    #section-pdf{
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        overflow: visible !important;
+    }
+
+    /* Remove a coluna de ações */
+    .container-pdf-acoes{
+        display: none !important;
+    }
+
+    /* Remove o scroll */
+    .container-pdf{
+        width: 100% !important;
+        height: auto !important;
+
+        display: block !important;
+
+        overflow: visible !important;
+        overflow-x: visible !important;
+        overflow-y: visible !important;
+
+        background: white !important;
+    }
+
+    /* Cada .pg-pdf vira uma folha */
+    .pg-pdf{
+        width: 210mm !important;
+        min-height: 297mm !important;
+
+        margin: 0 auto !important;
+
+        page-break-after: always;
+        break-after: page;
+        page-break-inside: avoid;
+
+        overflow: hidden;
+    }
+
+    .pg-pdf:last-child{
+        page-break-after: auto;
+        break-after: auto;
+    }
+
+}

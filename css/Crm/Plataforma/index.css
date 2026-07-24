@@ -1,0 +1,15 @@
+@import "Configuração/configuracao.css";
+@import 'Global/resumo.css';
+@import "Header/header.css";
+
+@import "Logo/logo.css";
+
+@import "Navegação/navegacao.css";
+
+@import 'Main/main.css';
+
+@import "Usuários/usuarios.css";
+
+@import 'App/app.css';
+@import 'App/global.css';
+

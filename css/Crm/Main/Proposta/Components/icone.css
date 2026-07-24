@@ -1,0 +1,12 @@
+.icone-card-info{
+
+    font-size: 22px;
+    padding: 8px;
+    color: var(--cor-terciaria);
+    background-color: var(--cor-fundo);
+    border-radius: 50px;
+}
+.icone-dica-proposta{
+
+    font-size: 20px;
+}

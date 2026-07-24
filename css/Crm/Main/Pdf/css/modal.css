@@ -1,0 +1,102 @@
+.container-acoes{
+
+    height: 70%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 16px;
+    border-radius: 4px;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        background-color: var(--cor-fundo);
+}
+.btn-pdf-proposta{
+
+    background-color: var(--cor-primaria);
+    border: none;
+    width: 80%;
+    height: 44px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-voltar-proposta{
+
+    background-color: white;
+    border: none;
+    width: 80%;
+    height: 44px;
+    border-radius: 4px;
+    border: 1px solid #34495e; 
+    color: var(--cor-primaria);
+    font-weight: 700;
+    cursor: pointer;
+        font-size: 15px;
+
+}
+.btn-negociar-proposta {
+
+    background-color: var(--cor-terciaria);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 44px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+        font-size: 15px;
+    margin-top: 12px;
+
+}
+
+
+.icone-proposta-modal {
+
+    color: var(--cor-sucesso);
+    font-size: 36px;
+    padding: 20px;
+    background-color: var(--cor-fundo-card);
+    border-radius: 300px;
+}
+.h2-modal{
+
+    color: var(--cor-sucesso);
+    margin: 0;
+    padding: 10px;
+        border-bottom: 1px solid rgb(197, 197, 197);
+        width: 80%;
+        text-align: center;
+
+}
+.p-modal{
+
+    font-size: 14px;
+    color: var(--cor-preto);
+    width: 70%;
+    text-align: center;
+    padding: 16px;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    margin: 0;
+}
+
+.icone-modal {
+
+    font-size: 18px;
+    padding-right: 6px;
+
+}
+
+.p-dica-modal {
+    font-size: 13px;
+    margin: 4px;
+    padding: 0;
+    width: 90%;
+    color: var(--cor-preto);
+    text-align: center;
+}

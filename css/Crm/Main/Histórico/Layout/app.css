@@ -1,0 +1,7 @@
+.container-historico{
+
+    background-color: var(--cor-fundo-card);
+    height: 100%;
+    width: 100%;
+    display: none;
+}

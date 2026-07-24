@@ -1,0 +1,175 @@
+.container-input-valor{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.d-h-etapa-negociacao {
+
+    height: 100%;
+    width: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+}
+.d-h-titulo-negociacao{
+
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-start;
+}
+.container-icone-negociacao {
+
+    height: 100%;
+    width: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-botao-negociacao {
+
+    background-color: var(--cor-texto-primaria);
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    cursor: pointer;
+
+}
+.container-items-valor{
+
+
+    height: 80%;
+    width: 33%;
+    display: flex;
+    padding: 8px;
+    
+    border-radius: 6px;
+
+}
+.container-icone-valor {
+
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-valor-texto {
+
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 8px;
+}
+.container-pagamento-1-negociacao {
+
+    height: 100%;
+    flex: 1;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-pagamento-2-negociacao {
+
+    height: 100%;
+    padding: 6px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-titulo-pagamento-negociacao {
+
+    width: 90%;
+    display: flex;
+    padding: 4px;
+    gap: 10px;
+    align-items: center;
+    
+}
+.container-elementos-pagamento-negociacao {
+
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    width: 90%;
+   
+
+}
+.container-items-pagamento-negociacao {
+
+    display: flex;
+    height: 37px;
+   
+    padding: 4px 10px;
+    border-radius: 8px;
+     border: 1px solid rgb(207, 207, 207);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+.container-mcs-negociacao {
+
+    height: 100%;
+    flex: 1;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container-resultado-negociacao {
+
+  height: 100%;
+    flex: 1;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.container-items-analise{
+
+    border: 1px solid var(--cor-texto-primaria);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 90%;
+    width: 95%;
+    border-radius: 6px;
+    gap: 15px;
+    padding: 0 15px;
+}
+.container-resumo-info {
+
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    flex-direction: column;
+}
+.container-proposta-negociada-pdf{
+
+    background-color: red;
+    height: 80%;
+    width: 60%;
+    border-radius: 4px;
+}
+.container-add-pagamento{
+
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

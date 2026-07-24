@@ -1,90 +1,92 @@
-//Código para mostrar inputs
-const escolhaConsumo = document.getElementById('consumo-proposta');
-const divPlacas = document.getElementById('div-consumo-placa')
-const divKwh = document.getElementById('div-consumo-kwh')
 
 
-escolhaConsumo.addEventListener('change', () =>{
+const botaoDicaTeste = document.getElementById("botao-dica-teste")
+const botaoDicaConsumo = document.getElementById("botao-dica-consumo")
+const botaoDicaExpansao = document.getElementById("botao-dica-expansao")
+
+botaoDicaTeste.addEventListener('click', mostrarDicaTeste)
+botaoDicaExpansao.addEventListener('click', mostrarDicaExpansão)
+botaoDicaConsumo.addEventListener('click', mostrarDicaConsumo)
 
 
-    if (escolhaConsumo.value == 0) {
-        divKwh.classList.add('hidden')
-        divPlacas.classList.add('hidden')
-        
+
+function mostrarDicaTeste(){
+
+    const textoDica = document.getElementById('texto-dica-teste')
+
+    textoDica.classList.toggle('hidden')
+
+}
+function mostrarDicaConsumo(){
+
+    const textoDica = document.getElementById('texto-dica-consumo')
+
+    textoDica.classList.toggle('hidden')
+
+}
+function mostrarDicaExpansão(){
+
+    const textoDica = document.getElementById('texto-dica-expansao')
+
+    textoDica.classList.toggle('hidden')
+
+}
+
+const mudarInversor = document.getElementById('inversor-proposta')
+
+mudarInversor.addEventListener('change', mudarHibrido)
+
+function mudarHibrido(){
+
+
+
+
+    const containerHibrido = document.getElementById('main-hibrido-proposta')
+    const containerConsumo = document.getElementById('main-consumo-proposta')
+
+    if(mudarInversor.value === "Híbrido") {
+
+       containerHibrido.classList.remove('hidden')
+       containerConsumo.classList.add('hidden')
     }
-    if (escolhaConsumo.value == 1) {
-        divKwh.classList.remove('hidden')
-        divPlacas.classList.add('hidden')
-        
-    }
-     if (escolhaConsumo.value == 2) {
-        divPlacas.classList.remove('hidden')
-        divKwh.classList.add('hidden')
-       
-    }
-})
+    else if (mudarInversor.value === "String Ongrid"){
 
-const expansao = document.getElementById("expansao");
-const alvo = document.getElementById("div-input-expansao");
-
-expansao.addEventListener("change", function () {
-
-    
-
-    if (expansao.checked) {
-        alvo.classList.remove('hidden')
-    }
-    else {
-        alvo.classList.add('hidden')
-    }
-
-})
-
-const usuarios = {
-    1: {
-        nome: 'Arthur Alvarez',
-        cargo: 'Desenvolvedor'
-    },
-    2: {
-        nome: 'Alex Coelho',
-        cargo: 'Diretor Comercial'
-    },
-    3: {
-        nome: 'Pedro Henrique',
-        cargo: 'Diretor Operacional'
-    },
-    4: {
-        nome: 'Gabriel Sato',
-        cargo: 'Diretor Administrativo / Financeiro'
-    },
-    5: {
-        nome: 'Alef Ferreira',
-        cargo: 'SDR'
-    },
-    6: {
-        nome: 'Pedro Brito',
-        cargo: 'SDR'
+        containerConsumo.classList.remove('hidden')
+        containerHibrido.classList.add('hidden')
     }
 }
 
-const usuarioAtivo = localStorage.getItem('usuarioAtivo')
+function esconderPlataforma(){
 
-const usuario = usuarios[usuarioAtivo]
+    const logo = document.querySelector('.logo-plataforma')
+    const header = document.querySelector('.header-plataforma')
+    const nav = document.querySelector('.navegacao-plataforma')
+    const user = document.querySelector('.usuario-plataforma')
+    const config = document.querySelector('.configuracao-plataforma')
+    const main = document.querySelector('.main-plataforma')
 
-if (usuario) {
+    header.classList.add('hidden')
+    logo.classList.add('hidden')
+    nav.classList.add('hidden')
+    user.classList.add('hidden')
+    config.classList.add('hidden')
 
-    document.querySelectorAll('.usuario-ativo')
-        .forEach(el => el.textContent = usuario.nome)
-
-    document.querySelectorAll('.colaborador-ativo')
-        .forEach(el => el.textContent = usuario.cargo)
-
+    main.classList.add('mudarGrid')
 }
-const divCanal = document.getElementById('div-canal-vendas')
-const checar = document.getElementById('teste-proposta')
+function mostrarPlataforma(){
 
+    const logo = document.querySelector('.logo-plataforma')
+    const header = document.querySelector('.header-plataforma')
+    const nav = document.querySelector('.navegacao-plataforma')
+    const user = document.querySelector('.usuario-plataforma')
+    const config = document.querySelector('.configuracao-plataforma')
+    const main = document.querySelector('.main-plataforma')
 
+    header.classList.remove('hidden')
+    logo.classList.remove('hidden')
+    nav.classList.remove('hidden')
+    user.classList.remove('hidden')
+    config.classList.remove('hidden')
 
-checar.addEventListener('click', () => {
-    divCanal.classList.toggle('hidden')
-})
+    main.classList.remove('mudarGrid')
+}

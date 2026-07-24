@@ -1,0 +1,130 @@
+
+/*CSS para as Paginas*/
+@import 'Main/Lançamento/index.css';
+@import 'Main/Negociação/index.css';
+@import 'Main/Proposta/index.css';
+@import 'Main/Histórico/index.css';
+/*CSS do Layout da Plataforma*/
+@import 'Plataforma/index.css';
+
+/*CSS do pdf*/
+
+@import 'Main/Pdf/index.css';
+
+.container-dashboard{
+
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+
+.showFlex{
+
+    display: flex !important;
+}
+.showGrid{
+
+    display: grid!important;
+}
+.hidden {
+
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

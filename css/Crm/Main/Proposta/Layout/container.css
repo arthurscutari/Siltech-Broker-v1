@@ -1,0 +1,55 @@
+.c-campos-proposta{
+
+    width: 90%;
+    height: auto;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.c-alerta-plataforma {
+
+  
+    display: flex;
+    height: 100%;
+    min-width: 40px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 4px;
+    border-radius: 4px;
+     background-color: #ececfd;
+    border: 2px solid #d9dfff;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.c-campos-consumo {
+
+    height: 70px;
+    width: 90%;
+    display: flex;
+    padding: 4px;
+    gap: 8px;
+}
+.c-consumo-tipo {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    background-color: var(--cor-fundo-card);
+    border-radius: 8px;
+    box-sizing: border-box;
+    align-items: center;
+
+}
+.c-consumo {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    padding: 4px;
+    box-sizing: border-box;
+    width: 80%;
+    
+}

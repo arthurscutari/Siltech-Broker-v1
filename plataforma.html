@@ -3,10 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-      <link rel="icon" href="img/logo-siltech.png" type="image/png">
-
+  <link rel="icon" href="img/logo-siltech.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/plataforma/index.css">
+  <link rel="stylesheet" href="css/Crm/index.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -20,106 +19,888 @@
 
 <body>
   <section class="app-plataforma">
-    <sidebar class="app-sidebar-plataforma">
-      <div class="sidebar-logo-plataforma">
-        <img src="img/logo-siltech.png" alt="Logo siltech" height="50px" width="50px">
-        <div class="sidebar-title-plataforma">
-          <h3 class="h3-plataforma">Siltech</h3>
-          <p class="p-plataforma">Plataforma de Propostas</p>
-        </div>
+    <header class="header-plataforma">
+      <div class="c-icone-header-plataforma">
+          <i class="bi bi-columns-gap icone-header-plataforma" id="icone-header"></i>
       </div>
-      <nav class="nav-sidebar-plataforma">
-        <div style="width: 100%;   display: flex; align-items: center; gap: 20px; flex-direction: column;">
-          <div class="card-nav-plataforma nav-proposta selecionado" id="div-proposta">
-              <i class="bi bi-clipboard icon branco selecionadoTag" id="icon-proposta-nav"></i>
-              <p class="p-nav-plataforma branco selecionadoTag" id="text-proposta-nav">Proposta</p>
-            </div>
-          <div class="card-nav-plataforma nav-proposta " id="div-dashboard">
-              <i class="bi bi-graph-up-arrow icon branco " id="icon-dashboard-nav"></i>
-              <p class="p-nav-plataforma branco " id="text-dashboard-nav">Histórico</p>
-            </div>
-            
-          <!-- <div class="card-nav-plataforma nav-proposta">
-                <i class="bi bi-clock-history icon branco"></i>
-                <p class="p-nav-plataforma branco">Hstórico</p>
-              </div> -->
+      <div  class="c-titulo-header-plataforma">
+        <h1 class="h1-header-plataforma" id="titulo-header">Pagina Inicial</h1>
+        <h3 class="h3-header-plataforma" id="subtitulo-header">Bem vindo a plataforma da Siltech.</h3>
+      </div>
+    </header>
+    <div class="usuario-plataforma">
+      <div class="c-items-usuario-plataforma">
+        <h4 class="h4-usuario-plataforma" id="usuario-plataforma">Arthur Alvarez</h4>
+        <p class="p-usuario-plataforma">Desenvolvedor</p>
+      </div>
+        <i class="bi bi-person icone-usuarios-plataforma"></i>
+    </div>
+    <nav class="navegacao-plataforma">
+      <div class="c-items-navegacao-plataforma fundo-selecao" id="proposta-navegacao">
+        <i class="bi bi-file-earmark-text icone-navegacao cor-selecao" id="icone-proposta"></i>
+        <p href="" class="a-texto-navegacao-plataforma cor-selecao" id="texto-proposta">Proposta</p>
+      </div>
+      <div class="c-items-navegacao-plataforma" id="dashboard-navegacao">
+        <i class="bi bi-columns-gap icone-navegacao" id="icone-dashboard"></i>
+        <p href="" class="a-texto-navegacao-plataforma" id="texto-dashboard">Dashboard</p>
+      </div>
+      
+      <div class="c-items-navegacao-plataforma" id="historico-navegacao">
+        <i class="bi bi-clock-history icone-navegacao" id="icone-historico"></i>
+        <p href="" class="a-texto-navegacao-plataforma" id="texto-historico">Histórico</p>
+      </div>
+   
+    
+    </nav>
+    <div class="logo-plataforma">
+      <img src="img/logo-siltech.png" alt="Logo Siltech" class="img-logo-plataforma">
+        <div class="c-titulo-logo-plataforma">
+          <h5 class="h5-logo-plataforma">Siltech Solar</h5>
+          <h6 class="h6-logo-plataforma">CRM</h6>
         </div>
-        <div class="card-nav-plataforma nav-proposta" id="btn-sair-plataforma">
-          <i class="bi bi-box-arrow-left icon branco"></i>
-          <p class="p-nav-plataforma branco">Sair</p>
-        </div>
-      </nav>
-    </sidebar>
+    </div>
+    <div class="configuracao-plataforma">
+      <div class="c-itens-configuracao-plataforma">
+        <i class="bi bi-database-gear icone-navegacao"></i>
+        <a href="" class="a-texto-configuracao-plataforma">Ajuste</a>
+      </div>
+      <div class="c-itens-configuracao-plataforma">
+        <i class="bi bi-gear icone-navegacao"></i>
+        <a href="" class="a-texto-configuracao-plataforma">Configuração</a>
+      </div>
+       <div class="c-itens-configuracao-plataforma" id="botao-sair-plataforma">
+        <i class="bi bi-box-arrow-left icone-navegacao"></i>
+        <a href="" class="a-texto-configuracao-plataforma">Sair</a>
+      </div>
+    </div>
     <main class="main-plataforma">
-      <section class="section-historico-plataforma hidden" id="container-dashboard">
-          <div class="cabecalho-plataforma">
-          <h2 class="h2-plataforma">Histórico</h2>
-          <div class="cabecalho-user">
-            <div class="cabecalho-user-text">
-              <h3 class="h3-user usuario-ativo" id="usuario-ativo">Arthur Alvarez</h3>
-              <p class="p-user colaborador-ativo">Vendedor</p>
-            </div>
-            <i class="bi bi-person user-icon"></i>
-          </div>
-        </div>
-        <div class="historico-plataforma">
-
-        </div>
+      <section class="container-dashboard" style=" align-items: center;
+      justify-content: center; flex-direction: column; ; background-color: var(--cor-fundo-card);" id="section-dashboard">
+        <i class="bi bi-gear" style="color: var(--cor-terciaria); font-size: 75px;"></i>
+        <h1 style="font-size: 25px; color: var(--cor-texto-primaria)">Estamos trabalhando nesta funcionalidade. Em breve, ela fará parte da plataforma.</h1>
       </section>
-      <section class="section-proposta-plataforma" id="container-proposta">
-        <div class="cabecalho-plataforma">
-          <h2 class="h2-plataforma">Proposta Comercial</h2>
-          <div class="cabecalho-user">
-            <div class="cabecalho-user-text">
-              <h3 class="h3-user usuario-ativo">Arthur Alvarez</h3>
-              <p class="p-user colaborador-ativo">Vendedor</p>
-            </div>
-            <i class="bi bi-person user-icon"></i>
-          </div>
-
-        </div>
-        <div class="form-plataforma">
-          <div class="form-proposta-plataforma">
-            <div class="card-1">
-              <h2 class="h2-plataforma-for">Cliente e Localização</h2>
-
-              <div class="campo-grupo">
-                <div class="label-info">
-                  <label class="lb" for="nome-proposta">Nome</label>
-                  <i class="bi bi-info-circle"></i>
+      <section class="container-lancamento" id="section-lancamento">
+          <article class="card-cliente-lancamento">
+            <header class="header-card-global">
+                <i class="bi bi-people icone-header-global"></i>
+                <p class="texto-header-global">ETAPA O1</p>
+                <h4 class="titulo-header-global">Cliente e Localização</h4>
+            </header>
+            <div class="container-card-main">
+              <div class="input-grupo">
+                <label for="nome-inputa-lancamento" class="label-lancamento">Nome</label>
+                <div class="input-icone-grupo">
+                  <div class="container-icone-lancamento">
+                    <i class="bi bi-person-badge icone-input-lancamento"></i>
+                  </div>
+                  <input type="text" placeholder="Digite o nome completo" class="input-lancamento" id="input-cliente-lancamento">
                 </div>
-                <input type="text" class="campo" id="nome-proposta" placeholder="Digite seu nome"
-                  autocomplete="new-password" data-required="true"/>
-              </div>
-              <div class="campo-grupo">
-                <div class="label-info">
-                  <label class="lb" for="celular-proposta">Celular</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <input type="text" class="campo" id="celular-proposta" placeholder="(xx) xxxx-xxxx"
-                  autocomplete="new-password" />
               </div>
               
-              <div class="grupo">
-                <div class="label-info">
-                  <label class="lb" for="teste-proposta">Proposta teste</label>
-                  <i class="bi bi-info-circle"></i>
+              <div class="input-grupo">
+                <label for="nome-inputa-lancamento" class="label-lancamento">CPF</label>
+                <div class="input-icone-grupo">
+                  <div class="container-icone-lancamento">
+                    <i class="bi bi-person-vcard icone-input-lancamento"></i>
+                  </div>
+                  <input type="text" placeholder="000.000.000-00" class="input-lancamento">
                 </div>
-                <label class="switch">
-                  <input type="checkbox" id="teste-proposta" />
-                  <span class="slider"></span>
-                </label>
               </div>
-              <div class="campo-grupo" id="div-canal-vendas">
-                <div class="label-info">
-                  <label class="lb" for="canal-proposta">Canal de Vendas</label>
-                  <i class="bi bi-info-circle"></i>
+              <div class="input-grupo">
+                <label for="nome-inputa-lancamento" class="label-lancamento">RG</label>
+                <div class="input-icone-grupo">
+                  <div class="container-icone-lancamento">
+                    <i class="bi bi-card-heading icone-input-lancamento"></i>
+                  </div>
+                  <input type="text" placeholder="Digite seu RG" class="input-lancamento">
                 </div>
-                <select type="text" class="selecao" id="canal-proposta" data-required="true">
+              </div>
+              <div class="input-grupo">
+                <label for="nome-inputa-lancamento" class="label-lancamento">E-mail</label>
+                <div class="input-icone-grupo">
+                  <div class="container-icone-lancamento">
+                    <i class="bi bi-envelope icone-input-lancamento"></i>
+                  </div>
+                  <input type="text" placeholder="Digite o e-mail" class="input-lancamento" id="input-cliente-lancamento">
+                </div>
+              </div>
+                <div class="container-elementos">
+                <div class="input-grupo-elemento">
+                  <label for="nome-inputa-lancamento" class="label-lancamento">Rua</label>
+                  <div class="input-icone-grupo">
+                    <div class="container-icone-lancamento">
+                      <i class="bi bi-signpost-fill icone-input-lancamento"></i>
+                    </div>
+                    <input type="text" placeholder="Digite o nome da rua" class="input-lancamento">
+                  </div>
+                </div>
+                <div class="input-grupo-elemento-2">
+                  <label for="nome-inputa-lancamento" class="label-lancamento-2">Nº</label>
+                  <div class="input-icone-grupo-2">
+                    <i class="bi bi-mailbox icone-input-lancamento"></i>
+                    <input type="text" class="input-lancamento" placeholder="00">
+                  </div>
+                </div>
+              </div>  
+              <div class="container-elementos">
+                <div class="input-grupo-elemento">
+                  <label for="nome-inputa-lancamento" class="label-lancamento">Bairro</label>
+                  <div class="input-icone-grupo">
+                    <div class="container-icone-lancamento">
+                      <i class="bi bi-signpost-split icone-input-lancamento"></i>
+                    </div>
+                    <input type="text" placeholder="Digite o nome do bairro" class="input-lancamento">
+                  </div>
+                </div>
+                <div class="input-grupo-elemento-3">
+                  <label for="nome-inputa-lancamento" class="label-lancamento-2">CEP</label>
+                  <div class="input-icone-grupo-2">
+                    <i class="bi bi-pin-map icone-input-lancamento"></i>
+                    <input type="text" class="input-lancamento" placeholder="00000-000">
+                  </div>
+                </div>
+              </div>
+                
+              <div class="container-elementos">
+                <div class="input-grupo-elemento">
+                  <label for="nome-inputa-lancamento" class="label-lancamento">Cidade</label>
+                  <div class="input-icone-grupo">
+                    <div class="container-icone-lancamento">
+                      <i class="bi bi-geo-alt icone-input-lancamento"></i>
+                    </div>
+                    <input type="text" placeholder="Digite o nome da rua" class="input-lancamento">
+                  </div>
+                </div>
+                <div class="input-grupo-elemento-2">
+                  <label for="nome-inputa-lancamento" class="label-lancamento-2">UF</label>
+                  <div class="input-icone-grupo-2">
+                    <i class="bi bi-globe-americas icone-input-lancamento"></i>
+                    <input type="text" class="input-lancamento" placeholder="UF">
+                  </div>
+                </div>
+                
+              </div>
+                <div class="input-grupo">
+                <label for="nome-inputa-lancamento" class="label-lancamento">Número da Instalação</label>
+                <div class="input-icone-grupo">
+                  <div class="container-icone-lancamento">
+                    <i class="bi bi-clock icone-input-lancamento"></i>
+                  </div>
+                  <input type="text" placeholder="Digite o número da instalação" class="input-lancamento">
+                </div>
+              </div>
+              
+            </div>
+          </article>
+          <article class="card-projeto-lancamento">
+            <header class="header-card-global">
+                <i class="bi bi-file-earmark-text icone-header-global"></i>
+                <p class="texto-header-global">ETAPA O2</p>
+                <h4 class="titulo-header-global">Projeto</h4>
+            </header>
+            <div class="container-card-main">
+                <div class="input-grupo-projeto">
+                  <div class="input-grupo-flex">
+                      <i class="bi bi-bricks icone-resumo"></i>
+                       <div class="c-info-label">
+                      <p class="p-dica-lancamento">Local em Obra</p>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                      </label>
+                      </div>
+                    </div>
+                    <textarea name="" id="" class="textarea-projeto"placeholder="Observação" ></textarea>
+                </div>
+                <div class="input-grupo-projeto">
+                  <div class="input-grupo-flex">
+                     
+                    <i class="bi bi-diamond-half icone-resumo"></i>
+                    <div class="c-info-label">
+                      <p class="p-dica-lancamento">Unificação de relógios</p>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                      </label>
+                      </div>
+                    </div>
+                    
+                    <textarea name="" id="" class="textarea-projeto" placeholder="Observação"></textarea>
+                </div>
+                <div class="input-grupo-projeto">
+                  <div class="input-grupo-flex">
+                    <i class="bi bi-exclude icone-resumo"></i>
+                    <div class="c-info-label">
+                      <p class="p-dica-lancamento">Adequação</p>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                      </label>
+                      </div>
+                    </div>
+                    <textarea name="" id="" class="textarea-projeto" placeholder="Observação"></textarea>
+                </div>
+                <div class="input-grupo-projeto">
+                  <div class="input-grupo-flex">
+                      <i class="bi bi-house-gear icone-resumo"></i>
+                      <div class="c-info-label">
+                      <p class="p-dica-lancamento">Reforma do Telhado</p>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                      </label>
+                      </div>
+                    </div>
+                    <textarea name="" id="" class="textarea-projeto" placeholder="Observação"></textarea>
+                </div>
+                <div class="input-grupo-projeto">
+                  <div class="input-grupo-flex">
+                      <i class="bi bi-hdd-network icone-resumo"></i>
+                      <div class="c-info-label">
+                        <p class="p-dica-lancamento">Embutido</p>
+                        <label class="switch">
+                          <input type="checkbox">
+                          <span class="slider"></span>
+                        </label>
+                      </div>
+                    </div>
+                    <textarea name="" id="" class="textarea-projeto"placeholder="Observação" ></textarea>
+                </div>
+            </div>
+          </article>
+          <article class="card-comercial-lancamento">
+            <header class="header-card-global">
+                <i class="bi bi-building icone-header-global"></i>
+                <p class="texto-header-global">ETAPA O3</p>
+                <h4 class="titulo-header-global">Comercial</h4>
+            </header>
+            <div class="container-card-main">
+               <div class="input-grupo">
+                <label for="nome-inputa-lancamento" class="label-lancamento">SDR</label>
+                <div class="input-icone-grupo">
+                  <div class="container-icone-lancamento">
+                    <i class="bi bi-person-bounding-box icone-input-lancamento"></i>
+                  </div>
+                  <select name="" id="" class="input-lancamento">
+                    <option value="">Selecione</option>
+                    <option value="Alef Ferreira">Alef Ferreira</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-grupo">
+                <label for="nome-inputa-lancamento" class="label-lancamento">Closer</label>
+                <div class="input-icone-grupo">
+                  <div class="container-icone-lancamento">
+                    <i class="bi bi-person-workspace icone-input-lancamento"></i>
+                  </div>
+                  <select name="" id="" class="input-lancamento">
+                    <option value="">Selecione</option>
+                    <option value="Pedro Brito">Pedro Brito</option>
+                  </select>
+                </div>
+              </div>
+              
+              <div class="input-grupo">
+                <label for="nome-inputa-lancamento" class="label-lancamento">B.U</label>
+                <div class="input-icone-grupo">
+                  <div class="container-icone-lancamento">
+                    <i class="bi bi-grid-3x3-gap icone-input-lancamento"></i>
+                  </div>
+                  <select name="" id="" class="input-lancamento">
+                    <option value="">Selecione</option>
+                    <option value="Comercial">Comercial</option>
+                    <option value="Pos Vendas">Pós Vendas</option>
+
+                  </select>
+                </div>
+              </div>
+              <div class="input-grupo">
+                <label for="nome-inputa-lancamento" class="label-lancamento">Canal de Vendas</label>
+                <div class="input-icone-grupo">
+                  <div class="container-icone-lancamento">
+                    <i class="bi bi-broadcast icone-input-lancamento"></i>
+                  </div>
+                  <select name="" id="" class="input-lancamento">             
                   <option value="">Selecione</option>
                   <option value="Indicação">Indicação</option>
                   <option value="Field sales">Field sales</option>
-                  <option value="Digital Smulação">Digital Simulação</option>
+                  <option value="Digital Simulação">Digital Simulação</option>
+                  <option value="SAGA">SAGA</option>
+                  <option value="Evento">Evento</option>
+                  <option value="Sindicato">Sindicato</option>
+                  <option value="Comunicação">Comunicação</option>
+                  <option value="Telefone">Telefone</option>
+                  <option value="Outros">Outros</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-grupo">
+                <label for="nome-inputa-lancamento" class="label-lancamento">Unidade Comercial</label>
+                <div class="input-icone-grupo">
+                  <div class="container-icone-lancamento">
+                    <i class="bi bi-building icone-input-lancamento"></i>
+                  </div>
+                  <select name="" id="" class="input-lancamento">
+                    <option value="">Selecione</option>
+                    <option value="">Unidade 1</option>
+                  </select>
+                </div>
+              </div>
+              <div class="input-grupo">
+                <label for="nome-inputa-lancamento" class="label-lancamento">Observação</label>
+                <div class="input-icone-grupo">
+                  <textarea name="" id="" class="textarea-projeto-cliente" placeholder="Observação"></textarea>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="card-dica-lancamento">
+            <div class="container-dica">
+              <i class="bi bi-stars icone-dica"></i>
+              <p class="p-dica-lancamento"><b>Dica:</b> Preencha os dados acima para gerar o resumo com as informações necessárias.</p>
+            </div>
+          </article>
+          <article class="card-resumo-lancamento">
+            <header class="header-resumo">
+                <i class="bi bi-clipboard-check-fill icone-header"></i>
+              <div class="header-resummo-titulo">
+                  <h2 class="h2-resumo">Resumo do Lançamento</h2>
+                  <p class="p-resumo">Atualização em tempo real</p>
+              </div>
+            </header>
+            <div class="resumo-main">
+                  <h6 class="h6-resumo">Cliente e Localiação</h6>
+                  <div class="card-resumo-item">
+                      <i class="bi bi-file-person icone-resumo"></i>
+                    <div class="resumo-dados">
+                      <p class="p-resumo-dados">Cliente</p>
+                      <p>-</p>
+                    </div>
+                  </div>
+                    <div class="card-resumo-item">
+                    <i class="bi bi-person-vcard icone-resumo"></i>
+                  
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">CPF</p>
+                    <p>-</p>
+                  </div>
+                    </div>
+                    <div class="card-resumo-item">
+                    <i class="bi bi-card-heading icone-resumo"></i>
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">RG</p>
+                    <p>-</p>
+                  </div>
+                    </div>
+                    <div class="card-resumo-item">
+                    <i class="bi bi-house icone-resumo"></i>
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Endereço</p>
+                    <p>-</p>
+                  </div>
+                    </div>
+                    <div class="card-resumo-item">
+                    <i class="bi bi-clock icone-resumo"></i>
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Número Instalação</p>
+                    <p>-</p>
+                  </div>
+                    </div>
+                  <h6 class="h6-resumo">Projeto</h6>
+                    <div class="card-resumo-item">
+                    <i class="bi bi-layers icone-resumo"></i>
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Quantidade de Placas</p>
+                    <p>-</p>
+                  </div>
+                    </div>
+                    <div class="card-resumo-item">
+                    <i class="bi bi-grid-3x3-gap icone-resumo"></i>
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Inversor</p>
+                    <p>-</p>
+                  </div>
+                    </div>
+                    <div class="card-resumo-item">
+                    <i class="bi bi-cpu icone-resumo"></i>
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Sistema</p>
+                    <p>-</p>
+                  </div>
+                    </div>
+                    <div class="card-resumo-item">
+                    <i class="bi bi-bricks icone-resumo"></i>
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Local em Obra</p>
+                    <p>-</p>
+                  </div>
+                    </div>
+                    <div class="card-resumo-item">
+                    <i class="bi bi-diamond-half icone-resumo"></i>
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Unificação</p>
+                    <p>-</p>
+                  </div>
+                    </div>
+                    <div class="card-resumo-item">
+                    <i class="bi bi-exclude icone-resumo"></i>
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Adequação</p>
+                    <p>-</p>
+                  </div>
+                    </div>
+                    <div class="card-resumo-item">
+                    <i class="bi bi-house-gear icone-resumo"></i>
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Reforma do Telhado</p>
+                    <p>-</p>
+                  </div>
+                    </div>
+                    <div class="card-resumo-item">
+                    <i class="bi bi-hdd-network icone-resumo"></i>
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Embutido</p>
+                    <p>-</p>
+                  </div>
+                    </div>
+                  <h6 class="h6-resumo">Comercial</h6>
+                    <div class="card-resumo-item">
+                          <i class="bi bi-person-bounding-box icone-resumo"></i>
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">SDR</p>
+                          <p>-</p>
+                        </div>
+                    </div>
+                    <div class="card-resumo-item">
+                          <i class="bi bi-person-workspace icone-resumo"></i>
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">Closer</p>
+                          <p>-</p>
+                        </div>
+                    </div>
+                     <div class="card-resumo-item">
+                          <i class="bi bi-grid-3x3-gap icone-resumo"></i>
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">B.U</p>
+                          <p>-</p>
+                        </div>
+                    </div>
+                     <div class="card-resumo-item">
+                          <i class="bi bi-broadcast icone-resumo"></i>
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">Canal de Vendas</p>
+                          <p>-</p>
+                        </div>
+                    </div>
+                     <div class="card-resumo-item">
+                          <i class="bi bi-building icone-resumo"></i>
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">Unidade Comercial</p>
+                          <p>-</p>
+                        </div>
+                    </div>
+                     <div class="card-resumo-item">
+                          <i class="bi bi-cash-coin icone-resumo dinheiro"></i>
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">Valor de Venda</p>
+                          <p>-</p>
+                        </div>
+                    </div>
+                     <div class="card-resumo-item">
+                          <i class="bi bi-activity icone-resumo"></i>
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">MCS</p>
+                          <p">-</p>
+                        </div>
+                    </div>
+                    
+                </div>
+              <div class="resumo-footer">
+                <button class="botao-resumo">
+                  <i class="bi bi-send"></i>Enviar Lançamento</button>
+                  <p class="p-resumo-footer">Dados gerados simultaneamente</p>
+              </div>
+            </div>
+            
+          </article>
+      </section>
+      <section class="container-negociacao " id="section-negociacao">
+          <div class="card-valor-negociacao">
+            <div class="header-card-global">
+                <i class="bi bi-info icone-header-global"></i>
+                <p class="texto-header-global">Etapa 1</p>
+                <h3 class="titulo-header-global">Informação da Proposta</h3>
+            </div>
+            <div class="main-card-negociacao">
+              <div class="card-negociacao-valor">
+                  <i class="bi bi-person icone-negociacao-valor"></i>
+                  <p class="p-negociacao-valor">Cliente</p>
+                  <p class="p-negociacao-info" id="cliente-negociacao-proposta">Cliente</p>
+                </div>
+                <div class="borda-pagamento"></div>
+                <div class="card-negociacao-valor">
+                  <i class="bi bi-calendar icone-negociacao-valor"></i>
+                  <p class="p-negociacao-valor">Data</p>
+                  <p class="p-negociacao-info" id="data-negociacao-proposta">11/11/2026</p>
+                </div>
+                <div class="borda-pagamento"></div>
+                <div class="card-negociacao-valor">
+                  <i class="bi bi-layers icone-negociacao-valor"></i>
+                  <p class="p-negociacao-valor">Placas</p>
+                  <p class="p-negociacao-info" id="placas-negociacao-proposta">0</p>
+                </div>
+                <div class="borda-pagamento"></div>
+                <div class="card-negociacao-valor">
+                  <i class="bi bi-plug icone-negociacao-valor"></i>
+                  <p class="p-negociacao-valor">Inversor</p>
+                  <p class="p-negociacao-info" id="inversor-negociacao-proposta">OnGrid</p>
+                </div>
+                <div class="borda-pagamento"></div>
+                <div class="card-negociacao-valor">
+                  <i class="bi bi-cash icone-negociacao-valor"></i>
+                  <p class="p-negociacao-valor">Valor da Proposta</p>
+                  <p class="p-negociacao-info"id="valor-final-negociacao-proposta">50000</p>
+                </div>
+
+
+              </div>
+              
+            </div>
+          </div>
+          <div class="card-desconto-negociacao">
+            <div class="header-card-global">
+                <i class="bi bi-suitcase-lg icone-header-global"></i>
+                <p class="texto-header-global">Etapa 2</p>
+                <h3 class="titulo-header-global">Negociação</h3>
+            </div>
+            <div class="main-card-negociacao">
+              <div class="container-input-valor">
+                <div class="input-valor-negociacao">
+                  <div class="container-icone-negociacao">
+                    <i class="bi bi-currency-dollar icone-negociacao"></i>
+                  </div>
+                  <input type="text" placeholder="Informe o novo valor negociado" class="input-negociacao" id="valor-negociado-proposta">
+                  
+                </div>
+              </div>
+              <div class="borda-pagamento"></div>
+              <div class="container-items-valor fundo-verde">
+                  <div class="container-icone-valor">
+                    <i class="bi-tag icone-valor-negociacao verde"></i>
+                  </div>
+                <div class="container-valor-texto">
+                  <p class="title-valor-negociacao verde-titulo ">Desconto da proposta</p>
+                  <p class="p-valor-negociacao verde" id="desconto-negociacao-proposta">0.0%</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="card-pagamento-negociacao">
+            <div class="header-card-global">
+                <i class="bi bi-wallet2 icone-header-global"></i>
+                <p class="texto-header-global">Etapa 3</p>
+                <h3 class="titulo-header-global">Forma de Pagamento</h3>
+            </div>
+            <div class="main-card-negociacao">
+              <div class="container-pagamento-1-negociacao">
+                <div class="container-titulo-pagamento-negociacao">
+                  <i class="bi bi-credit-card icone-pagamento-negociacao"></i>
+                  <h3 class="h3-pagamento-negociacao">Pagamento 1</h3>
+                </div>
+                
+                <div class="container-elementos-pagamento-negociacao">
+                  <label for="" class="label-pagamento-negociacao">Primeiro pagamento</label>
+                  <div class="container-items-pagamento-negociacao">
+                    <p class="p-pagamento-negociacao">R$</p>
+                    <input type="text" id="valor-pagamento-1" class="input-pagamento-negociacao" placeholder="Ex.: R$ 2.500,00">
+                  </div>
+                </div>
+                <div class="container-elementos-pagamento-negociacao">
+                  <label for="" class="label-pagamento-negociacao">Tipo de Pagamento </label>
+                  <div class="container-items-pagamento-negociacao aumentar-input">
+                    <select name="" id="forma-pagamento-1-negociacao" class="select-pagamento-negociacao ">
+                      <option value="" class="opcao-select">Selecione</option>
+                      <option value="Á vista">Á vista</option>
+                      <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="container-elementos-pagamento-negociacao ">
+                  <label for="" class="label-pagamento-negociacao">Quantidade de Parcelas</label>
+                  <div class="container-items-pagamento-negociacao aumentar-input">
+                    <select name="" id="parcela-pagamento-1-negociacao" class="select-pagamento-negociacao">
+                      <option value="" class="opcao-select">Selecione</option>
+                      <option value="1">1</option>
+                       <option value="2">2</option>
+                        <option value="3">3</option>
+                         <option value="4">4</option>
+                          <option value="5">5</option>
+                           <option value="6">6</option>
+                            <option value="7">7</option>
+                             <option value="8">8</option>
+                              <option value="9">9</option>
+                               <option value="10">10</option>
+                                <option value="11">11</option>
+                                 <option value="12">12</option>
+                                  <option value="13">13</option>
+                                   <option value="14">14</option>
+                                    <option value="15">15</option>
+                                     <option value="16">16</option>
+                                      <option value="17">17</option>
+                                       <option value="18">18</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="borda-pagamento"></div>
+              <div class="container-pagamento-2-negociacao hidden" id="container-pagamento-2">
+                <div class="container-titulo-pagamento-negociacao" id="campo-header-pagamento">
+                  <i class="bi bi-credit-card-2-back icone-pagamento-negociacao"></i>
+                  <h3 class="h3-pagamento-negociacao">Pagamento 2</h3>
+                </div>
+                <div class="container-elementos-pagamento-negociacao" id="campo-valor-pagamento">
+                  <label for="" class="label-pagamento-negociacao">Segundo pagamento</label>
+                  <div class="container-items-pagamento-negociacao">
+                    <p class="p-pagamento-negociacao">R$</p>
+                    <input type="text" id="valor-pagamento-2" class="input-pagamento-negociacao" placeholder="Valor restante">
+                  </div>
+                </div>
+                <div class="container-elementos-pagamento-negociacao" id="campo-tipo-pagamento">
+                  <label for="" class="label-pagamento-negociacao">Tipo de Pagamento </label>
+                  <div class="container-items-pagamento-negociacao aumentar-input">
+                    <select name="" id="forma-pagamento-2-negociacao" class="select-pagamento-negociacao ">
+                      <option value="" class="opcao-select">Selecione</option>
+                      <option value="Á vista">Á vista</option>
+                      <option value="Cartão de Crédito">Cartão de Crédito</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="container-elementos-pagamento-negociacao" id="campo-parcela-pagamento">
+                  <label for="" class="label-pagamento-negociacao">Quantidade de Parcelas</label>
+                  <div class="container-items-pagamento-negociacao aumentar-input">
+                    <select name="" id="parcela-pagamento-2-negociacao" class="select-pagamento-negociacao">
+                      <option value="" class="opcao-select">Selecione</option>
+                      <option value="1">1</option>
+                       <option value="2">2</option>
+                        <option value="3">3</option>
+                         <option value="4">4</option>
+                          <option value="5">5</option>
+                           <option value="6">6</option>
+                            <option value="7">7</option>
+                             <option value="8">8</option>
+                              <option value="9">9</option>
+                               <option value="10">10</option>
+                                <option value="11">11</option>
+                                 <option value="12">12</option>
+                                  <option value="13">13</option>
+                                   <option value="14">14</option>
+                                    <option value="15">15</option>
+                                     <option value="16">16</option>
+                                      <option value="17">17</option>
+                                       <option value="18">18</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="container-add-pagamento" id="container-campo-add">
+                <i class="bi bi-plus-circle icone-add-pagamento" id="botao-add-pagamento-negociacao"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card-resultado-negociacao">
+            <div class="header-card-global">
+                <i class="bi bi-graph-up-arrow icone-header-global"></i>
+                <p class="texto-header-global">Etapa 4</p>
+                <h3 class="titulo-header-global">Resultado da Análise</h3>
+            </div>
+            <div class="main-card-negociacao">
+              <div class="container-mcs-negociacao">
+                <div class="container-items-analise fundo-laranja">
+                  <div class="container-icone-resultado">
+                    <i class="bi bi-activity icone-valor-negociacao laranja"></i>
+                  </div>
+                  <div class="container-items-resultado">
+                    <h4 class="title-valor-negociacao azul-laranja">MCS</h4>
+                    <p class="p-valor-negociacao laranja" id="mcs-negociacao">-</p>
+                  </div>
+                </div>
+              </div>
+              <div class="borda-pagamento"></div>
+              <div class="container-resultado-negociacao">
+                <div class="container-items-analise " id="container-item-analise">
+                  <div class="container-icone-resultado">
+                    <i class="bi bi-emoji-expressionless icone-valor-negociacao" id="icone-resultado-negociacao"></i>
+                  </div>
+                  <div class="container-items-resultado">
+                    <h4 class="title-valor-negociacao" id="titulo-resultado-negociacao">Resultado</h4>
+                    <p class="p-valor-negociacao" id="texto-mcs-negociacao">Aguardando</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-resumo-negociacao">
+            <header class="header-resumo">
+                  <i class="bi bi-clipboard-check-fill icone-header"></i>
+                <div class="header-resummo-titulo">
+                    <h2 class="h2-resumo">Resumo da Negociacão</h2>
+                    <p class="p-resumo">Atualização em tempo real</p>
+                </div>
+              </header>
+            <div class="resumo-main">
+              <h6 class="h6-resumo"><i class="bi bi-clipboard-plus icone-resumo"></i>Proposta</h6>
+                      <div class="card-resumo-item">
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">ID da Proposta</p>
+                          <p id="id-resumo-negociacao" class="p-resumo-resultado">-</p>
+                        </div>
+                      </div>
+                      <div class="card-resumo-item">
+                    <div class="resumo-dados">
+                      <p class="p-resumo-dados">Valor da Proposta</p>
+                      <p id="valor-final-resumo-negociacao"class="p-resumo-resultado">-</p>
+                    </div>
+                      </div>
+                      <div class="card-resumo-item">
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">Desconto</p>
+                          <p id="desconto-resumo-negociacao" class="p-resumo-resultado">-</p>
+                        </div>
+                      </div>
+              <h6 class="h6-resumo"><i class="bi bi-credit-card-2-back icone-resumo"></i>Forma de Pagamento</h6>
+                      <div class="card-resumo-item">
+                          <div class="resumo-dados">
+                            <p class="p-resumo-dados">Forma de Pagamento 1</p>
+                            <p id="forma-1-pagamento-resumo-negociacao" class="p-resumo-resultado">-</p>
+                          </div>
+                      </div>
+                      <div class="card-resumo-item">
+                          <div class="resumo-dados">
+                            <p class="p-resumo-dados">Valor</p>
+                            <p id="valor-1-resumo-negociacao" class="p-resumo-resultado">-</p>
+                          </div>
+                      </div>
+                      <div class="card-resumo-item">
+                          <div class="resumo-dados">
+                            <p class="p-resumo-dados">Quantidade de Parcelas</p>
+                            <p id="parcelas-1-resumo-negociacao" class="p-resumo-resultado">-</p>
+                          </div>
+                      </div>
+                      <div class="card-resumo-item">
+                    <div class="resumo-dados">
+                      <p class="p-resumo-dados">Forma de Pagamento 2</p>
+                      <p id="forma-2-pagamento-resumo-negociacao" class="p-resumo-resultado">-</p>
+                    </div>
+                      </div>
+                      <div class="card-resumo-item">
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">Valor</p>
+                          <p id="valor-2-resumo-negociacao" class="p-resumo-resultado">-</p>
+                        </div>
+                      </div>
+                      <div class="card-resumo-item">
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">Quantidade de Parcelas</p>
+                          <p id="parcelas-2-resumo-negociacao" class="p-resumo-resultado">-</p>
+                        </div>
+                      </div>
+              <h6 class="h6-resumo"><i class="bi bi-graph-up-arrow icone-resumo"></i>Resultado Análise</h6>
+                          <div class="card-resumo-item">
+                            <div class="resumo-dados">
+                              <p class="p-resumo-dados">MCS</p>
+                              <p id="mcs-resumo-negociacao"class="p-resumo-resultado">-</p>
+                            </div>
+                          </div>
+                          <div class="card-resumo-item">
+                            <div class="resumo-dados">
+                              <p class="p-resumo-dados">Resultado</p>
+                              <p id="resultdo-resumo-negociacao" class="p-resumo-resultado">-</p>
+                            </div>
+                          </div>  
+                           <div class="card-resumo-item">
+                    <div class="resumo-dados">
+                      <p class="p-resumo-dados">Valor Negociado</p>
+                      <p id="valor-negociado-resumo-negociacao" class="p-resumo-resultado">-</p>
+                    </div>
+                      </div>        
+                      
+             </div>  
+            <div class="resumo-footer">
+                      
+                        <button class="botao-resumo"> <i class="bi bi-suitcase-lg"></i>Finalizar Negociação</button>
+                        <p class="p-resumo-footer">Conclua a negociação ou gere a proposta atualizada em PDF.</p>
+                        <button class="gerar-proposta-pdf"> <i class="bi bi-filetype-pdf"></i>Gerar Proposta Negociada</button>
+
+             </div>
+          </div>
+          <div class="card-dica-negociacao-1">
+           
+            <p class="p-dica-negociacao"> <i class="bi bi-rocket-takeoff icone-dica-negociacao"></i> <b> Dica: </b>Confira as informações da proposta antes de iniciar a negociação. Todas as alterações realizadas serão refletidas na análise da margem e no resultado final. </p>
+          </div>
+          <div class="card-dica-negociacao-2">
+           
+            <p class="p-dica-negociacao"> <i class="bi bi-rocket-takeoff icone-dica-negociacao"></i> <b> Dica:</b> Informe o novo valor negociado com o cliente.  </p>
+            <p class="p-dica-negociacao">O sistema calculará automaticamente o desconto aplicado em relação ao valor original.</p>
+          </div>
+          <div class="card-dica-negociacao-3">
+           
+            <p class="p-dica-negociacao"> <i class="bi bi-rocket-takeoff icone-dica-negociacao"></i> <b> Dica:</b> Escolha a forma de pagamento desejada. Caso utilize duas formas de pagamento, informe o valor da primeira.</p>
+            <p class="p-dica-negociacao">O sistema calculará automaticamente o valor restante para a segunda e atualizará o MCS conforme as condições selecionadas.</p>
+          </div>
+          <div class="card-dica-negociacao-4">
+           
+            <p class="p-dica-negociacao vermelho"> <i class="bi bi-exclamation-diamond icone-dica-negociacao vermelho"></i> <b> Dica:</b> Caso o cliente escolha apenas uma forma de pagamento, o sistema recalculará os valores e registrará automaticamente o segundo pagamento como R$ 0,00.</p>
+          </div>
+          <div class="card-dica-negociacao-5">
+           
+            <p class="p-dica-negociacao"> <i class="bi bi-rocket-takeoff icone-dica-negociacao"></i> <b> Dica:</b> Após preencher todas as informações, o sistema calculará automaticamente o MCS e verificará se a negociação atende às regras comerciais.</p>
+          </div>
+      </section>
+      <section class="container-proposta showGrid" id="section-proposta">
+        <article class="card-cliente-proposta">
+          <div class="header-card-global">
+            <i class="bi bi-people icone-header-global"></i>
+            <p class="texto-header-global">ETAPA 1</p>
+            <h3 class="titulo-header-global">Cliente</h3>
+          </div>
+          <div class="card-main-global">
+            <div class="c-campos-proposta">
+              <label for="" class="lb-proposta">Nome do cliente</label>
+              <div class="c-input-icon">
+                <i class="bi bi-person icone-input"></i>
+                <input type="text" id="nome-proposta" class="input-proposta" placeholder="Digite o nome completo">
+              </div>
+            </div>
+            <div class="c-campos-proposta">
+              <label for="" class="lb-proposta">Celular</label>
+              <div class="c-input-icon">
+                <i class="bi bi-telephone icone-input"></i>
+                <input type="text" class="input-proposta" placeholder="(12) 34567 - 8910" id="telefone-proposta">
+              </div>
+            </div>
+            <div class="c-campos-proposta">
+              <label for="" class="lb-proposta">Proposta Teste</label>
+                <label class="switch">
+                  <input type="checkbox" class="teste-proposta" id="status">
+                  <span class="slider"></span>
+                </label>
+            </div>
+            <div class="c-campos-proposta">
+              <div class="c-alerta-plataforma" id="botao-dica-teste">
+                <i class="bi bi-exclamation-circle icone-dica-proposta azul"></i>
+                <p class="texto-alerta-plataforma hidden" id="texto-dica-teste"> Ative essa opção caso deseja efetuar uma proposta teste.</p>
+              </div>
+            </div>
+            <div class="c-campos-proposta" id="canal-container-proposta">
+              <label for="" class="lb-proposta">Canal de vendas</label>
+              <div class="c-input-icon">
+                <i class="bi bi-broadcast icone-input"></i>
+                <select type="text" class="input-proposta" placeholder="Digite o nome completo" id="canal-proposta">
+                  <option value="" class="option-select">Selecione</option>
+                  <option value="Indicação">Indicação</option>
+                  <option value="Field sales">Field sales</option>
+                  <option value="Digital Simulação">Digital Simulação</option>
                   <option value="SAGA">SAGA</option>
                   <option value="Evento">Evento</option>
                   <option value="Sindicato">Sindicato</option>
@@ -128,194 +909,693 @@
                   <option value="Outros">Outros</option>
                 </select>
               </div>
-              <div class="campo-grupo">
-                <div class="label-info">
-                  <label class="lb" for="input-cidade">Localização</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <input type="text" class="campo" id="input-cidade" placeholder="Digite a cidade"
-                  autocomplete="new-password" data-required="true">
+            </div>
+          </div>
+        </article>
+        <article class="card-localizacao-proposta">
+          <div class="header-card-global">
+            <i class="bi bi-geo-alt icone-header-global"></i>
+            <p class="texto-header-global">ETAPA 2</p>
+            <h3 class="titulo-header-global">Localização</h3>
+          </div>
+          <div class="card-main-global">
+            <div class="c-campos-proposta">
+              <label for="" class="lb-proposta">Cidade</label>
+              <div class="c-input-icon">
+                <i class="bi bi-pin-map icone-input"></i>
+                <input type="text" class="input-proposta" placeholder="Digite a cidade" id="local-proposta">
               </div>
-              <div class="campo-grupo">
-                <div class="label-info">
-                  <label class="lb" for="modulo-proposta">Modulo</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <select type="text" class="selecao" id="modulo-proposta" data-required="true">
-                  <option value="">Selecione</option>
+            </div>
+            <div class="c-campos-proposta">
+              <label for="" class="lb-proposta">Módulo</label>
+              <div class="c-input-icon">
+                <i class="bi bi-grid-3x3-gap icone-input"></i>
+                <select type="text" class="input-proposta" placeholder="Digite o nome completo" id="modulo-proposta">
+                  <option value="" class="option-select">Selecione</option>
                   <option value="575Wp Tier 1">575Wp Tier 1</option>
                   <option value="585Wp Tier 1">585Wp Tier 1</option>
                   <option value="610Wp Tier 1">610Wp Tier 1</option>
                   <option value="700Wp Tier 1">700Wp Tier 1</option>
                 </select>
               </div>
-              <div class="campo-grupo">
-                <div class="label-info">
-                  <label class="lb" for="inversor-proposta">Inversor</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <select type="text" class="selecao" id="inversor-proposta">
+            </div>
+            <div class="c-campos-proposta">
+              <label for="" class="lb-proposta">Inversor</label>
+              <div class="c-input-icon">
+                <i class="bi bi-plug icone-input"></i>
+                <select type="text" class="input-proposta" placeholder="Digite o nome completo" id="inversor-proposta">
+                  <option value="" class="option-select">Selecione</option>
                   <option value="String Ongrid">String Ongrid</option>
+                  <option value="Híbrido">Híbrido</option>
                 </select>
               </div>
-              <div class="campo-grupo">
-                <div class="label-info">
-                  <label class="lb" for="promocao-proposta">Promocão</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <input type="text" class="campo" id="promocao-proposta" autocomplete="new-password" />
+            </div>
+            <div class="c-campos-proposta">
+              <label for="" class="lb-proposta">Promoção (Opcional)</label>
+              <div class="c-input-icon">
+                <i class="bi bi-tag icone-input"></i>
+                <input type="text" class="input-proposta" placeholder="Ex: BLACK20" id="promocao-proposta">
               </div>
             </div>
-            <div class="card-2" style="background-color: #273c75;">
-              <h2 class="h2-plataforma-for" style="color: #ffb200;">Hsp</h2>
-              <div class="campo-grupo">
-                <label class="lb branco">HSP</label>
-                <p class="p-general border-branco branco" id="input-hsp">0</p>
+          </div>
+        </article>
+        <article class="card-consumo-proposta">
+          <div class="header-card-global">
+            <i class="bi bi-lightning-charge icone-header-global"></i>
+            <p class="texto-header-global">ETAPA 3</p>
+            <h3 class="titulo-header-global">Consumo</h3>
+          </div>
+          <div class="card-main-global " id="main-consumo-proposta" >
+            <div class="c-campos-consumo" id="campo-consumo-proposta">
+              <div class="c-consumo-tipo">
+                <i class="bi bi-lightning icone-consumo"></i>
+                <div class="c-consumo">
+                  <label for="" class="lb-consumo">Energia</label>
+                  <input type="text" class="input-consumo" placeholder="Ex: 706" id="consumo-energia-proposta">
+                </div>
+              </div>
+              <div class="c-consumo-tipo">
+                <i class="bi bi-layers icone-consumo"></i>
+                <div class="c-consumo">
+                  <label for="" class="lb-consumo">Placas</label>
+                  <input type="text" class="input-consumo" placeholder="Ex: 20" id="consumo-placa-proposta">
+                </div>
               </div>
             </div>
-            <div class="card-3">
-              <h2 class="h2-plataforma-for">Consumo</h2>
-              <div class="campo-grupo">
-                <div class="label-info">
-                  <label class="lb" for="consumo-proposta">Consumo</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <select type="text" class="campo" id="consumo-proposta" data-required="true">
-                  <option value="" selected disabled>Base de cálculo</option>
-                  <option value="1">kWh</option>
-                  <option value="2">Placas</option>
-                </select>
+            <div class="c-campos-proposta " id="campo-dica-consumo-proposta">
+              <div class="c-alerta-plataforma" id="botao-dica-consumo">
+                <i class="bi bi-exclamation-circle icone-dica-proposta azul"></i>
+                <p class="texto-alerta-plataforma hidden" id="texto-dica-consumo"> Preencha apenas um campo, o outro será desativado sistemicamente.</p>
               </div>
-              <div class="campo-grupo hidden" id="div-consumo-kwh">
-                <div class="label-info">
-                  <label class="lb" for="consumo-kwh">kWh</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <input type="text" class="campo" id="consumo-kwh" autocomplete="new-password" />
-              </div>
-              <div class="campo-grupo hidden" id="div-consumo-placa">
-                <div class="label-info">
-                  <label class="lb" for="consumo-placa">Placas</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <input type="text" class="campo" id="consumo-placa" autocomplete="new-password" />
-              </div>
-
-              <div class="grupo">
-                <div class="label-info">
-                  <label class="lb" for="expansao">Expansão de placas</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
+            </div>
+            <div class="c-campos-proposta " id="campo-expansao-proposta">
+              <label for="" class="lb-proposta">Expansão de Placas </label>
                 <label class="switch">
-                  <input type="checkbox" id="expansao" />
+                  <input type="checkbox" class="expansao-proposta" id="status">
                   <span class="slider"></span>
                 </label>
-              </div>
-              <div class="campo-grupo hidden" id="div-input-expansao">
-                <div class="label-info">
-                  <label class="lb" for="qtd-expansao-proposta">Quantidade de placas</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <input type="text" class="campo" id="qtd-expansao-proposta" autocomplete="new-password" />
+            </div>        
+            <div class="c-campos-proposta " id="campo-dica-expansao-proposta">
+              <div class="c-alerta-plataforma" id="botao-dica-expansao">
+                <i class="bi bi-exclamation-circle icone-dica-proposta azul"></i>
+                <p class="texto-alerta-plataforma hidden" id="texto-dica-expansao"> Ative caso seja necessário uma expansão de placas de acordo com a necessidade.</p>
               </div>
             </div>
-            <div class="card-4">
-              <h2 class="h2-plataforma-for">Instalação</h2>
-              <div class="campo-grupo">
-                <div class="label-info">
-                  <label class="lb" for="valor-kwh-proposta">Preço kWh</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <input type="text" name="" id="valor-kwh-proposta" class="campo" autocomplete="new-password">
+            <div class="c-campos-proposta hidden" id="container-qtd-expansao-proposta">
+              <label for="" class="lb-proposta">Quantidade de placas</label>
+              <div class="c-input-icon">
+                <i class="bi bi-layers icone-input"></i>
+                <input type="text" class="input-proposta" placeholder="Digite a quantidade de placas" id="qtd-expansao-proposta">
               </div>
-              <div class="campo-grupo">
-                <div class="label-info">
-                  <label class="lb" for="instalacao-proposta">Instalação</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <select type="text" class="selecao" id="instalacao-proposta"data-required="true">
-                  <option value="">Selecione</option>
+            </div>
+            
+          </div>
+          <div class="card-main-global hidden" id="main-hibrido-proposta" style="display: flex; align-items: center;
+          justify-content: flex-start; padding: 64px 32px;">
+            <i class="bi bi-gear" style="color: var(--cor-terciaria); font-size: 40px;"></i>
+            <p style="text-align: center; color: var(--cor-texto-primaria);">Estamos trabalhando nesta funcionalidade. Em breve, ela fará parte da plataforma.</p>
+          </div>
+          
+        </article>
+        <article class="card-instalacao-proposta">
+          
+          <div class="header-card-global">
+            <i class="bi bi-wrench-adjustable icone-header-global"></i>
+            <p class="texto-header-global">ETAPA 4</p>
+            <h3 class="titulo-header-global">Instalação</h3>
+          </div>
+          <div class="card-main-global-row">
+             <div class="c-campos-proposta">
+              <label for="" class="lb-proposta">Preço (R$/kWh)</label>
+              <div class="c-input-icon">
+                <i class="bi bi-cash-coin icone-input"></i>
+                <input type="text" class="input-proposta" placeholder="Digite o valor Ex R$ 1" id="preco-kwh-proposta">
+              </div>
+            </div>
+            <div class="c-campos-proposta">
+              <label for="" class="lb-proposta">Instalação</label>
+              <div class="c-input-icon">
+                <i class="bi bi-outlet icone-input"></i>
+                <select type="text" class="input-proposta" id="instalacao-proposta">
+                  <option value="" class="option-select">Selecione</option>
                   <option value="Bifásico">Bifásico</option>
                   <option value="Trifásico">Trifásico</option>
 
                 </select>
               </div>
-              <div class="campo-grupo">
-                <div class="label-info">
-                  <label class="lb" for="telhado-proposta">Telhado</label>
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <select type="text" class="selecao" id="telhado-proposta"data-required="true">
-                  <option value="">Selecione</option>
+            </div>
+            <div class="c-campos-proposta">
+              <label for="" class="lb-proposta">Telhado</label>
+              <div class="c-input-icon">
+                <i class="bi bi-house-up icone-input"></i>
+                <select type="text" class="input-proposta" id="telhado-proposta">
+                  <option value="" class="option-select">Selecione</option>
                   <option value="Cerâmico">Cerâmico</option>
                   <option value="Fibrocimento">Fibrocimento</option>
-                  <option value="Metálico">Metálico</option>
                   <option value="Laje">Laje</option>
+                  <option value="Metálico">Metálico</option>
                 </select>
               </div>
             </div>
-            <div class="card-5" style="background-color: #273c75;">
-              <h2 class="h2-plataforma-for" style="color: #ffb200;">Placas</h2>
-              <div class="campo-grupo">
-                <label class="lb branco">Quantidade de Placas</label>
-                <p class="p-general border-branco branco" id="quantidade-placa-proposta">0</p>
-              </div>
+          </div>
+        </article>
+        <article class="card-hsp-proposta">
+          <div class="header-card-info">
+            <i class="bi bi-sun icone-card-info"></i>
+            <h3 class="h3-card-info">HSP</h3>
+          </div>
+          <div class="card-main">
+            <label for="" class="lb-proposta">HSP (Horas de sol pico)</label>
+            <p class="texto-hsp" id="hsp-proposta">0,00</p>
+          </div>
+        </article>
+        <article class="card-placas-proposta">
+          <div class="header-card-info">
+            <i class="bi bi-stack icone-card-info azul"></i>
+            <h3 class="h3-card-info">Placas</h3>
+          </div>
+          <div class="card-main">
+            <label for="" class="lb-proposta">Quantidade de Placas</label>
+            <p class="texto-hsp" id="quantidade-placa-proposta">0</p>
+          </div>
+        </article>
+        <article class="card-dica-proposta">
+                <p class="texto-dica-plataforma"><i class="bi bi-rocket-takeoff"></i> <b>Dica:</b> Os cálculos são atualizados automaticamente. Certifique-se de que todas as informações estejam corretas antes de continuar.</p>
+        </article>
+        <article class="card-resumo-proposta">
+          <div class="header-resumo">
+            <i class="bi bi-clipboard2-plus-fill icone-header"></i>
+            <div class="header-resummo-titulo">
+              <h2 class="h2-resumo">Resumo da Proposta</h2>
+              <p class="p-resumo">Confira as informações antes de continuar</p>
             </div>
           </div>
-          <div class="resumo-proposta-plataforma">
-            <h2 class="h2-plataforma-for">Resumo Proposta</h2>
-            <div class="resumo-conteudo">
-              <div class="resumo-chave">
-                <h4>Cliente</h4>
-                <p class="background-escuro">Nome</p>
-                <p>Celular</p>
-                <p class="background-escuro">Localização</p>
-                <p>Area de Telhado</p>
-                <p class="background-escuro">Quantidade de Placas</p>
-                <p>Geração de Energia (kWh)</p>
-                <p class="background-escuro">Conta de Energia sem a Siltech</p>
-                <p>Conta de energia com a Siltech</p>
-                <p class="background-escuro">Lucro em 1 Ano</p>
-                <p>Lucro em 15 anos</p>
-              </div>
-              <div class="resumo-valor">
-                <h4>Proposta</h4>
-                <p id="nome-resumo" class="background-escuro">-</p>
-                <p id="celular-resumo">-</p>
-                <p id="localizacao-resumo" class="background-escuro">-</p>
-                <p id="area-resumo">-</p>
-                <p id="placas-resumo" class="background-escuro">-</p>
-                <p id="geracao-energia-resumo">-</p>
-                <p id="valor-sem-resumo" class="background-escuro">-</p>
-                <p id="valor-com-resumo">-</p>
-                <p id="economia-1-ano-resumo" class="background-escuro">-</p>
-                <p id="economia-15-anos-resumo">-</p>
-              </div>
-            </div>
-            <button type="submit" class="botao amarelo" id="btn-confirmar-plataforma">
-              Gerar Proposta
-            </button>
-            <button class="botao esconder" id="btn-gerar-plataforma">
-              Gerar PDF
-            </button>
+          <div class="resumo-main">
+              <h6 class="h6-resumo"><i class="bi bi-clipboard-plus icone-resumo"></i>Proposta</h6>
+               <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados ">ID da Proposta</p>
+                    <p id="id-resumo-proposta" class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                 <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Colaborador</p>
+                    <p id="colaborador-resumo-proposta" class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                 <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Data</p>
+                    <p id="data-resumo-proposta" class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+              <h6 class="h6-resumo"><i class="bi bi-person icone-resumo"></i>Cliente</h6>
+                <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Nome</p>
+                    <p id="nome-resumo-proposta" class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Celular</p>
+                    <p id="telefone-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Proposta Teste</p>
+                    <p id="teste-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Canal de Vendas</p>
+                    <p id="canal-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+              <h6 class="h6-resumo"><i class="bi bi-geo icone-resumo"></i>Localização</h6>
+                <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Cidade</p>
+                    <p id="local-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Modulo</p>
+                    <p id="modulo-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Inversor</p>
+                    <p id="inversor-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Promoção</p>
+                    <p id="promocao-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+              <h6 class="h6-resumo"><i class="bi bi-lightning-charge icone-resumo"></i>Consumo</h6>
+                  <div class="card-resumo-item ">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Quantidade Placas</p>
+                    <p id="placas-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Expansão de Placas</p>
+                    <p id="espansao-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Placas Expansivas</p>
+                    <p id="qtd-expansao-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                   <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Hsp</p>
+                    <p id="hsp-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+              <h6 class="h6-resumo"><i class="bi bi-wrench-adjustable-circle icone-resumo"></i>Instalação</h6>
+                     <div class="card-resumo-item hidden">
+                  <div class="resumo-dados" >
+                    <p class="p-resumo-dados">Preço kWh</p>
+                    <p id="preco-kwh-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                   <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Instalação</p>
+                    <p id="instalacao-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                   <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Telhado</p>
+                    <p id="telhado-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                   <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Área</p>
+                    <p id="area-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+              <h6 class="h6-resumo"><i class="bi bi-piggy-bank icone-resumo"></i>Custos</h6>
+          <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">CMV</p>
+                    <p id="cmv-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+          </div>
+          <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Custo Telhado</p>
+                    <p id="custo-telhado-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+          </div> 
+          <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Custo Homologação</p>
+                    <p id="custo-homologacao-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+          </div>
+           <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Custo Instalação</p>
+                    <p id="custo-instalacao-resumo-proposta"class="p-resumo-resultado">-</p>
+                  </div>
+          </div>
+          <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Retorno</p>
+                    <p id="retorno-resumo-proposta"class="p-resumo-resultado">-</p>
+                  </div>
+          </div>  
+          <div class="card-resumo-item hidden">
+                  <div class="resumo-dados ">
+                    <p class="p-resumo-dados">Custo Equipamento</p>
+                    <p id="custo-equipamento-resumo-proposta"class="p-resumo-resultado">-</p>
+                  </div>
+          </div>
+          <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados" style="color: var(--cor-erro);">Conta sem Siltech</p>
+                    <p id="conta-sem-siltech-resumo-proposta"class="p-resumo-resultado" style="color: var(--cor-erro);">-</p>
+                  </div>
+          </div>  
+          <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados" style="color: var(--cor-sucesso);">Conta com Siltech</p>
+                    <p id="conta-com-siltech-resumo-proposta"class="p-resumo-resultado" style="color: var(--cor-sucesso);">-</p>
+                  </div>
+          </div> 
+          <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Economia Anual</p>
+                    <p id="economia-anual-resumo-proposta"class="p-resumo-resultado">-</p>
+                  </div>
+          </div>
+          <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Economia 15 anos</p>
+                    <p id="economia-15-resumo-proposta"class="p-resumo-resultado">-</p>
+                  </div>
+          </div>
+          <div class="card-resumo-item hidden">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Valor Final</p>
+                    <p id="valor-final-resumo-proposta"class="p-resumo-resultado">-</p>
+                  </div>
+          </div>           
+          <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados" style="color: var(--cor-terciaria);">Energia Gerada</p>
+                    <p id="energia-gerada-resumo-proposta"class="p-resumo-resultado" style="color: var(--cor-terciaria);" >-</p>
+                  </div>
+          </div>  
 
           </div>
-        </div>
-    
+          <div class="resumo-footer">
+            <button class="botao-resumo" id="botao-gerar-pdf-proposta">
+              <i class="bi bi-filetype-pdf"></i>Gerar PDF da Proposta</button>
+              <p class="p-resumo-footer">Proposta gerada simultaneamente.</p>
+          </div>
+        </article>
+       
       </section>
-      
+      <section class="container-historico" id="section-historico" style=" align-items: center;
+      justify-content: center; flex-direction: column; ; background-color: var(--cor-fundo-card);">
+         <i class="bi bi-gear" style="color: var(--cor-terciaria); font-size: 75px;"></i>
+        <h1 style="font-size: 25px; color: var(--cor-texto-primaria)">Estamos trabalhando nesta funcionalidade. Em breve, ela fará parte da plataforma.</h1>
+      </section>
+      <section class="container-proposta-pdf" id="section-pdf">
+        <div class="container-pdf">
+          <section class="pg-pdf pg-capa-pdf">
+            <div class="capa-pdf">
+                <div class="container-capa-pdf">
+                    <img src="img/logo-siltech.png" alt="Logo proposta" height="55px" width="55px">
+                </div>
+                <div class="container-capa-pdf">
+                    <h1 class="h1-capa-pdf">Proposta Comercial</h1>
+                    <p class="p-proposta-pdf"><i>O sol brilha para todos.</i></p>
+                </div>
+                <div class="container-capa-pdf">
+                    <p class="p-proposta-pdf nomargin">@siltechsolar</p>
+                    <p class="p-proposta-pdf nomargin">(11) 4799-5773</p>
+                    <p class="p-proposta-pdf nomargin">www.siltechsolar.com.br</p>
+                </div>
+            </div>
+            <div class="capa-2-pdf">
+                <img src="./img/imgProposta/imgCAPA2.jpg" alt="Imagem capa" class="img-capa-pdf">
+            </div>
+          </section>
+          <section class="pg-pdf">
+              <div class="cabecalho-pdf">
+                  <img src="img/logo-siltech.png" alt="Logo cabecalho">
+                  <h1 class="titulo-cabecalho-pdf">PROPOSTA COMERCIAL</h1>
+                  <p class="n-pagina-pdf">2</p>
+              </div>
+              <div class="corpo-pdf">
+                  <span id="nome-proposta-pdf" class="p-proposta-pdf bold" style="padding: 0; margin: 0;"><b>Kennedy,</b></span>
+                  <span id="local-proposta-pdf" class="p-proposta-pdf">Mogi das Cruzes</span>
+                  <h3 class="h3-proposta-pdf">DESCRIÇÃO GERAL </h3>
+                  <p class="p-proposta-pdf">Projeto que visa a implementação de um sistema de geração fotovoltaico
+                      distribuído, a fim de gerar créditos energéticos os quais serão compensadas
+                      na fatura de energia elétrica, trazendo sustentabilidade e uma economia de
+                      até 95% no valor da fatura de energia elétrica.
+                  </p>
+                  <h3 class="h3-proposta-pdf">REQUISITOS DE IMPLEMENTAÇÃO:</h3>
+                  <p class="p-proposta-pdf">Para a implementação do sistema, a limitação se dá pelo número de placas,
+                      no caso dimensionado, <b><span id="qtd-placa-proposta-pdf">15</span> placas</b>, os quais necessitam uma área de
+                      aproximadamente <b><span id="area-proposta-pdf">50</span> m²</b>.
+                  </p>
+                  <h3 class="h3-proposta-pdf">INSTALAÇÃO E HOMOLOGAÇÃO:</h3>
+                  <p class="p-proposta-pdf">A proposta conta com o projeto elétrico e a instalação do sistema de
+                      geração distribuída. Para uma correta instalação há necessidade de
+                      avaliação e inspeção prévia, tendo um profissional responsável pelo projeto.
+                  </p>
+                  <p class="p-proposta-pdf">A homologação do sistema junto à concessionaria está contemplada,
+                      haverá orientações em relação aos procedimentos a serem tomados com
+                      a companhia elétrica.</p>
+              </div>
+          </section>
+          <section class="pg-pdf">
+              <div class="cabecalho-pdf">
+                  <img src="img/logo-siltech.png" alt="Logo cabecalho">
+                  <h1 class="titulo-cabecalho-pdf">COMO FUNCIONA O INVESTIMENTO</h1>
+                  <p class="n-pagina-pdf">3</p>
+              </div>
+              <div class="corpo-pdf">
+                  <img src="img/imgProposta/backgroungIMG.png" class="img-background" alt="Background imagem">
+                  <div class="valores-pg-pdf">
+                      <p class="p-problema-pdf" id="problema-proposta-pdf">Problema</p>
+                      <p  class="p-solucao-pdf" id="solucao-proposta-pdf">Solução</p>
+                      <p class="p-valorFinal-pdf" id="valor-final-proposta-pdf">Valor Final</p>
+                      <p class="p-valorEconomia-pdf" id="valor-economia-proposta-pdf">Valor Economia</p>
+                      <p class="p-cartaoCredito-pdf">Cartão de crédito Financiamento</p>
+
+                  </div>
+              </div>
+
+          </section>
+          <section class="pg-pdf">
+              <div class="cabecalho-pdf">
+                  <img src="img/logo-siltech.png" alt="Logo cabecalho">
+                  <h1 class="titulo-cabecalho-pdf">DIMENSIONAMENTO DO PROJETO</h1>
+                  <p class="n-pagina-pdf">4</p>
+              </div>
+              <div class="corpo-pdf">
+                  <p class="p-proposta-pdf">Considerando o perfil do cliente, e o previsto consumo médio, chegamos
+                      a um Kit de <b><span id="kit-proposta-pdf">9.15kWp</span></b>, o que equivale no cenário atual, uma redução de
+                      <b><span id="valor-reducao-proposta-pdf">R$ 985,40</span></b> na fatura de energia elétrica. O Kit de geração distribuída
+                      é composto por:
+                  </p>
+                  <p class="p-proposta-pdf" style="padding: 0 26px ;">• <span id="inversor-proposta-pdf">01 inversor Huawei - 6kW;</span></p>
+                  <p class="p-proposta-pdf" style="padding: 0 26px ;">• <span id="placas-modulo-proposta-pdf">15</span> módulos de <span id="modulo-proposta-pdf">610Wp Tier 1</span>;</p>
+                  <p class="p-proposta-pdf" style="padding: 0 26px ;">• Conectores MC4;</p>
+                  <p class="p-proposta-pdf" style="padding: 0 26px ;">• Estruturas de fixação para telhado do tipo <b><span id="telhado-proposta-pdf">cerâmica;</span></p></b>
+                  <p class="p-proposta-pdf" style="padding: 0 26px ;">• Cabo solar especial.</p>
+
+                  <p class="p-proposta-m-pdf">Sua conta <span style="color: #c91a1a;"><b>SEM</b></span> Energia Solar: <span id="conta-sem-proposta-pdf" style="font-weight: 700; color: #c91a1a;"></span>
+                  </p>
+                  <p class="p-proposta-m-pdf">Sua conta <span style="color: #1a9e5f;"><b>COM</b></span> Energia Solar Siltech:
+                      <span id="conta-com-proposta-pdf" style="font-weight: 700; color: #1a9e5f;"></span></p>
+                  <p class="p-proposta-m-pdf"><b>Energia gerada com o Sistema Solar Siltech:</b> <span class="amarelo" id="energia-proposta-pdf">977
+                              kWh</span></p>
+                  <h1 class="h2-proposta-pdf espaco" style="display: flex; align-self: flex-start; margin-top: 10px; border: none;">CONDIÇÕES GERAIS DE FORNECIMENTO:</h1>
+              <section class="section-tabela-pdf">
+              <table class="tabela-pdf">
+                  <tr class="tabela-linha-pdf">
+                      <td>
+                          <p class="p-tabela-titulo-pdf">72x</p>
+                      </td>
+                      <td>
+                          <p class="p-tabela-titulo-2-pdf">Financiamento</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <p class="p-tabela-titulo-pdf">60x</p>
+                      </td>
+                      <td>
+                          <p class="p-tabela-titulo-2-pdf">Financiamento</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <p class="p-tabela-titulo-pdf">48x</p>
+                      </td>
+              
+                      <td>
+                          <p class="p-tabela-titulo-2-pdf">Financiamento</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <p class="p-tabela-titulo-pdf">10x</p>
+                      </td>
+              
+                      <td>
+                          <p class="p-tabela-titulo-2-pdf">Cartão de Crédito</p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <p class="p-tabela-titulo-pdf">Investimento</p>
+                      </td>
+              
+                      <td>
+                          <p id="valor-total-proposta-pdf" style="font-size: 20px; color: #2F4B7C; font-weight: 700; padding-left: 5px;">
+                              R$ 6666666
+                          </p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <p class="p-tabela-titulo-pdf" >Prazo de Entrega</p>
+                      </td>
+              
+                      <td>
+                          <p class="p-tabela-titulo-2-pdf">
+                              Créditos sendo gerados em 90 (noventa) dias corridos, a contar do dia de fechamento do pedido.
+                          </p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <p class="p-tabela-titulo-pdf">Garantia</p>
+                      </td>
+                      <td>
+                          <p class="p-tabela-titulo-2-pdf">
+                              25 anos de garantia de performance para os módulos;
+                          </p>
+              
+                          <p class="p-tabela-titulo-2-pdf">
+                              12 anos de garantia de fabricação para os módulos;
+                          </p>
+              
+                          <p class="p-tabela-titulo-2-pdf">
+                              10 anos de garantia de fabricação para os inversores.
+                          </p>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>
+                          <p class="p-tabela-titulo-pdf">Validade da Proposta</p>
+                      </td>
+              
+                      <td >
+                          <p class="p-tabela-titulo-2-pdf">
+                              10 (dez) dias corridos a partir da data de emissão da proposta comercial
+                          </p>
+                      </td>
+                  </tr>
+              </table>
+              </section>
+                  <p class="p-proposta menor-pdf"> <b>Importante:</b> O valor da parcela é baseado em taxa média e depende de
+                      análise de crédito e
+                      cadastro. A conta com solar é estimativa, considerando apenas custo de disponibilidade e sem
+                      incluir impostos, encargos, fio B e iluminação pública, que variam conforme o consumo.</p>
+              </div>
+          </section>
+          <section class="pg-pdf">
+              <div class="cabecalho-pdf">
+                  <img src="img/logo-siltech.png" alt="Logo cabecalho">
+                  <h1 class="titulo-cabecalho-pdf">RETORNO DE INVESTIMENTO:</h1>
+                  <p class="n-pagina-pdf">5</p>
+              </div>
+              <div class="corpo-pdf">
+                  <p class="p-proposta-pdf">Neste caso, considerando a economia gerada pelo KIT solar, e aumento da fatura de
+                      energia elétrica em 10,00% a.a.,
+                      o <b>RETORNO DO INVESTIMENTO</b> (payback simples) se dá em <b>28 meses</b> ou <b>2 anos e 4 meses</b>, e após isso o
+                      valor da fatura que seria pago para a
+                      concessionária é lucro para o investidor, portanto em uma análise de 15 anos, teria um retorno de <b><span id="retorno-investimeto-proposta-pdf">
+                      402.391,21 </span></b>, sendo a vida útil mínima das
+                      placas fotovoltaicas igual a 25 anos.
+                  </p>
+                  <img src="./img/imgProposta/retornoInvstimento.jpeg" alt="Imagem retorno investimento" height="300px"
+                      width="500px" style="align-self: center;">
+                  <h1 class="h2-proposta-pdf">CICLO ANUAL DE GERAÇÃO:</h1>
+                  <p class="p-proposta-pdf">A geração de energia solar não é constante todos os meses.
+                      Durante o <b>verão, a irradiação solar é mais intensa</b> e os dias são mais longos, o que aumenta a
+                      produção. Já no inverno, com dias mais curtos, menor ângulo de incidência do sol e maior presença de
+                      chuvas, a geração naturalmente diminui. Essa variação faz parte do comportamento normal do sistema e
+                      <b>deve ser avaliada sempre na média anual, que é o que garante
+                          a economia real e consistente na sua conta de luz.</b></p>
+                  <img src="./img/imgProposta/variacaoMensal.jpeg" alt="Imagem variação mensal" height="300px"
+                      width="500px" style="align-self: center;">
+              </div>
+          </section>
+          <section class="pg-pdf">
+              <div class="cabecalho-pdf">
+                  <img src="img/logo-siltech.png" alt="Logo cabecalho">
+                  <h1 class="titulo-cabecalho-pdf">CONSIDERAÇÕES FINAIS</h1>
+                  <p class="n-pagina-pdf">6</p>
+              </div>
+              <div class="corpo-pdf espaco-pdf">
+                  <p class="p-proposta-pdf">O sistema ora proposto foi dimensionado mediante a uma estimativa de consumo,
+                      entretanto o kit é passível de expansão
+                      e adaptável às necessidades específicas do perfil do cliente.</p>
+                  <p class="p-proposta-pdf">Atenciosamente,</p>
+                  <div class="div-underline-pdf" style="margin-top: 70px;">
+                      <p class="underline-pdf"></p>
+                  <p class="p-proposta-pdf center-pdf nomargin-pdf" style="padding: 0;" id="nome-assinatura-proposta-pdf">Nome</p>
+                  </div>
+                <div class="div-underline-pdf" style="margin-top: 70px;">
+                      <p class="underline-pdf"></p>
+                      <p class="p-proposta-pdf center-pdf">Siltech Energia Solar LTDA</p>
+                  </div>
+                  <p class="p-proposta-pdf center-pdf" style="margin-top: 150px;">Mogi das Cruzes, <span id="data-proposta-pdf">SP, 27 de abril de 2026.</span></p>
+                  <img src="./img/imgProposta/logoProposta.png" alt="Logo Siltech" height="44px" width="190px"
+                      class="center-pdf" style="margin-top: 150px;">
+                  <p class="p-proposta-pdf center-pdf nomargin-pdf">www.siltechsolar.com.br</p>
+                  <p class="p-proposta-pdf center-pdf nomargin-pdf">(11) 4799-5773</p>
+                  <p class="p-proposta-pdf center-pdf nomargin-pdf">@siltechsolar</p>
+
+              </div>
+          </section>
+        </div>
+        <div class="container-pdf-acoes" id="container-enviar">
+          <div class="container-acoes">
+            <i class="bi bi-clipboard2-check icone-proposta-modal"></i>
+        <h2 class="h2-modal">Proposta gerada com sucesso!</h2> 
+        <p class="p-modal">Revise as informações da proposta antes de gerar o PDF final ou imprimir.
+         Caso encontre alguma divergência, clique refaça a proposta através do botão abaixo.</p>
+                 <button class="btn-negociar-proposta" id="btn-negociar-proposta"><i class="bi bi-suitcase-lg icone-modal"></i>Negociar Proposta</button>
+                 <p class="p-dica-modal">Siga para o processo de  negociação da proposta.</p>
+        <button class="btn-pdf-proposta" id="btn-baixar-proposta"><i class="bi bi-printer icone-modal"></i>Imprimir / Gerar PDF</button>
+        <p class="p-dica-modal">Imprima ou gere o PDF para mostrar ao cliente.</p>
+        <button class="btn-voltar-proposta" id="btn-nova-proposta"><i class="bi bi-clipboard icone-modal"></i>Nova Proposta</button>
+        <p class="p-dica-modal">Limpar os dados e iniciar uma nova proposta</p>
+          </div>
+        
+        </div>
+        
+      </section>
+      <div class="container-proposta-negociada-pdf hidden"></div>
     </main>
+    
   </section>
   <script src="js/plataforma/plataforma-funcoes.js"></script>
+  <script src="js/plataforma/plataforma-funcoes-resumo.js"></script>
+  <script src="js/plataforma/plataforma-navegacao.js"></script>
+  <script src="js/Plataforma/plataforma-lancamento-index.js"></script>
+  <script src="js/Plataforma/plataforma-gerar-proposta.js"></script>
+  <script src="js/plataforma/plataforma-gerar-hsp.js"></script>
+  <script src="js/plataforma/plataforma-formulario.js"></script>
+  <!--script do PDF da proposta-->
+   <script src="js/Proposta/proposta-carregar-dados.js"></script>
+    <script src="js/Proposta/proposta-gerar-pdf.js"></script>
+    <script src="js/Proposta/proposta-navegacao.js"></script>
+  <!--Script para negociação-->
+  <script src="js/Negociacao/negociacao-gerar-resumo.js"></script>
+    <script src="js/Negociacao/index.js"></script>
+        <script src="js/Negociacao/formulario.js"></script>
+
+
+  
+  <!-- <script src="js/Plataforma/plataforma-usuarios.js"></script>
+  <script src="js/Plataforma/plataforma-registrar-banco.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
   <script src="js/plataforma/plataforma-enviar-dados.js"></script>
   <script src="js/plataforma/plataforma-formulario.js"></script>
-  <script src="js/plataforma/plataforma-gerar-hsp.js"></script>
-  <script src="js/plataforma/plataforma-navegacao.js"></script>
+  
   <script src="js/plataforma/plataforma-validacao.js"></script>
+   -->
+
 </body>
 
 </html>

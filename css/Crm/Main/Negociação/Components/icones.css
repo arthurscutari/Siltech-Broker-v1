@@ -1,0 +1,61 @@
+.icone-titulo-negociacao {
+
+    font-size: 16px;
+    padding: 8px;
+    background-color: var(--cor-texto-secundaria);
+    border-radius: 8px;
+    color:var(--cor-preto);
+}
+.d-h-icone-negociacao {
+
+    height: 100%;
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 8px;
+}
+
+.icone-dica-negociacao {
+
+    font-size: 20px;
+    color: #5A8FD3;
+}
+.icone-negociacao {
+    font-size: 20px;
+    padding: 8px;
+    color: var(--cor-texto-primaria);
+
+}
+
+.icone-valor-negociacao {
+
+    font-size: 26px;
+    background-color: white;
+    color: var(--cor-primaria);
+    padding: 10px;
+    border-radius: 300px;
+}
+
+.icone-pagamento-negociacao {
+
+    font-size: 16px;
+    padding: 6px;
+    border-radius: 4px;
+    background-color: var(--cor-texto-secundaria);
+    color: var(--cor-preto);
+    border: 1px solid rgb(221, 221, 221)
+}
+.icone-negociacao-valor{
+
+    font-size: 18px;
+    background-color: var(--cor-fundo);
+    padding: 8px;
+    border-radius: 50px;
+    color: var(--cor-terciaria);
+}
+.icone-add-pagamento{
+    font-size: 45px;
+    color: var(--cor-terciaria);
+    cursor: pointer;
+}

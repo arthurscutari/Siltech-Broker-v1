@@ -1,0 +1,26 @@
+.configuracao-plataforma{
+
+    grid-column: 1/2;
+    grid-row: 16/19;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 8px;
+    gap: 6px;
+}
+
+.c-itens-configuracao-plataforma {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px;
+    gap: 15px;
+    cursor: pointer;
+}
+.a-texto-configuracao-plataforma {
+
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}

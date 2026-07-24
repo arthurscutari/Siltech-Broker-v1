@@ -1,0 +1,27 @@
+.icone-consumo {
+
+    font-size: 22px;
+    padding: 4px 8px;
+    color: var(--cor-primaria);
+}
+.flex-row {
+    flex-direction: row;
+}
+.azul{
+
+     color: #2232c5;
+}
+.fundo-selecao {
+
+    background-color: var(--cor-fundo-card);
+}
+.cor-selecao{
+
+
+    color: var(--cor-primaria) !important;
+
+}
+.mudarGrid{
+    grid-column: 1/10!important;
+    grid-row: 1/19!important;
+}

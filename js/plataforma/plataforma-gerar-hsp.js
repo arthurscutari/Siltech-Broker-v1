@@ -1,5 +1,5 @@
-const inputCidade = document.getElementById("input-cidade");
-const inputHSP = document.getElementById("input-hsp");
+const inputCidade = document.getElementById("local-proposta");
+const inputHSP = document.getElementById("hsp-proposta");
 
 const cidadesDB = {
 
@@ -675,17 +675,23 @@ for (const cidade in cidadesDB) {
 inputCidade.addEventListener("input", () => {
 
   const cidade = normalizarTexto(inputCidade.value);
-
   const cidadeEncontrada = cidadesNormalizadas[cidade];
+
+  const localResumo = document.getElementById('local-resumo-proposta')
+  const hspResumo = document.getElementById('hsp-resumo-proposta')
 
   if (cidadeEncontrada) {
 
-    inputHSP.textContent = cidadeEncontrada.hsp;
+    inputHSP.textContent = cidadeEncontrada.hsp.toFixed(2);
+    proposta.hsp = cidadeEncontrada.hsp.toFixed(2);
+    hspResumo.textContent = proposta.hsp
+    proposta.local = cidade.charAt(0).toUpperCase() + cidade.slice(1)
+    localResumo.textContent = proposta.local
 
   } else {
 
     inputHSP.textContent = "Cidade não encontrada";
-
+    hspResumo.textContent = "Cidade não encontrada"
   }
 
 });

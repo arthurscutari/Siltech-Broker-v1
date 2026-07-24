@@ -1,0 +1,31 @@
+
+.icone-header-lancamento {
+
+    
+    color: var(--cor-preto);
+    font-size: 18px;
+}
+.icone-dica {
+
+    font-size: 16px;
+    color: var(--cor-primaria);
+    padding: 8px;
+}
+.icone-header-resumo {
+
+     color: var(--cor-primaria);
+    font-size: 18px;
+}
+.icone-input-lancamento {
+
+    font-size: 20px;
+    color: var(--cor-preto);
+}
+.icone-resumo {
+      font-size: 14px;
+       color: var(--cor-preto);
+}
+.icone-botao-lancamento {
+    color: white;
+    font-size: 16px;
+}

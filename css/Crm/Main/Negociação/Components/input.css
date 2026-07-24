@@ -1,0 +1,39 @@
+.input-valor-negociacao {
+
+    height: 50%;
+    width: 100%;
+         border: 1px solid rgb(207, 207, 207);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    border-radius: 5px;
+    display: flex;
+}
+.input-negociacao {
+
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    outline: none;
+    flex: 1;
+    padding-left: 8px;
+}
+.input-pagamento-negociacao {
+
+    border: none;
+    background-color: transparent;
+    padding-left: 12px;
+    flex: 1;
+    outline: none;
+}
+.select-pagamento-negociacao {
+
+      border: none;
+    background-color: transparent;
+    padding-left: 12px;
+    flex: 1;
+    outline: none;
+    color: var(--cor-texto-primaria);
+}
+.opcao-select{
+    font-size: 14px;
+    color: var(--cor-texto-primaria);
+}

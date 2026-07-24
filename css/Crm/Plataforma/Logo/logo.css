@@ -1,0 +1,41 @@
+.logo-plataforma{
+
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(209, 209, 209, 0.267);
+    gap: 6px;
+}
+
+
+.img-logo-plataforma{
+
+    height: 32px;
+    width: 30px;
+}
+.c-titulo-logo-plataforma{
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4px;
+}
+.h5-logo-plataforma {
+
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+.h6-logo-plataforma{
+
+      color: white;
+    font-size: 10px;
+    font-weight: 300;
+}

@@ -1,0 +1,43 @@
+
+.botao-buscar-negociacao {
+
+    height: 100%;
+    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: transparent;
+    border: none;
+    color: white;
+     cursor: pointer;
+}
+.botao-gerar-lancamento-negociacao {
+
+    height: 46px;
+    width: 80%;
+    background-color: var(--cor-primaria);
+    color: white;
+    font-size: 16px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.gerar-proposta-pdf{
+      width: 90%;
+    height: 44px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+}
