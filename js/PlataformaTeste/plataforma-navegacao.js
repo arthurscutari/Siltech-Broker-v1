@@ -70,6 +70,7 @@ function dashboardSelecionado(){
     containerPropostaPdf.classList.remove('showFlex')
     limparCamposProposta()
     limparCamposResumo()
+
 }
 function propostaSelecionado(){
 
