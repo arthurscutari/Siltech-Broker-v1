@@ -280,7 +280,7 @@ function attResumoArea(){
 
     const calcularEnergiaResumo = document.getElementById('energia-gerada-resumo-proposta')
 
-    calcularEnergiaResumo.textContent = formatarMoeda(proposta.energiaGerada)
+    calcularEnergiaResumo.textContent = proposta.energiaGerada
  }
  function attCustoHomologacao(){
 
