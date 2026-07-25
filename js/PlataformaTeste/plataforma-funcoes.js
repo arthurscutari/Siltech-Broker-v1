@@ -331,3 +331,26 @@ function limparCamposResumo() {
     texto.textContent = "";
   });
 }
+
+function calcularPotencia() {
+
+  const campoModulo = document.getElementById('modulo-proposta')
+
+  if (campoModulo.value === "575Wp Tier 1" ) {
+
+    return 575
+  }
+  if (campoModulo.value === "585Wp Tier 1" ) {
+
+    return 585
+  }
+  if (campoModulo.value === "610Wp Tier 1" ) {
+
+    return 610
+  }
+  if (campoModulo.value === "700Wp Tier 1" ) {
+
+    return 700
+  }
+
+}

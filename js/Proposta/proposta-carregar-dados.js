@@ -72,7 +72,7 @@ valorEconomiaProposta.textContent = "LUCRO DE  " + propostaGerada.economiaEm15An
 retornoInvestimentoProposta.textContent = propostaGerada.economiaAnual.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'
 })
 qtdPlacasModuloProposta.textContent = propostaGerada.placas
-kitProposta.textContent = propostaGerada.energiaGerada / 1000 + "kWp";
+kitProposta.textContent = propostaGerada.kitPlaca.toFixed(2) + "kWp";
 dataProposta.textContent = dataPorExtenso();
 function mostrarInversor() 
 {

@@ -93,7 +93,7 @@ function propostaSelecionado(){
 
 
 
-    tituloHeader.textContent = "Proposta"
+    tituloHeader.textContent = "Proposta Comercial"
     subtituloHeader.textContent = "Elabore uma proposta comercial preenchendo as informações abaixo."
     iconeHeader.removeAttribute('class')
     iconeHeader.classList.add('bi' ,'bi-file-earmark-text', 'icone-header-plataforma')

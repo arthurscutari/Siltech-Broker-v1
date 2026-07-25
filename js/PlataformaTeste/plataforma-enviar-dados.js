@@ -7,3 +7,4 @@ limparDados.addEventListener('click', (e) => {
     localStorage.removeItem('propostaGerada')
 
 })
+   

@@ -24,6 +24,7 @@ let proposta = {
     instalacao:"",
     telhado:"",
     //Calculos solicitados
+    kitPlaca:0,
     area:0,
     cmv:0,
     energiaGerada:0,
@@ -139,7 +140,9 @@ gerarPdf.addEventListener('click', ()=>{
     proposta.data = gerarDataProposta()
     proposta.colaborador = usuarioAtivo.textContent
     proposta.id = gerarIdProposta()
-    
+    proposta.kitPlaca = proposta.placas * calcularPotencia() / 1000
+
+
     dataResumo.textContent = proposta.data
     idResumo.textContent = proposta.id
     colaboradorResumo.textContent = proposta.colaborador
