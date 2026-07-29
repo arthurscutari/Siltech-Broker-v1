@@ -8,6 +8,7 @@
     background-color:white;
 
 }
+
 .card-projeto-lancamento{
 
      grid-column: 3/5;
@@ -20,7 +21,15 @@
 .card-comercial-lancamento{
 
      grid-column: 5/7;
-       grid-row: 1/10;
+       grid-row: 1/6;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    background-color:white;
+}
+.card-unidade-lancamento{
+
+     grid-column: 5/7;
+       grid-row: 6/10;
     border-radius: 8px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     background-color:white;

@@ -3,14 +3,14 @@
 let proposta = {
 
     //Valor da solicitação Appscript
-    tipo:"registrarBanco",
+    tipo:"registrarProposta",
     id:0,
     data:0,
     colaborador:"",
     //propriedades do formulario
     nome:"",
     telefone:0,
-    teste:"",
+    teste:"Não",
     canal:"",
     local:"",
     modulo:"",
@@ -47,8 +47,35 @@ let proposta = {
     parcelasPagamento2:0,
     mcs:0,
     resultado:"",
-    valorNegociado:0
-
+    valorNegociado:0,
+    //Variaveis de lancamento
+    cliente:"",
+    cpf:0,
+    rg:0,
+    email:"",
+    cep:0,
+    rua:"",
+    bairro:"",
+    numero:0,
+    cidade:"",
+    estado:"",
+    numeroInstalacao:0,
+    obra:"Não",
+    obsObra:"Não",
+    unificacao:"Não",
+     obsUnificacao:"Não",
+    adequacao:"Não",
+     obsAdequacao:"Não",
+    reforma:"Não",
+     obsReforma:"Não",
+    embutido:"Não",
+     obsEmbutido:"Não",
+    sdr:"",
+    closer:"",
+    bu:"",
+    canalLancamento:"",
+    unidade:"",
+    observacao:""
 
 }
 //Código nome proposta
@@ -149,7 +176,7 @@ gerarPdf.addEventListener('click', ()=>{
 
     localStorage.setItem('propostaGerada', JSON.stringify(proposta));
 
-    const url = "https://script.google.com/macros/s/AKfycbxdUhKG_A-yW0OheQJW2hm8TR2uNiHMidNojye1uBqpUYRvQKm1FcttmJ9PRZP0qqnl/exec";
+    const url = "https://script.google.com/macros/s/AKfycbyXRfH1QwCzoPUaS3jFkDUBP42nreLTUoizqjFUxsPxwTRFycQ8bF6rzRbbNucih6GV/exec";
 
         fetch(url, {
             method: "POST",
@@ -167,4 +194,5 @@ gerarPdf.addEventListener('click', ()=>{
        carregarDadosProposta()
        propostaPdfSelecionado()
        carregarProspostaNegociacao()
+       carregarDadosLancamento()
 })

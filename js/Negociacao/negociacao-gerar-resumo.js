@@ -90,122 +90,122 @@ valorFinalNegociacao.textContent = formatarMoeda(proposta.valorFinalProposta)
 
 
     }
-function calcularDesconto(){
+    function calcularDesconto(){
 
-  const valorAtual = proposta.valorFinalProposta
-  const valorNegociado = proposta.valorNegociado
-  let resultado = 0
+      const valorAtual = proposta.valorFinalProposta
+      const valorNegociado = proposta.valorNegociado
+      let resultado = 0
 
-  
-  resultado = (((valorAtual - valorNegociado) / valorAtual) * 100)
-  proposta.desconto = resultado.toFixed(1) + "%"
+      
+      resultado = (((valorAtual - valorNegociado) / valorAtual) * 100)
+      proposta.desconto = resultado.toFixed(1) + "%"
 
-  return proposta.desconto
-
-}
-function attResumoFormaPagamento1(){
-
-  const resumoFormaPagamento1 = document.getElementById('forma-1-pagamento-resumo-negociacao')
-
-  proposta.formaDePagamento1 = formaPagamento1.value
-  resumoFormaPagamento1.textContent = proposta.formaDePagamento1
-
-}
-function attResumoFormaPagamento2(){
-
-    const resumoFormaPagamento2 = document.getElementById('forma-2-pagamento-resumo-negociacao')
-
-  proposta.formaDePagamento2 = formaPagamento2.value
-  resumoFormaPagamento2.textContent = proposta.formaDePagamento2
-}
-function attResumoParcelas1(){
-
-  const resumoQtdParcelas1 = document.getElementById('parcelas-1-resumo-negociacao')
-
-  proposta.parcelasPagamento1 = parcelasPagamento1.value
-  resumoQtdParcelas1.textContent = proposta.parcelasPagamento1
-
-}
-function attResumoParcelas2(){
-
-    const resumoQtdParcelas2 = document.getElementById('parcelas-2-resumo-negociacao')
-
-  proposta.parcelasPagamento2 = parcelasPagamento2.value
-  resumoQtdParcelas2.textContent = proposta.parcelasPagamento2
-}
- function calcularMcs() {
-
-
-
-      const valorOriginal = proposta.valorFinalProposta;
-      const margemOriginal = 37;
-
-      const custo = valorOriginal * (1 - margemOriginal / 100);
-
-      const novoValor = proposta.valorNegociado;
-
-      const novaMargem = ((novoValor - custo) / novoValor) * 100;
-
-      if (novaMargem < 0 ){
-
-          return 0
-      }
-      else {
-
-          return novaMargem.toFixed(1);
-
-      }
-
-
-}
-function resultadoMcs(){
-
-
-    const valorMcs = proposta.mcs;
-    const containerAnalise = document.getElementById('container-item-analise')
-    const emojiAnalise = document.getElementById('icone-resultado-negociacao')
-    const tituloAnalise = document.getElementById('titulo-resultado-negociacao')
-    const textoAnalise = document.getElementById('texto-mcs-negociacao')
-    const resumoResultadoMcs = document.getElementById('resultdo-resumo-negociacao')
-
-
-    textoAnalise.classList.remove('verde', 'laranja', 'vermelho');
-    tituloAnalise.classList.remove('verde', 'laranja', 'vermelho');
-    containerAnalise.classList.remove('fundo-verde','fundo-laranja', 'fundo-vermelho');
-    emojiAnalise.removeAttribute('class')
-    emojiAnalise.classList.add('bi' ,'bi-emoji-expressionless', 'icone-valor-negociacao')
-    resumoResultadoMcs.textContent = "Aguardando análise"
-    if (valorMcs >= 30 ){
-
-        textoAnalise.classList.add('verde')
-        tituloAnalise.classList.add('verde')
-        textoAnalise.textContent = "Aprovado"
-         emojiAnalise.removeAttribute('class')
-          emojiAnalise.classList.add('bi' ,'bi-emoji-smile', 'icone-valor-negociacao', 'verde')
-        containerAnalise.classList.add('fundo-verde')
-          resumoResultadoMcs.textContent = "Aprovado"
+      return proposta.desconto
 
     }
-    else if (valorMcs >= 27 && valorMcs <= 29.99 ) {
+    function attResumoFormaPagamento1(){
 
-         textoAnalise.classList.add('laranja')
-        tituloAnalise.classList.add('laranja')
-        textoAnalise.textContent = "Autorização"
-         emojiAnalise.removeAttribute('class')
-          emojiAnalise.classList.add('bi' ,'bi-emoji-surprise', 'icone-valor-negociacao', 'laranja')
-        containerAnalise.classList.add('fundo-laranja')
-          resumoResultadoMcs.textContent = "Autorização"
+      const resumoFormaPagamento1 = document.getElementById('forma-1-pagamento-resumo-negociacao')
+
+      proposta.formaDePagamento1 = formaPagamento1.value
+      resumoFormaPagamento1.textContent = proposta.formaDePagamento1
 
     }
-    else if  (valorMcs <= 26.99 ){
+    function attResumoFormaPagamento2(){
 
-        textoAnalise.classList.add('vermelho')
-        tituloAnalise.classList.add('vermelho')
-        textoAnalise.textContent = "Reprovado"
-         emojiAnalise.removeAttribute('class')
-          emojiAnalise.classList.add('bi' ,'bi-emoji-frown', 'icone-valor-negociacao', 'vermelho')
-        containerAnalise.classList.add('fundo-vermelho')
-            resumoResultadoMcs.textContent = "Reprovado"
+        const resumoFormaPagamento2 = document.getElementById('forma-2-pagamento-resumo-negociacao')
+
+      proposta.formaDePagamento2 = formaPagamento2.value
+      resumoFormaPagamento2.textContent = proposta.formaDePagamento2
+    }
+    function attResumoParcelas1(){
+
+      const resumoQtdParcelas1 = document.getElementById('parcelas-1-resumo-negociacao')
+
+      proposta.parcelasPagamento1 = parcelasPagamento1.value
+      resumoQtdParcelas1.textContent = proposta.parcelasPagamento1
 
     }
-}
+    function attResumoParcelas2(){
+
+        const resumoQtdParcelas2 = document.getElementById('parcelas-2-resumo-negociacao')
+
+      proposta.parcelasPagamento2 = parcelasPagamento2.value
+      resumoQtdParcelas2.textContent = proposta.parcelasPagamento2
+    }
+    function calcularMcs() {
+
+
+
+          const valorOriginal = proposta.valorFinalProposta;
+          const margemOriginal = 37;
+
+          const custo = valorOriginal * (1 - margemOriginal / 100);
+
+          const novoValor = proposta.valorNegociado;
+
+          const novaMargem = ((novoValor - custo) / novoValor) * 100;
+
+          if (novaMargem < 0 ){
+
+              return 0
+          }
+          else {
+
+              return novaMargem.toFixed(1);
+
+          }
+
+
+    }
+    function resultadoMcs(){
+
+
+        const valorMcs = proposta.mcs;
+        const containerAnalise = document.getElementById('container-item-analise')
+        const emojiAnalise = document.getElementById('icone-resultado-negociacao')
+        const tituloAnalise = document.getElementById('titulo-resultado-negociacao')
+        const textoAnalise = document.getElementById('texto-mcs-negociacao')
+        const resumoResultadoMcs = document.getElementById('resultdo-resumo-negociacao')
+
+
+        textoAnalise.classList.remove('verde', 'laranja', 'vermelho');
+        tituloAnalise.classList.remove('verde', 'laranja', 'vermelho');
+        containerAnalise.classList.remove('fundo-verde','fundo-laranja', 'fundo-vermelho');
+        emojiAnalise.removeAttribute('class')
+        emojiAnalise.classList.add('bi' ,'bi-emoji-expressionless', 'icone-valor-negociacao')
+        resumoResultadoMcs.textContent = "Aguardando análise"
+        if (valorMcs >= 30 ){
+
+            textoAnalise.classList.add('verde')
+            tituloAnalise.classList.add('verde')
+            textoAnalise.textContent = "Aprovado"
+            emojiAnalise.removeAttribute('class')
+              emojiAnalise.classList.add('bi' ,'bi-emoji-smile', 'icone-valor-negociacao', 'verde')
+            containerAnalise.classList.add('fundo-verde')
+              resumoResultadoMcs.textContent = "Aprovado"
+
+        }
+        else if (valorMcs >= 27 && valorMcs <= 29.99 ) {
+
+            textoAnalise.classList.add('laranja')
+            tituloAnalise.classList.add('laranja')
+            textoAnalise.textContent = "Autorização"
+            emojiAnalise.removeAttribute('class')
+              emojiAnalise.classList.add('bi' ,'bi-emoji-surprise', 'icone-valor-negociacao', 'laranja')
+            containerAnalise.classList.add('fundo-laranja')
+              resumoResultadoMcs.textContent = "Autorização"
+
+        }
+        else if  (valorMcs <= 26.99 ){
+
+            textoAnalise.classList.add('vermelho')
+            tituloAnalise.classList.add('vermelho')
+            textoAnalise.textContent = "Reprovado"
+            emojiAnalise.removeAttribute('class')
+              emojiAnalise.classList.add('bi' ,'bi-emoji-frown', 'icone-valor-negociacao', 'vermelho')
+            containerAnalise.classList.add('fundo-vermelho')
+                resumoResultadoMcs.textContent = "Reprovado"
+
+        }
+    }

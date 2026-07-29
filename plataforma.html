@@ -79,12 +79,12 @@
          <i class="bi bi-gear" style="color: var(--cor-terciaria); font-size: 75px;"></i>
         <h1 style="font-size: 25px; color: var(--cor-texto-primaria)">Estamos trabalhando nesta funcionalidade. Em breve, ela fará parte da plataforma.</h1>
       </section>
-      <section class="container-lancamento" id="section-lancamento">
+      <section class="container-lancamento " id="section-lancamento">
           <article class="card-cliente-lancamento">
             <header class="header-card-global">
                 <i class="bi bi-people icone-header-global"></i>
                 <p class="texto-header-global">ETAPA O1</p>
-                <h4 class="titulo-header-global">Cliente e Localização</h4>
+                <h4 class="titulo-header-global">Cliente</h4>
             </header>
             <div class="container-card-main">
               <div class="input-grupo">
@@ -103,7 +103,7 @@
                   <div class="container-icone-lancamento">
                     <i class="bi bi-person-vcard icone-input-lancamento"></i>
                   </div>
-                  <input type="text" placeholder="000.000.000-00" class="input-lancamento">
+                  <input type="text" placeholder="000.000.000-00" class="input-lancamento" id="input-cpf-lancamento">
                 </div>
               </div>
               <div class="input-grupo">
@@ -112,7 +112,7 @@
                   <div class="container-icone-lancamento">
                     <i class="bi bi-card-heading icone-input-lancamento"></i>
                   </div>
-                  <input type="text" placeholder="Digite seu RG" class="input-lancamento">
+                  <input type="text" placeholder="Digite seu RG" class="input-lancamento" id="input-rg-lancamento">
                 </div>
               </div>
               <div class="input-grupo">
@@ -121,45 +121,47 @@
                   <div class="container-icone-lancamento">
                     <i class="bi bi-envelope icone-input-lancamento"></i>
                   </div>
-                  <input type="text" placeholder="Digite o e-mail" class="input-lancamento" id="input-cliente-lancamento">
+                  <input type="text" placeholder="Digite o e-mail" class="input-lancamento" id="input-e-mail-lancamento">
                 </div>
               </div>
-                <div class="container-elementos">
-                <div class="input-grupo-elemento">
+               <div class="input-grupo">
+                  <label for="" class="label-lancamento">CEP</label>
+                  <div class="input-icone-grupo">
+                    <i class="bi bi-pin-map icone-input-lancamento"></i>
+                    <input type="text" class="input-lancamento" placeholder="00000-000" id="input-cep-lancamento">
+                  </div>
+                </div>
+                <div class="input-grupo">
                   <label for="nome-inputa-lancamento" class="label-lancamento">Rua</label>
                   <div class="input-icone-grupo">
                     <div class="container-icone-lancamento">
                       <i class="bi bi-signpost-fill icone-input-lancamento"></i>
                     </div>
-                    <input type="text" placeholder="Digite o nome da rua" class="input-lancamento">
+                    <input type="text" placeholder="Digite o nome da rua" class="input-lancamento" id="input-rua-lancamento">
                   </div>
                 </div>
-                <div class="input-grupo-elemento-2">
-                  <label for="nome-inputa-lancamento" class="label-lancamento-2">Nº</label>
-                  <div class="input-icone-grupo-2">
-                    <i class="bi bi-mailbox icone-input-lancamento"></i>
-                    <input type="text" class="input-lancamento" placeholder="00">
-                  </div>
-                </div>
-              </div>  
-              <div class="container-elementos">
+
+                <div class="container-elementos">
+                 
+              
                 <div class="input-grupo-elemento">
                   <label for="nome-inputa-lancamento" class="label-lancamento">Bairro</label>
                   <div class="input-icone-grupo">
                     <div class="container-icone-lancamento">
                       <i class="bi bi-signpost-split icone-input-lancamento"></i>
                     </div>
-                    <input type="text" placeholder="Digite o nome do bairro" class="input-lancamento">
+                    <input type="text" placeholder="Digite o nome do bairro" class="input-lancamento" id="input-bairro-lancamento">
                   </div>
                 </div>
-                <div class="input-grupo-elemento-3">
-                  <label for="nome-inputa-lancamento" class="label-lancamento-2">CEP</label>
+                <div class="input-grupo-elemento-2">
+                  <label for="nome-inputa-lancamento" class="label-lancamento-2">Nº</label>
                   <div class="input-icone-grupo-2">
-                    <i class="bi bi-pin-map icone-input-lancamento"></i>
-                    <input type="text" class="input-lancamento" placeholder="00000-000">
+                    <i class="bi bi-mailbox icone-input-lancamento"></i>
+                    <input type="text" class="input-lancamento" placeholder="00" id="input-numero-lancamento">
                   </div>
                 </div>
-              </div>
+               </div>
+            
                 
               <div class="container-elementos">
                 <div class="input-grupo-elemento">
@@ -168,14 +170,14 @@
                     <div class="container-icone-lancamento">
                       <i class="bi bi-geo-alt icone-input-lancamento"></i>
                     </div>
-                    <input type="text" placeholder="Digite o nome da rua" class="input-lancamento">
+                    <input type="text" placeholder="Digite o nome da rua" class="input-lancamento" id="input-cidade-lancamento">
                   </div>
                 </div>
                 <div class="input-grupo-elemento-2">
                   <label for="nome-inputa-lancamento" class="label-lancamento-2">UF</label>
                   <div class="input-icone-grupo-2">
                     <i class="bi bi-globe-americas icone-input-lancamento"></i>
-                    <input type="text" class="input-lancamento" placeholder="UF">
+                    <input type="text" class="input-lancamento" placeholder="UF" id="input-estado-lancamento">
                   </div>
                 </div>
                 
@@ -186,7 +188,7 @@
                   <div class="container-icone-lancamento">
                     <i class="bi bi-clock icone-input-lancamento"></i>
                   </div>
-                  <input type="text" placeholder="Digite o número da instalação" class="input-lancamento">
+                  <input type="text" placeholder="Digite o número da instalação" class="input-lancamento" id="input-numero-instalacao-lancamento">
                 </div>
               </div>
               
@@ -205,12 +207,12 @@
                        <div class="c-info-label">
                       <p class="p-dica-lancamento">Local em Obra</p>
                       <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
+                        <input type="checkbox" class="swipeLocal">
+                        <span class="slider "></span>
                       </label>
                       </div>
                     </div>
-                    <textarea name="" id="" class="textarea-projeto"placeholder="Observação" ></textarea>
+                    <textarea name="" id="textarea-local" class="textarea-projeto hidden"placeholder="Observação" ></textarea>
                 </div>
                 <div class="input-grupo-projeto">
                   <div class="input-grupo-flex">
@@ -219,13 +221,13 @@
                     <div class="c-info-label">
                       <p class="p-dica-lancamento">Unificação de relógios</p>
                       <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" class="swipeUnificacao">
                         <span class="slider"></span>
                       </label>
                       </div>
                     </div>
                     
-                    <textarea name="" id="" class="textarea-projeto" placeholder="Observação"></textarea>
+                    <textarea name="" id="textarea-unificacao" class="textarea-projeto hidden" placeholder="Observação"></textarea>
                 </div>
                 <div class="input-grupo-projeto">
                   <div class="input-grupo-flex">
@@ -233,12 +235,12 @@
                     <div class="c-info-label">
                       <p class="p-dica-lancamento">Adequação</p>
                       <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" class="swipeAdequacao">
                         <span class="slider"></span>
                       </label>
                       </div>
                     </div>
-                    <textarea name="" id="" class="textarea-projeto" placeholder="Observação"></textarea>
+                    <textarea name="" id="textarea-adequacao" class="textarea-projeto hidden" placeholder="Observação"></textarea>
                 </div>
                 <div class="input-grupo-projeto">
                   <div class="input-grupo-flex">
@@ -246,12 +248,12 @@
                       <div class="c-info-label">
                       <p class="p-dica-lancamento">Reforma do Telhado</p>
                       <label class="switch">
-                        <input type="checkbox">
+                        <input type="checkbox" class="swipeReforma">
                         <span class="slider"></span>
                       </label>
                       </div>
                     </div>
-                    <textarea name="" id="" class="textarea-projeto" placeholder="Observação"></textarea>
+                    <textarea name="" id="textarea-reforma" class="textarea-projeto hidden" placeholder="Observação"></textarea>
                 </div>
                 <div class="input-grupo-projeto">
                   <div class="input-grupo-flex">
@@ -259,12 +261,12 @@
                       <div class="c-info-label">
                         <p class="p-dica-lancamento">Embutido</p>
                         <label class="switch">
-                          <input type="checkbox">
+                          <input type="checkbox" class="swipeEmbutido">
                           <span class="slider"></span>
                         </label>
                       </div>
                     </div>
-                    <textarea name="" id="" class="textarea-projeto"placeholder="Observação" ></textarea>
+                    <textarea name="" id="textarea-embutido" class="textarea-projeto hidden"placeholder="Observação" ></textarea>
                 </div>
             </div>
           </article>
@@ -281,7 +283,7 @@
                   <div class="container-icone-lancamento">
                     <i class="bi bi-person-bounding-box icone-input-lancamento"></i>
                   </div>
-                  <select name="" id="" class="input-lancamento">
+                  <select name="" id="input-sdr-lancamento" class="input-lancamento" >
                     <option value="">Selecione</option>
                     <option value="Alef Ferreira">Alef Ferreira</option>
                   </select>
@@ -293,7 +295,7 @@
                   <div class="container-icone-lancamento">
                     <i class="bi bi-person-workspace icone-input-lancamento"></i>
                   </div>
-                  <select name="" id="" class="input-lancamento">
+                  <select name="" id="input-closer-lancamento" class="input-lancamento">
                     <option value="">Selecione</option>
                     <option value="Pedro Brito">Pedro Brito</option>
                   </select>
@@ -306,7 +308,7 @@
                   <div class="container-icone-lancamento">
                     <i class="bi bi-grid-3x3-gap icone-input-lancamento"></i>
                   </div>
-                  <select name="" id="" class="input-lancamento">
+                  <select name="" id="input-bu-lancamento" class="input-lancamento">
                     <option value="">Selecione</option>
                     <option value="Comercial">Comercial</option>
                     <option value="Pos Vendas">Pós Vendas</option>
@@ -320,7 +322,7 @@
                   <div class="container-icone-lancamento">
                     <i class="bi bi-broadcast icone-input-lancamento"></i>
                   </div>
-                  <select name="" id="" class="input-lancamento">             
+                  <select name="" id="input-canal-lancamento" class="input-lancamento">             
                   <option value="">Selecione</option>
                   <option value="Indicação">Indicação</option>
                   <option value="Field sales">Field sales</option>
@@ -334,22 +336,32 @@
                   </select>
                 </div>
               </div>
+              
+            </div>
+          </article>
+          <article class="card-unidade-lancamento">
+            <header class="header-card-global">
+                <i class="bi bi-people icone-header-global"></i>
+                <p class="texto-header-global">ETAPA O5</p>
+                <h4 class="titulo-header-global">Unidade</h4>
+            </header>
+            <div class="container-card-main">
               <div class="input-grupo">
                 <label for="nome-inputa-lancamento" class="label-lancamento">Unidade Comercial</label>
                 <div class="input-icone-grupo">
                   <div class="container-icone-lancamento">
                     <i class="bi bi-building icone-input-lancamento"></i>
                   </div>
-                  <select name="" id="" class="input-lancamento">
+                  <select name="" id="input-unidade-lancamento" class="input-lancamento">
                     <option value="">Selecione</option>
-                    <option value="">Unidade 1</option>
+                    <option value="Unidade 1">Unidade 1</option>
                   </select>
                 </div>
               </div>
               <div class="input-grupo">
                 <label for="nome-inputa-lancamento" class="label-lancamento">Observação</label>
                 <div class="input-icone-grupo">
-                  <textarea name="" id="" class="textarea-projeto-cliente" placeholder="Observação"></textarea>
+                  <textarea name="" id="textarea-observacao" class="textarea-projeto-cliente" placeholder="Observação"></textarea>
                 </div>
               </div>
             </div>
@@ -369,154 +381,175 @@
               </div>
             </header>
             <div class="resumo-main">
-                  <h6 class="h6-resumo">Cliente e Localiação</h6>
+              <h6 class="h6-resumo"><i class="bi bi-file-person icone-resumo"></i>Cliente</h6>
                   <div class="card-resumo-item">
-                      <i class="bi bi-file-person icone-resumo"></i>
                     <div class="resumo-dados">
                       <p class="p-resumo-dados">Cliente</p>
-                      <p>-</p>
+                      <p id="cliente-resumo-lancamento">-</p>
                     </div>
                   </div>
-                    <div class="card-resumo-item">
-                    <i class="bi bi-person-vcard icone-resumo"></i>
-                  
+                    <div class="card-resumo-item">                  
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">CPF</p>
-                    <p>-</p>
+                    <p id="cpf-resumo-lancamento">-</p>
                   </div>
                     </div>
                     <div class="card-resumo-item">
-                    <i class="bi bi-card-heading icone-resumo"></i>
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">RG</p>
-                    <p>-</p>
+                    <p id="rg-resumo-lancamento">-</p>
                   </div>
                     </div>
                     <div class="card-resumo-item">
-                    <i class="bi bi-house icone-resumo"></i>
                   <div class="resumo-dados">
-                    <p class="p-resumo-dados">Endereço</p>
-                    <p>-</p>
+                    <p class="p-resumo-dados">E-mail</p>
+                    <p id="e-mail-resumo-lancamento">-</p>
                   </div>
                     </div>
                     <div class="card-resumo-item">
-                    <i class="bi bi-clock icone-resumo"></i>
+                      <div class="resumo-dados">
+                        <p class="p-resumo-dados">Cep</p>
+                        <p id="cep-resumo-lancamento">-</p>
+                      </div>
+                    </div>
+                    <div class="card-resumo-item">
+                      <div class="resumo-dados">
+                        <p class="p-resumo-dados">Rua</p>
+                        <p id="rua-resumo-lancamento">-</p>
+                      </div>
+                    </div>
+                    <div class="card-resumo-item">
+                      <div class="resumo-dados">
+                        <p class="p-resumo-dados">Bairro</p>
+                        <p id="bairro-resumo-lancamento">-</p>
+                      </div>
+                    </div>
+                    <div class="card-resumo-item">
+                      <div class="resumo-dados">
+                        <p class="p-resumo-dados">Numero</p>
+                        <p id="numero-resumo-lancamento">-</p>
+                      </div>
+                    </div>
+                    <div class="card-resumo-item">
+                      <div class="resumo-dados">
+                        <p class="p-resumo-dados">Estado</p>
+                        <p id="estado-resumo-lancamento">-</p>
+                      </div>
+                    </div>
+                    <div class="card-resumo-item">
+                      <div class="resumo-dados">
+                        <p class="p-resumo-dados">Cidade</p>
+                        <p id="cidade-resumo-lancamento">-</p>
+                      </div>
+                    </div>
+                    <div class="card-resumo-item">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Número Instalação</p>
-                    <p>-</p>
+                    <p id="numero-instalacao-resumo-lancamento">-</p>
                   </div>
                     </div>
-                  <h6 class="h6-resumo">Projeto</h6>
+              <h6 class="h6-resumo"><i class="bi bi-file icone-resumo"></i>Projeto</h6>
                     <div class="card-resumo-item">
-                    <i class="bi bi-layers icone-resumo"></i>
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Quantidade de Placas</p>
-                    <p>-</p>
+                    <p id="placas-resumo-lancamento">-</p>
                   </div>
                     </div>
                     <div class="card-resumo-item">
-                    <i class="bi bi-grid-3x3-gap icone-resumo"></i>
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Inversor</p>
-                    <p>-</p>
+                    <p id="inversor-resumo-lancamento">-</p>
                   </div>
                     </div>
                     <div class="card-resumo-item">
-                    <i class="bi bi-cpu icone-resumo"></i>
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Sistema</p>
-                    <p>-</p>
+                    <p id="sistema-resumo-lancamento">-</p>
                   </div>
                     </div>
                     <div class="card-resumo-item">
-                    <i class="bi bi-bricks icone-resumo"></i>
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Local em Obra</p>
-                    <p>-</p>
+                    <p id="local-resumo-lancamento">-</p>
                   </div>
                     </div>
                     <div class="card-resumo-item">
-                    <i class="bi bi-diamond-half icone-resumo"></i>
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Unificação</p>
-                    <p>-</p>
+                    <p id="unificacao-resumo-lancamento">-</p>
                   </div>
                     </div>
                     <div class="card-resumo-item">
-                    <i class="bi bi-exclude icone-resumo"></i>
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Adequação</p>
-                    <p>-</p>
+                    <p id="adequacao-resumo-lancamento">-</p>
                   </div>
                     </div>
                     <div class="card-resumo-item">
-                    <i class="bi bi-house-gear icone-resumo"></i>
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Reforma do Telhado</p>
-                    <p>-</p>
+                    <p id="reforma-resumo-lancamento">-</p>
                   </div>
                     </div>
                     <div class="card-resumo-item">
-                    <i class="bi bi-hdd-network icone-resumo"></i>
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Embutido</p>
-                    <p>-</p>
+                    <p id="embutido-resumo-lancamento">-</p>
                   </div>
                     </div>
-                  <h6 class="h6-resumo">Comercial</h6>
+              <h6 class="h6-resumo"><i class="bi bi-building icone-resumo"></i>Comercial</h6>
                     <div class="card-resumo-item">
-                          <i class="bi bi-person-bounding-box icone-resumo"></i>
                         <div class="resumo-dados">
                           <p class="p-resumo-dados">SDR</p>
-                          <p>-</p>
+                          <p id="sdr-resumo-lancamento">-</p>
                         </div>
                     </div>
                     <div class="card-resumo-item">
-                          <i class="bi bi-person-workspace icone-resumo"></i>
                         <div class="resumo-dados">
                           <p class="p-resumo-dados">Closer</p>
-                          <p>-</p>
+                          <p id="closer-resumo-lancamento">-</p>
                         </div>
                     </div>
                      <div class="card-resumo-item">
-                          <i class="bi bi-grid-3x3-gap icone-resumo"></i>
                         <div class="resumo-dados">
                           <p class="p-resumo-dados">B.U</p>
-                          <p>-</p>
+                          <p id="bu-resumo-lancamento">-</p>
                         </div>
                     </div>
                      <div class="card-resumo-item">
-                          <i class="bi bi-broadcast icone-resumo"></i>
                         <div class="resumo-dados">
                           <p class="p-resumo-dados">Canal de Vendas</p>
-                          <p>-</p>
+                          <p id="canal-resumo-lancamento">-</p>
                         </div>
                     </div>
                      <div class="card-resumo-item">
-                          <i class="bi bi-building icone-resumo"></i>
                         <div class="resumo-dados">
                           <p class="p-resumo-dados">Unidade Comercial</p>
-                          <p>-</p>
+                          <p id="unidade-resumo-lancamento">-</p>
                         </div>
                     </div>
                      <div class="card-resumo-item">
-                          <i class="bi bi-cash-coin icone-resumo dinheiro"></i>
                         <div class="resumo-dados">
                           <p class="p-resumo-dados">Valor de Venda</p>
-                          <p>-</p>
+                          <p id="valor-negociado-resumo-lancamento">-</p>
                         </div>
                     </div>
                      <div class="card-resumo-item">
-                          <i class="bi bi-activity icone-resumo"></i>
                         <div class="resumo-dados">
                           <p class="p-resumo-dados">MCS</p>
-                          <p">-</p>
+                          <p id="mcs-resumo-lancamento">-</p>
+                        </div>
+                    </div>
+                       <div class="card-resumo-item">
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">Observação</p>
+                          <p id="observacao-resumo-lancamento">-</p>
                         </div>
                     </div>
                     
                 </div>
               <div class="resumo-footer">
-                <button class="botao-resumo">
+                <button class="botao-resumo" id="btn-enviar-lancamento">
                   <i class="bi bi-send"></i>Enviar Lançamento</button>
                   <p class="p-resumo-footer">Dados gerados simultaneamente</p>
               </div>
@@ -828,7 +861,7 @@
              </div>  
             <div class="resumo-footer">
                       
-                        <button class="botao-resumo"> <i class="bi bi-suitcase-lg"></i>Finalizar Negociação</button>
+                        <button class="botao-resumo" id="btn-enviar-negociacao"> <i class="bi bi-suitcase-lg" ></i>Enviar Negociação</button>
                         <p class="p-resumo-footer">Conclua a negociação ou gere a proposta atualizada em PDF.</p>
                         <button class="gerar-proposta-pdf"> <i class="bi bi-filetype-pdf"></i>Gerar Proposta Negociada</button>
 
@@ -1065,7 +1098,7 @@
             <h3 class="h3-card-info">HSP</h3>
           </div>
           <div class="card-main">
-            <label for="" class="lb-proposta">HSP (Horas de sol pico)</label>
+            <label for="" class="lb-proposta">HSP (Horas de Sol Pleno)</label>
             <p class="texto-hsp" id="hsp-proposta">0,00</p>
           </div>
         </article>
@@ -1573,15 +1606,19 @@
   <script src="js/PlataformaTeste/plataforma-gerar-hsp.js"></script>
   <script src="js/PlataformaTeste/plataforma-formulario.js"></script>
     <script src="js/PlataformaTeste/plataforma-usuarios.js"></script>
-
+  <!--script para lancamento-->
   
+  <script src="js/Lançamento/lancamento-funcoes.js"></script>
+  <script src="js/Lançamento/lancamento-gerar-eventos.js"></script>
+   <script src="js/Lançamento/lancamento-formulario.js"></script>
+    <script src="js/Lançamento/lancamento-enviar-dados"></script>
   <!--script do PDF da proposta-->
    <script src="js/Proposta/proposta-carregar-dados.js"></script>
     <script src="js/Proposta/proposta-gerar-pdf.js"></script>
     <script src="js/Proposta/proposta-navegacao.js"></script>
   <!--Script para negociação-->
   <script src="js/Negociacao/negociacao-gerar-resumo.js"></script>
-  <script src="js/Negociacao/index.js"></script>
+  <script src="js/Negociacao/negociacao-enviar-dados.js"></script>
   <script src="js/Negociacao/formulario.js"></script>
 
 </body>
