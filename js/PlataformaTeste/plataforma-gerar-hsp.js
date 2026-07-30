@@ -668,30 +668,43 @@ for (const cidade in cidadesDB) {
 
   const cidadeFormatada = normalizarTexto(cidade);
 
-  cidadesNormalizadas[cidadeFormatada] = cidadesDB[cidade];
+  cidadesNormalizadas[cidadeFormatada] = {
+    ...cidadesDB[cidade],
+    nomeOriginal: cidade
+  };
 
 }
 
 inputCidade.addEventListener("input", () => {
 
-  const cidade = normalizarTexto(inputCidade.value);
-  const cidadeEncontrada = cidadesNormalizadas[cidade];
+  const cidadeDigitada = normalizarTexto(inputCidade.value);
+  const cidadeEncontrada = cidadesNormalizadas[cidadeDigitada];
 
-  const localResumo = document.getElementById('local-resumo-proposta')
-  const hspResumo = document.getElementById('hsp-resumo-proposta')
+  const localResumo = document.getElementById("local-resumo-proposta");
+  const hspResumo = document.getElementById("hsp-resumo-proposta");
 
   if (cidadeEncontrada) {
 
     inputHSP.textContent = cidadeEncontrada.hsp.toFixed(2);
+
     proposta.hsp = cidadeEncontrada.hsp.toFixed(2);
-    hspResumo.textContent = proposta.hsp
-    proposta.local = cidade.charAt(0).toUpperCase() + cidade.slice(1)
-    localResumo.textContent = proposta.local
+    proposta.local = cidadeEncontrada.nomeOriginal;
+
+    hspResumo.textContent = proposta.hsp;
+    localResumo.textContent = proposta.local;
+
+      calcularDados()
+
 
   } else {
 
     inputHSP.textContent = "Cidade não encontrada";
-    hspResumo.textContent = "Cidade não encontrada"
-  }
+    hspResumo.textContent = "Cidade não encontrada";
 
+    proposta.hsp = "";
+    proposta.local = "";
+
+    localResumo.textContent = "";
+
+  }
 });

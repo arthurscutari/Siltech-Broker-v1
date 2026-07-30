@@ -18,7 +18,7 @@ let proposta = {
     hsp:0,
     promocao:"",
     placas:0,
-    expansao:"",
+    expansao:"Não",
     qtdExpansao:0,
     precoKwh:0,
     instalacao:"",
@@ -80,75 +80,83 @@ let proposta = {
 }
 //Código nome proposta
 const nomeFormularioProposta = document.getElementById('nome-proposta')
-nomeFormularioProposta.addEventListener('input', attResumoNome)
+nomeFormularioProposta.addEventListener('input', calcularDados)
 
 //Código telefone proposta
 const telefoneFormularioProposta = document.getElementById('telefone-proposta')
-telefoneFormularioProposta.addEventListener('input',attResumoTelefone)
+telefoneFormularioProposta.addEventListener('input', calcularDados)
 
 //Código para teste de proposta
 const testeFormularioProposta = document.querySelector('.teste-proposta')
 
-testeFormularioProposta.addEventListener('change', attResumoTeste)
+testeFormularioProposta.addEventListener('change', calcularDados)
 
 //Código para canal de vendas
 const canalFormularioProposta = document.getElementById('canal-proposta')
 
-canalFormularioProposta.addEventListener('change',attResumoCanal)
+canalFormularioProposta.addEventListener('change', calcularDados)
 //Código para modulo
 const moduloFormularioProposta = document.getElementById('modulo-proposta')
 
-moduloFormularioProposta.addEventListener('change', attResumoModulo)
+moduloFormularioProposta.addEventListener('change', calcularDados)
 
 //Código para promoção
 
 const promocaoFormularioProposta = document.getElementById('promocao-proposta')
 
-promocaoFormularioProposta.addEventListener('input',attResumoPromocao)
+promocaoFormularioProposta.addEventListener('input', calcularDados)
 
 //Código gerar quantidade de placas
 
 const consumoPlacas = document.getElementById('consumo-placa-proposta')
 
-consumoPlacas.addEventListener('input', attResumoQuantidadePlaca)
+consumoPlacas.addEventListener('input',() =>{
+
+    consumoEnergia.value = ""
+    calcularDados()
+} )
 
 
 const consumoEnergia = document.getElementById('consumo-energia-proposta')
 
-consumoEnergia.addEventListener('input', attResumoQuantidadeEnergia)
+consumoEnergia.addEventListener('input', () =>{
+
+    consumoPlacas.value = ""
+    calcularDados()
+    })
 
 //Código para gerar expansão
 
 const expansaoFormularioProposta = document.querySelector('.expansao-proposta')
 const campoQtdExpansao = document.getElementById('container-qtd-expansao-proposta')
 
-expansaoFormularioProposta.addEventListener('change',attResumoExpansao)
+expansaoFormularioProposta.addEventListener('change', calcularDados)
 
 
 //Código cquantidade de placas expansivas.
 
 const qtdExpansaoFormularioProposta = document.getElementById('qtd-expansao-proposta')
 
-qtdExpansaoFormularioProposta.addEventListener('input', attQtdExpansao)
+qtdExpansaoFormularioProposta.addEventListener('input', calcularDados)
 
 //Código para preco do kWh
 
 const precoKwhFormularioProposta = document.getElementById('preco-kwh-proposta')
 
-precoKwhFormularioProposta.addEventListener('input', attResumoPrecoKwh)
+precoKwhFormularioProposta.addEventListener('input', calcularDados)
 
 
 //Código para instalacao
 
 const instalacaoFormularioProposta = document.getElementById('instalacao-proposta')
 
-instalacaoFormularioProposta.addEventListener('change', attResumoInstalacao)
+instalacaoFormularioProposta.addEventListener('change', calcularDados)
 
 //Código para telhado
 
 const telhadoFormularioProposta = document.getElementById('telhado-proposta')
 
-telhadoFormularioProposta.addEventListener('change', attResumoTelhado)
+telhadoFormularioProposta.addEventListener('change', calcularDados)
 
 
 ///////////////////////////////////////////////////////////////////

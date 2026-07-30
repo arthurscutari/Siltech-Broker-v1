@@ -4,11 +4,204 @@ const impostos = 0.06
 const retorno = 550
 const inflacao = 0.01
 
-function calcularArea() {
+function calcularDados(){
 
-    const placas = Number(proposta.placas)
-    return proposta.area = placas * 3;
-  }
+  //Inserindo dados na variável Proposta, para calcular posteriormente
+  inserirNome()
+  inserirTelefone()
+  inserirTeste()
+  inserirCanal()
+  inserirModulo()
+  inserirPromocao()
+  inserirQuantidade()
+  inserirExpansao()
+  inserirQtdExpansao()
+  inserirPrecoKwh()
+  inserirInstalacao()
+  inserirTelhado()
+
+//Calculando dados a partir das variaveis preenchidas na Proposta
+
+  gerarIdProposta() 
+  gerarDataProposta()
+  calcularArea()
+  calcularPotencia() 
+  custoEquipamento() 
+  custoTelhado() 
+  custoHomologacao() 
+  custoInstalacao() 
+  calcularEnergia() 
+  contaComSiltech() 
+  contaSemSiltech() 
+  custoMercadoriaVendida() 
+  valorFinalProposta() 
+  custoExpansao() 
+  economiaEm15Anos() 
+  economiaAnual() 
+  custoRetorno()
+
+  atualizarResumo()
+
+  console.log(proposta)
+}
+function inserirNome(){
+
+    const nomeResumo = document.getElementById('nome-resumo-proposta')
+    proposta.nome = nomeFormularioProposta.value
+}
+function inserirTelefone(){
+
+    const telefoneResumo = document.getElementById('telefone-resumo-proposta')
+
+    proposta.telefone = telefoneFormularioProposta.value
+    telefoneResumo.textContent = proposta.telefone
+
+}
+function inserirTeste () { 
+    
+        const canalContainerProposta = document.getElementById('canal-container-proposta')
+
+        if(testeFormularioProposta.checked) {
+
+
+            proposta.teste = "Sim"
+            canalContainerProposta.classList.add('hidden')
+        }
+        else {
+            proposta.teste = "Não"
+            canalContainerProposta.classList.remove('hidden')
+ 
+        }
+    
+
+}
+function inserirCanal() {
+
+        if(proposta.teste === "Sim"){
+           proposta.canal = 'Teste'
+        }
+        else {
+             proposta.canal = canalFormularioProposta.value
+        }
+}
+function inserirModulo(){
+
+    proposta.modulo = moduloFormularioProposta.value
+}
+function inserirPromocao(){
+
+    proposta.promocao = promocaoFormularioProposta.value
+}
+function calcularPlacaComEnergia() {
+
+    const energiaGerada = document.getElementById("modulo-proposta");
+
+    let energia = 0;
+
+    if (energiaGerada.value === "575Wp Tier 1") energia = 575;
+    if (energiaGerada.value === "585Wp Tier 1") energia = 585;
+    if (energiaGerada.value === "610Wp Tier 1") energia = 610;
+    if (energiaGerada.value === "700Wp Tier 1") energia = 700;
+
+    const consumo = Number(document.getElementById("consumo-energia-proposta").value);
+    const hsp = Number(proposta.hsp);
+
+    if (energia === 0) {
+      return "Aguardando Módulo"
+    }
+    if (!hsp) {
+    return "Aguardando Hsp"
+    }
+    if (!consumo) {
+      
+      return "Aguardando Consumo"
+    }
+    const geracaoMensal = (hsp * energia * 30 * 0.8) / 1000;
+
+    return Math.ceil(consumo / geracaoMensal);
+
+}
+function inserirQuantidade() {
+
+    const consumoEnergia = document.getElementById("consumo-energia-proposta");
+    const consumoPlacas = document.getElementById("consumo-placa-proposta");
+
+    if (consumoEnergia.value.trim() !== "") {
+
+        inserirQuantidadeEnergia();
+
+    } else if (consumoPlacas.value.trim() !== "") {
+
+        inserirQuantidadePlaca();
+
+    } else {
+
+        proposta.placas = 0;
+
+    }
+
+}
+function inserirQuantidadePlaca() {
+
+    
+    const campoEnergia = document.getElementById('consumo-placa-proposta')
+
+  
+    proposta.placas = consumoPlacas.value
+}
+function inserirQuantidadeEnergia() {
+
+    
+    const campoPlacas = document.getElementById('consumo-energia-proposta')
+
+    proposta.placas = calcularPlacaComEnergia()
+
+    
+
+}
+function inserirExpansao(){
+
+    if(expansaoFormularioProposta.checked){
+
+        proposta.expansao = "Sim"
+        campoQtdExpansao.classList.remove('hidden')
+    }
+    else{
+
+        proposta.expansao = "Não"
+        campoQtdExpansao.classList.add('hidden')
+    }
+}
+function inserirQtdExpansao(){
+
+    proposta.qtdExpansao = qtdExpansaoFormularioProposta.value 
+
+}
+function inserirPrecoKwh(){
+
+    if(precoKwhFormularioProposta.value === ""){
+
+         proposta.precoKwh = 0.95
+        
+    }
+    else {
+         proposta.precoKwh = precoKwhFormularioProposta.value
+    }
+     
+}
+function inserirInstalacao(){
+
+    proposta.instalacao = instalacaoFormularioProposta.value
+
+}
+function inserirTelhado(){
+
+    proposta.telhado = telhadoFormularioProposta.value
+
+}
+
+
+//Calculos automáticos, não depende de inserção de dados, utilizma dados já preenchido.
 function gerarIdProposta() {
     const hoje = new Date();
 
@@ -36,6 +229,11 @@ function gerarDataProposta() {
 
     return `${dia}/${mes}/${ano}`;
 }
+function calcularArea(){
+
+    proposta.area = proposta.placas * 3
+
+ }
   //OK
   function custoEquipamento() {
     const inversor3kw = 1450;
@@ -237,23 +435,6 @@ function gerarDataProposta() {
     return proposta.valorFinalProposta = (
       proposta.cmv / (1 - (contribuicao + impostos + comissao))
     );
-  }
-  //OK
-  function calcularPotencia() {
-    const energiaGerada = proposta.modulo;
-
-    if (energiaGerada === "575Wp Tier 1") {
-      return 575;
-    }
-    if (energiaGerada === "585Wp Tier 1") {
-      return 585;
-    }
-    if (energiaGerada === "610Wp Tier 1") {
-      return 610;
-    }
-    if (energiaGerada === "700Wp Tier 1") {
-      return 700;
-    }
   }
   //OK
   function custoExpansao() {

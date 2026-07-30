@@ -1,25 +1,25 @@
 
-function validarFormulario() {
+// function validarFormulario() {
 
-    let formularioValido = true
+//     let formularioValido = true
 
-    const campos = document.querySelectorAll('[data-required="true"]')
+//     const campos = document.querySelectorAll('[data-required="true"]')
 
-    campos.forEach((campo) => {
+//     campos.forEach((campo) => {
 
-        campo.classList.remove('erro')
+//         campo.classList.remove('erro')
 
-        if (campo.disabled) return
+//         if (campo.disabled) return
 
-        if (campo.offsetParent === null) return
+//         if (campo.offsetParent === null) return
 
-        if (campo.value.trim() === "") {
+//         if (campo.value.trim() === "") {
 
-            campo.classList.add('erro')
+//             campo.classList.add('erro')
 
-            formularioValido = false
-        }
-    })
+//             formularioValido = false
+//         }
+//     })
 
-    return formularioValido
-}
+//     return formularioValido
+// }
