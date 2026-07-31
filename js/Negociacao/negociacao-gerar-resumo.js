@@ -38,127 +38,185 @@ valorFinalNegociacao.textContent = formatarMoeda(proposta.valorFinalProposta)
     const parcelasPagamento2 = document.getElementById('parcela-pagamento-2-negociacao')
 
 
-    campoPagamento1.addEventListener('input', attResumoPagamento)
-    valorNegociado.addEventListener('input', attResumoValorNegociado)
+    campoPagamento1.addEventListener('input', atualizarDadosNavegacao)
+    valorNegociado.addEventListener('input', atualizarDadosNavegacao)
 
-    formaPagamento1.addEventListener('change', attResumoFormaPagamento1)
-    formaPagamento2.addEventListener('change', attResumoFormaPagamento2)
+    formaPagamento1.addEventListener('change', atualizarDadosNavegacao)
+    formaPagamento2.addEventListener('change', atualizarDadosNavegacao)
 
-    parcelasPagamento1.addEventListener('change', attResumoParcelas1)
-    parcelasPagamento2.addEventListener('change', attResumoParcelas2)
+    parcelasPagamento1.addEventListener('change', atualizarDadosNavegacao)
+    parcelasPagamento2.addEventListener('change', atualizarDadosNavegacao)
 
-    function attResumoValorNegociado(){
-
-      const resumoValorNegociado = document.getElementById('valor-negociado-resumo-negociacao')
-      const resumoDesconto = document.getElementById('desconto-resumo-negociacao')
-      const campoDesconto = document.getElementById('desconto-negociacao-proposta')
-
-      const campoMcs = document.getElementById('mcs-negociacao')
-      const resumoMcs = document.getElementById('mcs-resumo-negociacao')
+    function inserirValorNegociado(){
 
       proposta.valorNegociado = valorNegociado.value
-      resumoValorNegociado.textContent = proposta.valorNegociado
 
-      calcularDesconto();
-      resumoDesconto.textContent = proposta.desconto
-      campoDesconto.textContent = proposta.desconto
-      
-
-      proposta.mcs = calcularMcs();
-      campoMcs.textContent = proposta.mcs
-      resumoMcs.textContent = proposta.mcs
-
-      resultadoMcs()
     }
-    function attResumoPagamento(){
-
-      const campoValorNegociado = document.getElementById('valor-negociado-proposta')
-      const campoValorPagamento1 = document.getElementById('valor-pagamento-1')
-      const campoValorPagamento2 = document.getElementById('valor-pagamento-2')
-
-      const resumoValorPagamento1 =  document.getElementById('valor-1-resumo-negociacao')
-      const resumoValorPagamento2 = document.getElementById('valor-2-resumo-negociacao')
+    function inserirPagamento1(){
 
       proposta.valorPagamento1 = campoPagamento1.value
 
-       proposta.valorPagamento2 = campoValorNegociado.value - campoValorPagamento1.value
-        campoValorPagamento2.value =   proposta.valorPagamento2
+    }
+    function inserirPagamento2(){
 
-         resumoValorPagamento1.textContent = formatarMoeda(proposta.valorPagamento1)
-        resumoValorPagamento2.textContent = formatarMoeda(proposta.valorPagamento2)
-
-
+      proposta.valorPagamento2 =
+    Number(proposta.valorNegociado) -
+    Number(campoPagamento1.value);
 
     }
-    function calcularDesconto(){
+    function inserirFormaPagamento1(){
 
-      const valorAtual = proposta.valorFinalProposta
-      const valorNegociado = proposta.valorNegociado
-      let resultado = 0
-
-      
-      resultado = (((valorAtual - valorNegociado) / valorAtual) * 100)
-      proposta.desconto = resultado.toFixed(1) + "%"
-
-      return proposta.desconto
-
-    }
-    function attResumoFormaPagamento1(){
-
-      const resumoFormaPagamento1 = document.getElementById('forma-1-pagamento-resumo-negociacao')
 
       proposta.formaDePagamento1 = formaPagamento1.value
-      resumoFormaPagamento1.textContent = proposta.formaDePagamento1
+
 
     }
-    function attResumoFormaPagamento2(){
-
-        const resumoFormaPagamento2 = document.getElementById('forma-2-pagamento-resumo-negociacao')
-
+    function inserirFormaPagamento2(){
       proposta.formaDePagamento2 = formaPagamento2.value
-      resumoFormaPagamento2.textContent = proposta.formaDePagamento2
     }
-    function attResumoParcelas1(){
+    function inserirParcelas1(){
 
-      const resumoQtdParcelas1 = document.getElementById('parcelas-1-resumo-negociacao')
 
       proposta.parcelasPagamento1 = parcelasPagamento1.value
-      resumoQtdParcelas1.textContent = proposta.parcelasPagamento1
 
     }
-    function attResumoParcelas2(){
+    function inserirParcelas2(){
 
-        const resumoQtdParcelas2 = document.getElementById('parcelas-2-resumo-negociacao')
 
       proposta.parcelasPagamento2 = parcelasPagamento2.value
+    }
+   function inserirValorMcs() {
+
+    const valorOriginal = Number(proposta.valorFinalProposta);
+    const margemOriginal = 37;
+    const custo = valorOriginal * (1 - margemOriginal / 100);
+
+    const novoValor = Number(proposta.valorNegociado);
+
+    let novaMargem = ((novoValor - custo) / novoValor) * 100;
+
+    
+      if (formaPagamento1.value === "Cartão de Crédito") {
+        novaMargem -= 0.08;
+    }
+
+    if (formaPagamento2.value === "Cartão de Crédito") {
+        novaMargem -= 0.08;
+    }
+    if (novaMargem < 0) {
+        novaMargem = 0;
+    }
+
+    proposta.mcs = Number(novaMargem.toFixed(1));
+}
+function inserirDesconto(){
+
+    const valorAtual = Number(proposta.valorFinalProposta);
+    const valorNegociado = Number(proposta.valorNegociado);
+
+    proposta.desconto = ((valorAtual - valorNegociado) / valorAtual) * 100;
+}
+   //Calcular dados da variavel Proposta
+
+   
+     function atualizarDadosNavegacao(){
+      inserirValorNegociado()
+      inserirPagamento1()
+      inserirPagamento2()
+      inserirFormaPagamento1()
+      inserirFormaPagamento2()
+      inserirParcelas1()
+      inserirParcelas2()
+      inserirValorMcs() 
+      inserirDesconto()
+
+      atualizarResumoNegociacao()
+    }
+    //Funções de atualização de resumo
+
+    function atualizarResumoNegociacao(){
+
+      attResumoDesconto()
+      attResumoValorPagamento1()
+      attResumoValorPagamento2()
+      attResumoTipoPagamento1()
+      attResumoTipoPagamento2()
+      attQtdParcelas1()
+      attQtdParcelas2()
+      attMcs()
+      attResultadoMcs()
+      attValorNegociado()
+      attResultadoMcs()
+      attResumoMcs()
+    }
+    function attResumoDesconto(){
+
+      const campoDescontoNegociacao = document.getElementById('desconto-negociacao-proposta')
+      const resumoDescontoNegociacao = document.getElementById('desconto-resumo-negociacao')
+      campoDescontoNegociacao.textContent = proposta.desconto.toFixed(1) + "%"
+      resumoDescontoNegociacao.textContent = proposta.desconto.toFixed(1) + "%"
+
+    }
+    function attResumoValorPagamento1(){
+
+      const resumoValorPagamento1 = document.getElementById('valor-1-resumo-negociacao')
+
+      resumoValorPagamento1.textContent = formatarMoeda(proposta.valorPagamento1)
+    }
+    function attResumoValorPagamento2(){
+
+      const resumoValorPagamento2 = document.getElementById('valor-2-resumo-negociacao')
+      const campoPagamento2 = document.getElementById('valor-pagamento-2')
+
+      campoPagamento2.value = proposta.valorPagamento2
+      resumoValorPagamento2.textContent = formatarMoeda(proposta.valorPagamento2)
+
+    }
+    function attResumoTipoPagamento1(){
+      const resumoFormaPagamento1 = document.getElementById('forma-1-pagamento-resumo-negociacao')
+      
+      if(proposta.formaDePagamento1 === 'Á vista'){
+
+        proposta.parcelasPagamento1 = "Á vista"
+      }
+      resumoFormaPagamento1.textContent = proposta.formaDePagamento1
+    }
+    function attResumoTipoPagamento2(){
+      const resumoFormaPagamento2 = document.getElementById('forma-2-pagamento-resumo-negociacao')
+
+      if(proposta.formaDePagamento2 === 'Á vista'){
+
+        proposta.parcelasPagamento2 = "Á vista"
+      }
+      resumoFormaPagamento2.textContent = proposta.formaDePagamento2
+    }
+    function attQtdParcelas1(){
+      const resumoQtdParcelas1 = document.getElementById('parcelas-1-resumo-negociacao')
+
+      resumoQtdParcelas1.textContent = proposta.parcelasPagamento1
+    }
+     function attQtdParcelas2(){
+      const resumoQtdParcelas2 = document.getElementById('parcelas-2-resumo-negociacao')
+
       resumoQtdParcelas2.textContent = proposta.parcelasPagamento2
     }
-    function calcularMcs() {
+    function attMcs(){
+      const campoMcs = document.getElementById('mcs-negociacao')
 
-
-
-          const valorOriginal = proposta.valorFinalProposta;
-          const margemOriginal = 37;
-
-          const custo = valorOriginal * (1 - margemOriginal / 100);
-
-          const novoValor = proposta.valorNegociado;
-
-          const novaMargem = ((novoValor - custo) / novoValor) * 100;
-
-          if (novaMargem < 0 ){
-
-              return 0
-          }
-          else {
-
-              return novaMargem.toFixed(1);
-
-          }
-
+      campoMcs.textContent = proposta.mcs
+    }
+    function attResumoMcs(){
+    const resumoMcsNegociacao = document.getElementById('mcs-resumo-negociacao')
+      resumoMcsNegociacao.textContent = proposta.mcs
 
     }
-    function resultadoMcs(){
+    function attValorNegociado(){
+
+      const resumoValorNegociadoNegociacao = document.getElementById('valor-negociado-resumo-negociacao')
+
+      resumoValorNegociadoNegociacao.textContent = formatarMoeda(proposta.valorNegociado)
+    }
+     function attResultadoMcs(){
 
 
         const valorMcs = proposta.mcs;
@@ -166,7 +224,7 @@ valorFinalNegociacao.textContent = formatarMoeda(proposta.valorFinalProposta)
         const emojiAnalise = document.getElementById('icone-resultado-negociacao')
         const tituloAnalise = document.getElementById('titulo-resultado-negociacao')
         const textoAnalise = document.getElementById('texto-mcs-negociacao')
-        const resumoResultadoMcs = document.getElementById('resultdo-resumo-negociacao')
+        const resumoResultadoMcs = document.getElementById('resultado-mcs-resumo-negociacao')
 
 
         textoAnalise.classList.remove('verde', 'laranja', 'vermelho');
@@ -209,4 +267,3 @@ valorFinalNegociacao.textContent = formatarMoeda(proposta.valorFinalProposta)
 
         }
     }
-   

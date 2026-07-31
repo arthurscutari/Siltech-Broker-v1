@@ -194,9 +194,8 @@ function lancamentoSelecionado(){
     historicoSection.classList.remove('showFlex');
     negociacaoSection.classList.remove('showGrid');
     lancamentoSection.classList.add('showGrid');
-    containerPropostaPdf.classList.add('showFlex')
+    containerPropostaPdf.classList.remove('showFlex')
 }
-
 function propostaPdfSelecionado(){
 
     const containerPropostaPdf = document.getElementById('section-pdf')

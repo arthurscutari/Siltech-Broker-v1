@@ -557,7 +557,7 @@
             
           </article>
       </section>
-      <section class="container-negociacao " id="section-negociacao">
+      <section class="container-negociacao  " id="section-negociacao">
           <div class="card-valor-negociacao">
             <div class="header-card-global">
                 <i class="bi bi-info icone-header-global"></i>
@@ -656,10 +656,12 @@
                       <option value="" class="opcao-select">Selecione</option>
                       <option value="Á vista">Á vista</option>
                       <option value="Cartão de Crédito">Cartão de Crédito</option>
+                      <option value="Financiamento">Financiamento</option>
+
                     </select>
                   </div>
                 </div>
-                <div class="container-elementos-pagamento-negociacao ">
+                <div class="container-elementos-pagamento-negociacao" id="campoQtdParcelas1" >
                   <label for="" class="label-pagamento-negociacao">Quantidade de Parcelas</label>
                   <div class="container-items-pagamento-negociacao aumentar-input">
                     <select name="" id="parcela-pagamento-1-negociacao" class="select-pagamento-negociacao">
@@ -706,10 +708,11 @@
                       <option value="" class="opcao-select">Selecione</option>
                       <option value="Á vista">Á vista</option>
                       <option value="Cartão de Crédito">Cartão de Crédito</option>
+                      <option value="Financiamento">Financiamento</option>
                     </select>
                   </div>
                 </div>
-                <div class="container-elementos-pagamento-negociacao" id="campo-parcela-pagamento">
+                <div class="container-elementos-pagamento-negociacao" id="campoQtdParcelas2">
                   <label for="" class="label-pagamento-negociacao">Quantidade de Parcelas</label>
                   <div class="container-items-pagamento-negociacao aumentar-input">
                     <select name="" id="parcela-pagamento-2-negociacao" class="select-pagamento-negociacao">
@@ -848,7 +851,7 @@
                           <div class="card-resumo-item">
                             <div class="resumo-dados">
                               <p class="p-resumo-dados">Resultado</p>
-                              <p id="resultdo-resumo-negociacao" class="p-resumo-resultado">-</p>
+                              <p id="resultado-mcs-resumo-negociacao" class="p-resumo-resultado">-</p>
                             </div>
                           </div>  
                            <div class="card-resumo-item">
@@ -1156,38 +1159,38 @@
                     <p id="telefone-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
-                <div class="card-resumo-item ">
+                <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Proposta Teste</p>
                     <p id="teste-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
-                <div class="card-resumo-item ">
+                <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Canal de Vendas</p>
                     <p id="canal-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
               <h6 class="h6-resumo"><i class="bi bi-geo icone-resumo"></i>Localização</h6>
-                <div class="card-resumo-item">
+                <div class="card-resumo-item ">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Cidade</p>
                     <p id="local-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
-                <div class="card-resumo-item ">
+                <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Modulo</p>
                     <p id="modulo-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
-                <div class="card-resumo-item ">
+                <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Inversor</p>
                     <p id="inversor-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
-                <div class="card-resumo-item ">
+                <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Promoção</p>
                     <p id="promocao-resumo-proposta"class="p-resumo-resultado validar">-</p>
@@ -1200,93 +1203,93 @@
                     <p id="placas-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
-                <div class="card-resumo-item ">
+                <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Expansão de Placas</p>
                     <p id="expansao-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
-                <div class="card-resumo-item ">
+                <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Placas Expansivas</p>
                     <p id="qtd-expansao-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
-                   <div class="card-resumo-item ">
+                   <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Hsp</p>
                     <p id="hsp-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
               <h6 class="h6-resumo"><i class="bi bi-wrench-adjustable-circle icone-resumo"></i>Instalação</h6>
-                     <div class="card-resumo-item ">
+                     <div class="card-resumo-item validar-sdr ">
                   <div class="resumo-dados" >
                     <p class="p-resumo-dados">Preço kWh</p>
                     <p id="preco-kwh-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
-                   <div class="card-resumo-item ">
+                   <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Instalação</p>
                     <p id="instalacao-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
-                   <div class="card-resumo-item ">
+                   <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Telhado</p>
                     <p id="telhado-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
-                   <div class="card-resumo-item">
+                   <div class="card-resumo-item ">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Área</p>
                     <p id="area-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
               <h6 class="h6-resumo"><i class="bi bi-piggy-bank icone-resumo"></i>Custos</h6>
-          <div class="card-resumo-item ">
-                  <div class="resumo-dados">
+          <div class="card-resumo-item validar-sdr ">
+                  <div class="resumo-dados ">
                     <p class="p-resumo-dados">CMV</p>
                     <p id="cmv-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
           </div>
-          <div class="card-resumo-item ">
+          <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Custo Telhado</p>
                     <p id="custo-telhado-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
           </div> 
-          <div class="card-resumo-item ">
+          <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Custo Homologação</p>
                     <p id="custo-homologacao-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
           </div>
-           <div class="card-resumo-item ">
+           <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Custo Instalação</p>
                     <p id="custo-instalacao-resumo-proposta"class="p-resumo-resultado">-</p>
                   </div>
           </div>
-          <div class="card-resumo-item ">
+          <div class="card-resumo-item validar-sdr ">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Retorno</p>
                     <p id="custo-retorno-resumo-proposta"class="p-resumo-resultado">-</p>
                   </div>
           </div>  
-          <div class="card-resumo-item ">
+          <div class="card-resumo-item validar-sdr">
                   <div class="resumo-dados ">
                     <p class="p-resumo-dados">Custo Equipamento</p>
                     <p id="custo-equipamento-resumo-proposta"class="p-resumo-resultado">-</p>
                   </div>
           </div>
-          <div class="card-resumo-item">
+          <div class="card-resumo-item ">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados" style="color: var(--cor-erro);">Conta sem Siltech</p>
                     <p id="conta-sem-siltech-resumo-proposta"class="p-resumo-resultado" style="color: var(--cor-erro);">-</p>
                   </div>
           </div>  
-          <div class="card-resumo-item">
+          <div class="card-resumo-item ">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados" style="color: var(--cor-sucesso);">Conta com Siltech</p>
                     <p id="conta-com-siltech-resumo-proposta"class="p-resumo-resultado" style="color: var(--cor-sucesso);">-</p>
@@ -1304,7 +1307,7 @@
                     <p id="economia-15-resumo-proposta"class="p-resumo-resultado">-</p>
                   </div>
           </div>
-          <div class="card-resumo-item hidden">
+          <div class="card-resumo-item hidden validar-sdr">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Valor Final</p>
                     <p id="valor-final-resumo-proposta"class="p-resumo-resultado">-</p>
@@ -1331,7 +1334,7 @@
          <i class="bi bi-gear" style="color: var(--cor-terciaria); font-size: 75px;"></i>
         <h1 style="font-size: 25px; color: var(--cor-texto-primaria)">Estamos trabalhando nesta funcionalidade. Em breve, ela fará parte da plataforma.</h1>
       </section>
-      <section class="container-proposta-pdf" id="section-pdf">
+      <section class="container-proposta-pdf " id="section-pdf">
         <div class="container-pdf">
           <section class="pg-pdf pg-capa-pdf">
             <div class="capa-pdf">
@@ -1619,7 +1622,7 @@
   <!--Script para negociação-->
   <script src="js/Negociacao/negociacao-gerar-resumo.js"></script>
   <script src="js/Negociacao/negociacao-enviar-dados.js"></script>
-  <script src="js/Negociacao/formulario.js"></script>
+  <script src="js/Negociacao/negociacao-formulario.js"></script>
 
 </body>
 

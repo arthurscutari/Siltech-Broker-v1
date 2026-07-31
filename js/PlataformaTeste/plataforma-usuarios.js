@@ -30,23 +30,38 @@ function atualizarColaborador () {
     else if(usuario === 5){
 
         colaborador.textContent = "Gustavo Munhoz"
-        cargo.textContent = "Representante de Vendas / Closer"
+        cargo.textContent = "Representante de Vendas"
+        visualizacoInfoSdr()
+
     }
     else if(usuario === 6){
 
         colaborador.textContent = "Pedro Toqueton"
-        cargo.textContent = "Representante  de Vendas"
+        cargo.textContent = "Representante de Vendas"
+        visualizacoInfoSdr()
     }
     else if(usuario === 7){
 
         colaborador.textContent = "Breno Celino"
         cargo.textContent = "Representante de Vendas"
+        visualizacoInfoSdr()
     }
      else if(usuario === 8){
 
         colaborador.textContent = "Diego Mattos"
         cargo.textContent = "Representante de Vendas"
+        visualizacoInfoSdr()
     }
 }
 
 atualizarColaborador()
+
+function visualizacoInfoSdr() {
+
+    const dadosResumo = document.querySelectorAll('.validar-sdr');
+
+    dadosResumo.forEach(elemento => {
+        elemento.classList.add('hidden');
+    });
+
+}
