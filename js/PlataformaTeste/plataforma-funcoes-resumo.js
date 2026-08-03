@@ -88,7 +88,7 @@ function atualizarResumo(){
 
     const economiaEm15AnosResumo = document.getElementById('economia-15-resumo-proposta')
     economiaEm15AnosResumo.textContent = validarDado(
-    proposta.economiaEm15anos,
+    proposta.economiaEm15Anos,
     formatarMoeda);
 
     const valorFinalResumo = document.getElementById('valor-final-resumo-proposta')
@@ -96,7 +96,7 @@ function atualizarResumo(){
 
      const energiGeradaResumo = document.getElementById('energia-gerada-resumo-proposta')
     energiGeradaResumo.textContent = proposta.energiaGerada.toFixed(1)
-        
+
 }
 //  function attResumoCustoTelhado(){
 
