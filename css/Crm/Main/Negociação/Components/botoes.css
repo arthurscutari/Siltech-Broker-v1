@@ -41,3 +41,15 @@
     border: 1px solid var(--cor-primaria);
     color: var(--cor-primaria);
 }
+.botao-fechar-modal{
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    flex: 1;
+    padding-right: 8px;
+    align-self: flex-end;
+    color: var(--cor-texto-primaria);
+    cursor: pointer;
+}

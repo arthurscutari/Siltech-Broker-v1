@@ -50,3 +50,13 @@ function mostrarParcela2(){
    }
 }
 
+const btnNegociacaoPdf = document.getElementById('btn-pdf-negociacao')
+
+btnNegociacaoPdf.addEventListener('click', mostrarTelaNegociacaoPdf)
+
+function mostrarTelaNegociacaoPdf() {
+
+   const telaNegociacaoPdf = document.getElementById('tela-pdf-negociacao')
+
+   telaNegociacaoPdf.classList.remove('hidden')
+}

@@ -59,7 +59,7 @@ atualizarColaborador()
 function visualizacoInfoSdr() {
 
     const dadosResumo = document.querySelectorAll('.validar-sdr');
-
+    
     dadosResumo.forEach(elemento => {
         elemento.classList.add('hidden');
     });

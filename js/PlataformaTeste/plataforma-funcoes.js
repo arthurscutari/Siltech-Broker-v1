@@ -535,3 +535,18 @@ function calcularPotencia() {
   }
 
 }
+function validarDado(valor, formatador = null) {
+
+    const numero = Number(valor);
+
+    if (
+        valor === null ||
+        valor === undefined ||
+        valor === "" ||
+        !Number.isFinite(numero)
+    ) {
+        return "Aguardando dados";
+    }
+
+    return formatador ? formatador(numero) : numero;
+}

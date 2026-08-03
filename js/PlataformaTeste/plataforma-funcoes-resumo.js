@@ -72,23 +72,31 @@ function atualizarResumo(){
     custoEquipamentoResumo.textContent = formatarMoeda(proposta.custoEquipamento)
 
     const contaSemSiltechResumo = document.getElementById('conta-sem-siltech-resumo-proposta')
-    contaSemSiltechResumo.textContent = formatarMoeda(proposta.contaSemSiltech)
+    contaSemSiltechResumo.textContent = validarDado(
+    proposta.contaSemSiltech,
+    formatarMoeda);
 
     const contaComSiltechResumo = document.getElementById('conta-com-siltech-resumo-proposta')
-    contaComSiltechResumo.textContent = formatarMoeda(proposta.contaComSiltech)
+    contaComSiltechResumo.textContent = validarDado(
+    proposta.contaComSiltech,
+    formatarMoeda);
 
     const economiaAnualResumo = document.getElementById('economia-anual-resumo-proposta')
-    economiaAnualResumo.textContent = formatarMoeda(proposta.economiaAnual)
+    economiaAnualResumo.textContent = validarDado(
+    proposta.economiaAnual,
+    formatarMoeda);
 
     const economiaEm15AnosResumo = document.getElementById('economia-15-resumo-proposta')
-    economiaEm15AnosResumo.textContent = formatarMoeda(proposta.economiaEm15Anos)
+    economiaEm15AnosResumo.textContent = validarDado(
+    proposta.economiaEm15anos,
+    formatarMoeda);
 
     const valorFinalResumo = document.getElementById('valor-final-resumo-proposta')
     valorFinalResumo.textContent = formatarMoeda(proposta.valorFinalProposta)
 
      const energiGeradaResumo = document.getElementById('energia-gerada-resumo-proposta')
     energiGeradaResumo.textContent = proposta.energiaGerada.toFixed(1)
-
+        
 }
 //  function attResumoCustoTelhado(){
 

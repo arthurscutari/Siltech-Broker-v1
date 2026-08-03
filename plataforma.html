@@ -866,7 +866,7 @@
                       
                         <button class="botao-resumo" id="btn-enviar-negociacao"> <i class="bi bi-suitcase-lg" ></i>Enviar Negociação</button>
                         <p class="p-resumo-footer">Conclua a negociação ou gere a proposta atualizada em PDF.</p>
-                        <button class="gerar-proposta-pdf"> <i class="bi bi-filetype-pdf"></i>Gerar Proposta Negociada</button>
+                        <button class="gerar-proposta-pdf" id="btn-pdf-negociacao"> <i class="bi bi-filetype-pdf"></i>Gerar Proposta Negociada</button>
 
              </div>
           </div>
@@ -893,7 +893,7 @@
             <p class="p-dica-negociacao"> <i class="bi bi-rocket-takeoff icone-dica-negociacao"></i> <b> Dica:</b> Após preencher todas as informações, o sistema calculará automaticamente o MCS e verificará se a negociação atende às regras comerciais.</p>
           </div>
       </section>
-      <section class="container-proposta showGrid" id="section-proposta">
+      <section class="container-proposta showGrid " id="section-proposta">
         <article class="card-cliente-proposta">
           <div class="header-card-global">
             <i class="bi bi-people icone-header-global"></i>
@@ -1324,6 +1324,7 @@
           <div class="resumo-footer">
             <button class="botao-resumo" id="botao-gerar-pdf-proposta">
               <i class="bi bi-filetype-pdf"></i>Gerar PDF da Proposta</button>
+              <p class="p-erro-gerar-pdf hidden">Não foi possível gerar o PDF porque existem campos obrigatórios sem preenchimento.</p>
               <p class="p-resumo-footer">Proposta gerada simultaneamente.</p>
           </div>
         </article>
@@ -1339,7 +1340,7 @@
           <section class="pg-pdf pg-capa-pdf">
             <div class="capa-pdf">
                 <div class="container-capa-pdf">
-                    <img src="img/logo-siltech.png" alt="Logo proposta" height="55px" width="55px">
+                    <img src="img/logo-siltech.png" alt="Logo proposta" height="70px" width="60px">
                 </div>
                 <div class="container-capa-pdf">
                     <h1 class="h1-capa-pdf">Proposta Comercial</h1>
@@ -1347,7 +1348,7 @@
                 </div>
                 <div class="container-capa-pdf">
                     <p class="p-proposta-pdf nomargin">@siltechsolar</p>
-                    <p class="p-proposta-pdf nomargin">(11) 4799-5773</p>
+                    <p class="p-proposta-pdf nomargin">(11) 4796-5773</p>
                     <p class="p-proposta-pdf nomargin">www.siltechsolar.com.br</p>
                 </div>
             </div>
@@ -1356,7 +1357,7 @@
             </div>
           </section>
           <section class="pg-pdf">
-              <div class="cabecalho-pdf">
+              <div class="cabecalho-pdf" style="margin-bottom: 16px;">
                   <img src="img/logo-siltech.png" alt="Logo cabecalho">
                   <h1 class="titulo-cabecalho-pdf">PROPOSTA COMERCIAL</h1>
                   <p class="n-pagina-pdf">2</p>
@@ -1426,7 +1427,7 @@
                   </p>
                   <p class="p-proposta-m-pdf">Sua conta <span style="color: #1a9e5f;"><b>COM</b></span> Energia Solar Siltech:
                       <span id="conta-com-proposta-pdf" style="font-weight: 700; color: #1a9e5f;"></span></p>
-                  <p class="p-proposta-m-pdf"><b>Energia gerada com o Sistema Solar Siltech:</b> <span class="amarelo" id="energia-proposta-pdf">977
+                  <p class="p-proposta-m-pdf"><b>Energia gerada com o Sistema Solar Siltech:</b> <span class="amarelo-pdf" id="energia-proposta-pdf">977
                               kWh</span></p>
                   <h1 class="h2-proposta-pdf espaco" style="display: flex; align-self: flex-start; margin-top: 10px; border: none;">CONDIÇÕES GERAIS DE FORNECIMENTO:</h1>
               <section class="section-tabela-pdf">
@@ -1565,17 +1566,17 @@
                   <p class="p-proposta-pdf">Atenciosamente,</p>
                   <div class="div-underline-pdf" style="margin-top: 70px;">
                       <p class="underline-pdf"></p>
-                  <p class="p-proposta-pdf center-pdf nomargin-pdf" style="padding: 0;" id="nome-assinatura-proposta-pdf">Nome</p>
+                  <p class="p-proposta-pdf center-pdf nomargin-pdf" style="padding: 0; margin-top: 10px;" id="nome-assinatura-proposta-pdf">Nome</p>
                   </div>
                 <div class="div-underline-pdf" style="margin-top: 70px;">
                       <p class="underline-pdf"></p>
-                      <p class="p-proposta-pdf center-pdf">Siltech Energia Solar LTDA</p>
+                      <p class="p-proposta-pdf center-pdf" style="padding: 0; margin-top: 10px;">Siltech Energia Solar LTDA</p>
                   </div>
                   <p class="p-proposta-pdf center-pdf" style="margin-top: 150px;">Mogi das Cruzes, <span id="data-proposta-pdf">SP, 27 de abril de 2026.</span></p>
                   <img src="./img/imgProposta/logoProposta.png" alt="Logo Siltech" height="44px" width="190px"
                       class="center-pdf" style="margin-top: 150px;">
                   <p class="p-proposta-pdf center-pdf nomargin-pdf">www.siltechsolar.com.br</p>
-                  <p class="p-proposta-pdf center-pdf nomargin-pdf">(11) 4799-5773</p>
+                  <p class="p-proposta-pdf center-pdf nomargin-pdf">(11) 4796-5773</p>
                   <p class="p-proposta-pdf center-pdf nomargin-pdf">@siltechsolar</p>
 
               </div>
@@ -1587,7 +1588,7 @@
         <h2 class="h2-modal">Proposta gerada com sucesso!</h2> 
         <p class="p-modal">Revise as informações da proposta antes de gerar o PDF final ou imprimir.
          Caso encontre alguma divergência, clique refaça a proposta através do botão abaixo.</p>
-                 <button class="btn-negociar-proposta" id="btn-negociar-proposta"><i class="bi bi-suitcase-lg icone-modal"></i>Negociar Proposta</button>
+                 <button class="btn-negociar-proposta validar-sdr" id="btn-negociar-proposta"><i class="bi bi-suitcase-lg icone-modal"></i>Negociar Proposta</button>
                  <p class="p-dica-modal">Siga para o processo de  negociação da proposta.</p>
         <button class="btn-pdf-proposta" id="btn-baixar-proposta"><i class="bi bi-printer icone-modal"></i>Imprimir / Gerar PDF</button>
         <p class="p-dica-modal">Imprima ou gere o PDF para mostrar ao cliente.</p>
@@ -1598,7 +1599,64 @@
         </div>
         
       </section>
-      <div class="container-proposta-negociada-pdf hidden"></div>
+      <div class="fundo-modal-negociacao hidden" id="tela-pdf-negociacao">
+        
+      </div>
+      <div class="modal-negociacao hidden">
+          <div class="header-modal-negociacao">
+                <i class="bi bi-suitcase-lg icone-header-global"></i>
+                <p class="texto-header-global">Etapa Única</p>
+                <h3 class="titulo-header-global">Gerar Proposta de Negociação</h3>
+                <p class="botao-fechar-modal">X</p>
+            </div>
+        <div class="card-modal-negociacao">
+          <div class="container-titulo-modal-negociacao">
+              <i class="bi bi-clipboard-check-fill icone-resumo"></i>
+              <h4 class="h4-global">Valor Inicial da Proposta</h4>
+          </div>
+          <div class="borda-pagamento">           
+          </div>
+          <div class="container-info-modal-negociacao">
+            <p class="p-modal-negociacao">Valor</p>
+          </div>
+        </div>
+        <div class="card-modal-negociacao">
+          <div class="container-titulo-modal-negociacao">
+              <i class="bi bi-clipboard-check-fill icone-resumo"></i>
+              <h4 class="h4-global">Valor Inicial da Proposta</h4>
+          </div>
+          <div class="borda-pagamento">           
+          </div>
+          <div class="container-info-modal-negociacao">
+            <p class="p-modal-negociacao">Valor</p>
+          </div>
+        </div>
+        <div class="card-modal-negociacao">
+          <div class="container-titulo-modal-negociacao">
+              <i class="bi bi-clipboard-check-fill icone-resumo"></i>
+              <h4 class="h4-global">Valor Inicial da Proposta</h4>
+          </div>
+          <div class="borda-pagamento">           
+          </div>
+          <div class="container-info-modal-negociacao">
+            <p class="p-modal-negociacao">Valor</p>
+          </div>
+        </div>
+        <div class="card-modal-negociacao">
+          <div class="container-titulo-modal-negociacao">
+              <i class="bi bi-clipboard-check-fill icone-resumo"></i>
+              <h4 class="h4-global">Valor Inicial da Proposta</h4>
+          </div>
+          <div class="borda-pagamento">           
+          </div>
+          <div class="container-info-modal-negociacao">
+            <p class="p-modal-negociacao">Valor</p>
+          </div>
+        </div>
+        <div class="footer-modal-negociacao">
+
+        </div>
+      </div>
     </main>
     
   </section>

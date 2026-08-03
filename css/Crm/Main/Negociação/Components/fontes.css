@@ -82,3 +82,11 @@
     color: var(--cor-preto);
     font-weight: 700;
 }
+.p-modal-negociacao{
+
+    border: 1px solid var(--cor-borda);
+    padding: 14px 100px;
+    border-radius: 4px;
+    background-color: var(--cor-fundo-texto);
+    color: var(--cor-preto);
+}
