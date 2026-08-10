@@ -54,8 +54,32 @@
     border-radius: 50px;
     color: var(--cor-terciaria);
 }
+.icone-card-negociacao{
+
+    font-size: 16px!important;
+    padding: 8px;
+}
 .icone-add-pagamento{
     font-size: 45px;
     color: var(--cor-terciaria);
     cursor: pointer;
+}
+.icone-modal{
+
+    font-size: 30px!important;
+    background-color: var(--cor-fundo);
+    color: var(--cor-terciaria);
+    padding: 8px;
+}
+.icone-pagamento-modal {
+    
+    font-size: 24px!important;
+    color: var(--cor-primaria);
+
+
+}
+.icone-botao{
+
+    font-size: 18px;
+    
 }

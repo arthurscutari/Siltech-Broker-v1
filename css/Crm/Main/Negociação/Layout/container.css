@@ -181,7 +181,7 @@
 }
 .modal-negociacao{
 
-    height: 80%;
+    height: 82%;
     width: 60%;
     background-color: var(--cor-fundo);
     border-radius: 10px;
@@ -190,11 +190,10 @@
     display: flex;
     align-self: center;
     justify-self: center;
-    
     z-index: 999999;
         flex-direction: column;
-
     
+    gap: 16px;
 }
 .header-modal-negociacao{
 
@@ -219,8 +218,9 @@
     height: 100%;
     align-items: center;
     display: flex;
-    padding: 16px;
-    gap: 20px;
+    padding: 12px;
+    gap: 8px;
+    
 }
 .container-info-modal-negociacao{
 
@@ -231,4 +231,137 @@
     display: flex;
     padding: 16px;
     gap: 20px;
+}
+.container-titulo-pagamento-modal{
+
+    height: 15%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px;
+    gap: 8px;
+}
+.container-pagamento-modal {
+    display: flex;
+    width: 95%;
+    height: 70px;
+    border: 1px solid rgb(189, 189, 189) ;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.body-card-negociacao{
+    width: 100%;
+    height: 100%;
+    gap: 8px;
+    padding: 8px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.div-icone-pagamento-modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 6%;
+}
+.div-titulo-pagamento-modal{
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center ;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+}
+.div-valor-pagamento-modal{
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+}
+.div-acao-modal-negociacao{
+
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-titulo-forma-modal{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1;
+}
+.container-parcela-pagamento-modal{
+
+        height: 100%;
+        width: 14%;
+        display: flex;
+        align-items: space-between;
+        flex-direction: column;
+        justify-content: space-between ;
+        padding: 8px;
+    
+}
+.container-total-pagamento-modal{
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+     justify-content: space-between ;
+    padding: 8px;
+    height: 100%;
+    width: 14%;
+    
+}
+.container-juros-pagamento-modal{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 100%;
+    width: 10%;
+    box-sizing: border-box;
+    padding: 12px 0;
+
+}
+.container-financiamento-parcela-pagamento-modal{
+
+       height: 100%;
+        width: 24%;
+        display: flex;
+        align-items: space-between;
+        flex-direction: column;
+        justify-content: space-between ;
+        padding: 8px;
+}
+.footer-modal-negociacao{
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding:  0 32px 16px;
+    justify-content: space-between;
+}
+#container-avista:hover{
+
+    border: 1px solid var(--cor-terciaria);
+
+}
+#container-credito:hover{
+
+    border: 1px solid var(--cor-terciaria);
+
+}
+#container-financiamento:hover{
+
+    border: 1px solid var(--cor-terciaria);
+
 }

@@ -25,3 +25,7 @@
     grid-column: 1/10!important;
     grid-row: 1/19!important;
 }
+.erro-borda {
+
+    border: 1px solid red!important;
+}

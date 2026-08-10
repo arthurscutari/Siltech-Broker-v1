@@ -37,3 +37,11 @@
     font-size: 14px;
     color: var(--cor-texto-primaria);
 }
+.select-modal{
+    
+    padding: 6px;
+    color: var(--cor-texto-primaria);
+    border-radius: 4px;
+    border: 1px solid var(--cor-texto-primaria);
+    outline: none;
+}

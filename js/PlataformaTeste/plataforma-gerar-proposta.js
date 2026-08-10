@@ -18,6 +18,7 @@ let proposta = {
     hsp:0,
     promocao:"",
     placas:0,
+    sistema:"",
     expansao:"Não",
     qtdExpansao:0,
     precoKwh:0,
@@ -165,12 +166,25 @@ const gerarPdf = document.getElementById('botao-gerar-pdf-proposta')
 
 gerarPdf.addEventListener('click', ()=>{
 
+    const campoVazio = espacoVazio()
+
+    
+
+    if (campoVazio === "Sim"){
+
+        
+         console.log('Campo Vazio Não Continuar')
+         return
+    }
+
+    else {
+
+        
     const usuarioAtivo = document.getElementById('usuario-plataforma')
     const dataResumo = document.getElementById('data-resumo-proposta')
     const idResumo = document.getElementById('id-resumo-proposta')
     const colaboradorResumo = document.getElementById('colaborador-resumo-proposta')
 
-    
 
     proposta.data = gerarDataProposta()
     proposta.colaborador = usuarioAtivo.textContent
@@ -184,7 +198,7 @@ gerarPdf.addEventListener('click', ()=>{
 
     localStorage.setItem('propostaGerada', JSON.stringify(proposta));
 
-    const url = "https://script.google.com/macros/s/AKfycbyXRfH1QwCzoPUaS3jFkDUBP42nreLTUoizqjFUxsPxwTRFycQ8bF6rzRbbNucih6GV/exec";
+    const url = "https://script.google.com/macros/s/AKfycbzW2J8R3V8Px79-LKCNB00XzcX9jeYXxFT_O1ZxKxQgDoBoZEUid7EG6YzoifIWw6d-eg/exec";
 
         fetch(url, {
             method: "POST",
@@ -203,4 +217,7 @@ gerarPdf.addEventListener('click', ()=>{
        propostaPdfSelecionado()
        carregarProspostaNegociacao()
        carregarDadosLancamento()
+
+    }
+
 })

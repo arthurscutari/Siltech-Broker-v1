@@ -50,13 +50,29 @@ function mostrarParcela2(){
    }
 }
 
-const btnNegociacaoPdf = document.getElementById('btn-pdf-negociacao')
+const btnAbrirModal = document.getElementById('btn-pdf-negociacao')
+const btnXmodal =  document.getElementById('btn-x-modal-negociacao')
+const btnFecharModal = document.getElementById('btn-fechar-modal-negociacao')
 
-btnNegociacaoPdf.addEventListener('click', mostrarTelaNegociacaoPdf)
+btnAbrirModal.addEventListener('click', abrirModalNegociacao)
+btnXmodal.addEventListener('click', fecharModalNegociacao)
+btnFecharModal.addEventListener('click', fecharModalNegociacao)
 
-function mostrarTelaNegociacaoPdf() {
+function abrirModalNegociacao() {
 
-   const telaNegociacaoPdf = document.getElementById('tela-pdf-negociacao')
+    const fundoModal = document.getElementById('fundo-modal-negociacao')
+   const modalNegociacao = document.getElementById('modal-negociacao')
 
-   telaNegociacaoPdf.classList.remove('hidden')
+   fundoModal.classList.remove('hidden')
+      modalNegociacao.classList.remove('hidden')
+}
+
+function fecharModalNegociacao(){
+
+   const fundoModal = document.getElementById('fundo-modal-negociacao')
+   const modalNegociacao = document.getElementById('modal-negociacao')
+
+   fundoModal.classList.add('hidden')
+      modalNegociacao.classList.add('hidden')
+
 }

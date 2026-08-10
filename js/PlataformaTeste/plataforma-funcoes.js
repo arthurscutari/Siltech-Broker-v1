@@ -41,6 +41,9 @@ function calcularDados(){
   custoRetorno()
 
   atualizarResumo()
+  //Retirar borda de validação
+
+  limparCamposValidados ()
 
   console.log(proposta)
 }
@@ -404,7 +407,6 @@ function calcularArea(){
       return proposta.energiaGerada = Number((hsp * 700 * 30 * 0.8) / 1000) * placas;
     }
   }
-  //OK
   function contaComSiltech() {
     const instalacao = proposta.instalacao;
 
@@ -417,13 +419,12 @@ function calcularArea(){
     }
 
   }
-  //OK
   function contaSemSiltech() {
     const custoEnergia = Number(proposta.precoKwh);
 
     return proposta.contaSemSiltech = calcularEnergia() * custoEnergia;
   }
-  //OK
+
   function custoMercadoriaVendida() {
     
        proposta.cmv = proposta.custoEquipamento + proposta.custoTelhado + proposta.custoHomologacao + proposta.custoInstalacao + retorno 
@@ -466,7 +467,6 @@ function formatarMoeda(valor) {
         currency: 'BRL'
     }).format(valor);
 }
-
 function limparCamposProposta() {
 
   const nomeProposta = document.getElementById('nome-proposta')
@@ -504,7 +504,6 @@ function limparCamposProposta() {
   localStorage.removeItem('propostaGerada')
 
 }
-
 function limparCamposResumo() {
   const textos = document.querySelectorAll('.p-resumo-resultado');
 
@@ -549,4 +548,110 @@ function validarDado(valor, formatador = null) {
     }
 
     return formatador ? formatador(numero) : numero;
+}
+
+function espacoVazio(){
+
+  const mensagemErro = document.getElementById('mensagem-erro-proposta"')
+  const nome = document.getElementById('nome-proposta')
+  const containerNome = document.getElementById('c-nome')
+  // const teste = document.getElementById('teste-proposta')
+  // const canal = document.getElementById('canal-proposta')
+  // const containerCanal = document.getElementById('c-canal')
+  const hsp = document.getElementById('hsp-proposta')
+  const containerCidade = document.getElementById('c-cidade')
+  const modulo = document.getElementById('modulo-proposta')
+  const containerModulo = document.getElementById('c-modulo')
+  const placas = document.getElementById('quantidade-placa-proposta')
+  const containerConsumo = document.getElementById('consumo-energia-proposta')
+  const containerPlacas = document.getElementById('consumo-placa-proposta')
+  const preco = document.getElementById('preco-kwh-proposta')
+  const containerPrecoKwh = document.getElementById('c-preco-kwh')
+  const instalacao = document.getElementById('instalacao-proposta')
+  const containerInstalacao = document.getElementById('c-instalacao')
+  const telhado = document.getElementById('telhado-proposta')
+  const containerTelhado = document.getElementById('c-telhado')
+
+
+  if (nome.value === "") {
+
+    containerNome.classList.add('erro-borda')
+    // mensagemErro.classList.remove('hidden')
+    
+    return campoVazio = "Sim"
+  }
+  //   if (canal.value === "") {
+
+  //   containerCanal.classList.add('erro-borda')
+  //   // mensagemErro.classList.remove('hidden')
+    
+  //   return campoVazio = "Sim"
+  // }
+    if (hsp.textContent === "0,00" || hsp.textContent === "Cidade não encontrada") {
+
+    containerCidade.classList.add('erro-borda')
+    // mensagemErro.classList.remove('hidden')
+    
+    return campoVazio = "Sim"
+  }
+   if (modulo.value === "") {
+
+    containerModulo.classList.add('erro-borda')
+    // mensagemErro.classList.remove('hidden')
+    
+    return campoVazio = "Sim"
+  }
+  if (placas.textContent === "0") {
+
+    containerConsumo.classList.add('erro-borda')
+    containerPlacas.classList.add('erro-borda')
+    // mensagemErro.classList.remove('hidden')
+    
+    return campoVazio = "Sim"
+  }
+  if (preco.value === "") {
+
+    containerPrecoKwh.classList.add('erro-borda')
+    // mensagemErro.classList.remove('hidden')
+    
+    return campoVazio = "Sim"
+  }
+   if (instalacao.value === "") {
+
+    containerInstalacao.classList.add('erro-borda')
+    // mensagemErro.classList.remove('hidden')
+    
+    return campoVazio = "Sim"
+  }
+  if (telhado.value === "") {
+
+    containerTelhado.classList.add('erro-borda')
+    // mensagemErro.classList.remove('hidden')
+    
+    return campoVazio = "Sim"
+  }
+  
+  
+}
+
+function limparCamposValidados (){
+
+
+  const containerNome = document.getElementById('c-nome')
+  const containerCidade = document.getElementById('c-cidade')
+  const containerModulo = document.getElementById('c-modulo')
+  const containerConsumo = document.getElementById('consumo-energia-proposta')
+  const containerPlacas = document.getElementById('consumo-placa-proposta')
+  const containerPrecoKwh = document.getElementById('c-preco-kwh')
+  const containerInstalacao = document.getElementById('c-instalacao')
+  const containerTelhado = document.getElementById('c-telhado')
+
+    containerNome.classList.remove('erro-borda')
+    containerCidade.classList.remove('erro-borda')
+    containerModulo.classList.remove('erro-borda')
+    containerConsumo.classList.remove('erro-borda')
+    containerPlacas.classList.remove('erro-borda')
+    containerPrecoKwh.classList.remove('erro-borda')
+    containerInstalacao.classList.remove('erro-borda')
+    containerTelhado.classList.remove('erro-borda')
 }

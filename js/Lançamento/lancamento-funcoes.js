@@ -126,12 +126,12 @@ function attResumoLocalObraLancamento(){
 
 
         proposta.localObra = "Sim"
-        resumoLocal.textContent = proposta.obra
+        resumoLocal.textContent = proposta.localObra
     }
    else {
 
         proposta.localObra = "Não"
-        resumoLocal.textContent = proposta.obra
+        resumoLocal.textContent = proposta.localObra
 
    }
       
