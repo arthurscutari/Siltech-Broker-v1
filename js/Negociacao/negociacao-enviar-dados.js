@@ -6,6 +6,6 @@ function enviarDadosNegociacao(){
 
 
    lancamentoSelecionado()
-
+   carregarDadosLancamento()
    
 }

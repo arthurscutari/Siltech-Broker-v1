@@ -3,6 +3,7 @@
     const inputBairroLancamento = document.getElementById("input-bairro-lancamento");
     const inputCidadeLancamento = document.getElementById("input-cidade-lancamento");
     const inputEstadoLancamento = document.getElementById("input-estado-lancamento");
+    
 function carregarDadosLancamento(){
 
     const resumoQuantidadePlaca = document.getElementById('placas-resumo-lancamento')

@@ -96,6 +96,11 @@ testeFormularioProposta.addEventListener('change', calcularDados)
 const canalFormularioProposta = document.getElementById('canal-proposta')
 
 canalFormularioProposta.addEventListener('change', calcularDados)
+//Código para sistema
+const sistemaFormularioProposta = document.getElementById('inversor-proposta')
+
+sistemaFormularioProposta.addEventListener('change', calcularDados)
+
 //Código para modulo
 const moduloFormularioProposta = document.getElementById('modulo-proposta')
 
@@ -198,7 +203,7 @@ gerarPdf.addEventListener('click', ()=>{
 
     localStorage.setItem('propostaGerada', JSON.stringify(proposta));
 
-    const url = "https://script.google.com/macros/s/AKfycbyPJCPV2O5yQc_T2YBKGbRBu0euNQqv2xFZwMHCdrU-SZBhFr4N3YWKiasoFK-BnRVu/exec";
+    const url = "https://script.google.com/macros/s/AKfycbzhNzbVVpwHhejc7j4xBEF020xWtomWGcFFI8QTQrvh6XP1gNULqajt2nN6bT8Igwl1-A/exec";
 
         fetch(url, {
             method: "POST",
@@ -216,7 +221,7 @@ gerarPdf.addEventListener('click', ()=>{
        carregarDadosProposta()
        propostaPdfSelecionado()
        carregarProspostaNegociacao()
-       carregarDadosLancamento()
+       
 
     }
 

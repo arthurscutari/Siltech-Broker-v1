@@ -11,6 +11,7 @@ function calcularDados(){
   inserirTelefone()
   inserirTeste()
   inserirCanal()
+  inserirSistema()
   inserirModulo()
   inserirPromocao()
   inserirQuantidade()
@@ -45,7 +46,6 @@ function calcularDados(){
 
   limparCamposValidados ()
 
-  console.log(proposta)
 }
 function inserirNome(){
 
@@ -90,6 +90,10 @@ function inserirCanal() {
 function inserirModulo(){
 
     proposta.modulo = moduloFormularioProposta.value
+}
+function inserirSistema(){
+
+    proposta.sistema = sistemaFormularioProposta.value
 }
 function inserirPromocao(){
 

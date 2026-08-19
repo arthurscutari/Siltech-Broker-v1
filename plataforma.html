@@ -79,7 +79,7 @@
          <i class="bi bi-gear" style="color: var(--cor-terciaria); font-size: 75px;"></i>
         <h1 style="font-size: 25px; color: var(--cor-texto-primaria)">Estamos trabalhando nesta funcionalidade. Em breve, ela fará parte da plataforma.</h1>
       </section>
-      <section class="container-lancamento " id="section-lancamento">
+      <section class="container-lancamento showGrid " id="section-lancamento">
           <article class="card-cliente-lancamento">
             <header class="header-card-global">
                 <i class="bi bi-people icone-header-global"></i>
@@ -285,7 +285,9 @@
                   </div>
                   <select name="" id="input-sdr-lancamento" class="input-lancamento" >
                     <option value="">Selecione</option>
-                    <option value="Alef Ferreira">Alef Ferreira</option>
+                    <option value="Gustavo Munhoz">Gustavo Munhoz</option>
+                    <option value="Diego Mattos">Diego Mattos</option>
+                    <option value="Breno Celino">Breno Celino</option>
                   </select>
                 </div>
               </div>
@@ -470,16 +472,29 @@
                     </div>
                     <div class="card-resumo-item">
                   <div class="resumo-dados">
+                    <p class="p-resumo-dados">Sistema</p>
+                    <p id="sistema-resumo-lancamento" class="p-resumo-resultado">-</p>
+                  </div>
+                    </div>
+                    <div class="card-resumo-item">
+                  <div class="resumo-dados">
                     <p class="p-resumo-dados">Inversor</p>
                     <p id="inversor-resumo-lancamento" class="p-resumo-resultado">-</p>
                   </div>
                     </div>
                     <div class="card-resumo-item">
                   <div class="resumo-dados">
-                    <p class="p-resumo-dados">Sistema</p>
-                    <p id="sistema-resumo-lancamento" class="p-resumo-resultado">-</p>
+                    <p class="p-resumo-dados">Telhado</p>
+                    <p id="telhado-resumo-lancamento" class="p-resumo-resultado">-</p>
                   </div>
                     </div>
+                    <div class="card-resumo-item">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Concessionária</p>
+                    <p id="concessionaria-resumo-lancamento" class="p-resumo-resultado">-</p>
+                  </div>
+                    </div>
+                    
                     <div class="card-resumo-item">
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Local em Obra</p>
@@ -541,10 +556,34 @@
                           <p id="unidade-resumo-lancamento" class="p-resumo-resultado">-</p>
                         </div>
                     </div>
+                    <div class="card-resumo-item">
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">Valor Inicial</p>
+                          <p id="valor-inicial-resumo-lancamento" class="p-resumo-resultado">-</p>
+                        </div>
+                    </div>
                      <div class="card-resumo-item">
                         <div class="resumo-dados">
-                          <p class="p-resumo-dados">Valor de Venda</p>
+                          <p class="p-resumo-dados">Valor Negociado</p>
                           <p id="valor-negociado-resumo-lancamento" class="p-resumo-resultado">-</p>
+                        </div>
+                    </div>
+                    <div class="card-resumo-item">
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">Forma de Pagamento</p>
+                          <p id="forma-pagamento-resumo-lancamento" class="p-resumo-resultado">-</p>
+                        </div>
+                    </div>
+                    <div class="card-resumo-item">
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">Desconto</p>
+                          <p id="desconto-resumo-lancamento" class="p-resumo-resultado">-</p>
+                        </div>
+                    </div>
+                    <div class="card-resumo-item">
+                        <div class="resumo-dados">
+                          <p class="p-resumo-dados">Promoção</p>
+                          <p id="promocao-resumo-lancamento" class="p-resumo-resultado">-</p>
                         </div>
                     </div>
                      <div class="card-resumo-item">
@@ -906,7 +945,7 @@
             <p class="p-dica-negociacao"> <i class="bi bi-rocket-takeoff icone-dica-negociacao"></i> <b> Dica:</b> Após preencher todas as informações, o sistema calculará automaticamente o MCS e verificará se a negociação atende às regras comerciais.</p>
           </div>
       </section>
-      <section class="container-proposta showGrid " id="section-proposta">
+      <section class="container-proposta " id="section-proposta">
         <article class="card-cliente-proposta">
           <div class="header-card-global">
             <i class="bi bi-people icone-header-global"></i>
@@ -1189,6 +1228,12 @@
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">Cidade</p>
                     <p id="local-resumo-proposta"class="p-resumo-resultado validar">-</p>
+                  </div>
+                </div>
+                <div class="card-resumo-item validar-sdr">
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Sistema</p>
+                    <p id="sistema-resumo-proposta"class="p-resumo-resultado validar">-</p>
                   </div>
                 </div>
                 <div class="card-resumo-item validar-sdr">

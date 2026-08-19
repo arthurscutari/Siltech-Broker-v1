@@ -17,6 +17,9 @@ function atualizarResumo(){
     const localResumo = document.getElementById('local-resumo-proposta')
     localResumo.textContent = proposta.local
 
+    const sistemaResumo = document.getElementById('sistema-resumo-proposta')
+    sistemaResumo.textContent = proposta.sistema
+
     const moduloResumo = document.getElementById('modulo-resumo-proposta')
     moduloResumo.textContent = proposta.modulo
 
