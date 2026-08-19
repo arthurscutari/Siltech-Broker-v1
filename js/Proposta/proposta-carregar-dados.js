@@ -1,10 +1,10 @@
 function carregarDadosProposta(){
 
-const propostaGerada = JSON.parse(localStorage.getItem('propostaGerada'));
+// const propostaGerada = JSON.parse(localStorage.getItem('propostaGerada'));
 
-console.log(propostaGerada.nome)
+// console.log(propostaGerada.nome)
 
-console.log(propostaGerada)
+// console.log(propostaGerada)
 
 const nomeProposta = document.getElementById('nome-proposta-pdf')
 const localProposta = document.getElementById('local-proposta-pdf')
@@ -29,75 +29,75 @@ const dataProposta = document.getElementById('data-proposta-pdf');
 const kitProposta = document.getElementById('kit-proposta-pdf');
 
 
-nomeAssinaturaProposta.textContent = propostaGerada.nome
-nomeProposta.textContent = propostaGerada.nome + ","
-localProposta.textContent = propostaGerada.local + " - SP"
-qtdPlacaProposta.textContent = propostaGerada.placas
-areaProposta.textContent = propostaGerada.area 
-moduloProposta.textContent = propostaGerada.modulo
-problemaProposta.textContent = propostaGerada.contaSemSiltech.toLocaleString('pt-BR', {
+nomeAssinaturaProposta.textContent = proposta.nome
+nomeProposta.textContent = proposta.nome + ","
+localProposta.textContent = proposta.local + " - SP"
+qtdPlacaProposta.textContent = proposta.placas
+areaProposta.textContent = proposta.area 
+moduloProposta.textContent = proposta.modulo
+problemaProposta.textContent = proposta.contaSemSiltech.toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL'
 });
-solucaoProposta.textContent = propostaGerada.contaComSiltech.toLocaleString('pt-BR', {
+solucaoProposta.textContent = proposta.contaComSiltech.toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL'
 });
-precoFinalProposta.textContent = propostaGerada.valorFinalProposta.toLocaleString('pt-BR', {
+precoFinalProposta.textContent = proposta.valorFinalProposta.toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL'
 });
 inversorProposta.textContent = mostrarInversor()
-telhadoProposta.textContent = propostaGerada.telhado
-contaSemProposta.textContent = propostaGerada.contaSemSiltech.toLocaleString('pt-BR', {
+telhadoProposta.textContent = proposta.telhado
+contaSemProposta.textContent = proposta.contaSemSiltech.toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL'
 });
-contaComProposta.textContent = propostaGerada.contaComSiltech.toLocaleString('pt-BR', {
+contaComProposta.textContent = proposta.contaComSiltech.toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL'
 });
 
-invenstimentoTabela.textContent = propostaGerada.valorFinalProposta.toLocaleString('pt-BR', {
+invenstimentoTabela.textContent = proposta.valorFinalProposta.toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL'
 });
-energiaGeradaProposta.textContent = propostaGerada.energiaGerada.toFixed(0) + " kWh"
-valorReducao.textContent =  (propostaGerada.contaSemSiltech - propostaGerada.contaComSiltech ).toLocaleString('pt-BR', {
+energiaGeradaProposta.textContent = proposta.energiaGerada.toFixed(0) + " kWh"
+valorReducao.textContent =  (proposta.contaSemSiltech - proposta.contaComSiltech ).toLocaleString('pt-BR', {
     style: 'currency',
     currency: 'BRL'
 });
-valorEconomiaProposta.textContent = "LUCRO DE  " + propostaGerada.economiaEm15Anos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'
+valorEconomiaProposta.textContent = "LUCRO DE  " + proposta.economiaEm15Anos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'
 })+ " EM 15 ANOS" ;
-retornoInvestimentoProposta.textContent = propostaGerada.economiaAnual.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'
+retornoInvestimentoProposta.textContent = proposta.economiaEm15Anos.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'
 })
-qtdPlacasModuloProposta.textContent = propostaGerada.placas
-kitProposta.textContent = propostaGerada.kitPlaca.toFixed(2) + "kWp";
+qtdPlacasModuloProposta.textContent = proposta.placas
+kitProposta.textContent = proposta.kitPlaca.toFixed(2) + "kWp";
 dataProposta.textContent = dataPorExtenso();
 function mostrarInversor() 
 {
 
-    if (propostaGerada.inversor === "1x 3kw") {
+    if (proposta.inversor === "1x 3kw") {
 
         return "01 inversor Huawei - 3kW"
     }
-     if (propostaGerada.inversor === "1x 6kw") {
+     if (proposta.inversor === "1x 6kw") {
 
         return "01 inversor Huawei - 6kW"
     }
-     if (propostaGerada.inversor === "1x 6kw + 1x 3kw") {
+     if (proposta.inversor === "1x 6kw + 1x 3kw") {
 
         return "02 Inversores Huawei - 3kW + 6kW"
     }
-     if (propostaGerada.inversor === "2x 6kw") {
+     if (proposta.inversor === "2x 6kw") {
 
         return "02 inversores Huawei - 6kW"
      }
-     if (propostaGerada.inversor === "3x 6kw") {
+     if (proposta.inversor === "3x 6kw") {
 
         return "03 inversores Huawei - 6kW"
     }
-    if (propostaGerada.inversor === "4x 6kw") {
+    if (proposta.inversor === "4x 6kw") {
 
         return "014 inversores Huawei - 6kW"
     }

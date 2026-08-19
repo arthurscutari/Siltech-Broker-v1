@@ -39,18 +39,21 @@ function atualizarColaborador () {
         colaborador.textContent = "Pedro Toqueton"
         cargo.textContent = "Representante de Vendas"
         visualizacoInfoSdr()
+        esconderBotaoNegociar()
     }
     else if(usuario === 7){
 
         colaborador.textContent = "Breno Celino"
         cargo.textContent = "Representante de Vendas"
         visualizacoInfoSdr()
+        esconderBotaoNegociar()
     }
      else if(usuario === 8){
 
         colaborador.textContent = "Diego Mattos"
         cargo.textContent = "Representante de Vendas"
         visualizacoInfoSdr()
+        esconderBotaoNegociar()
     }
 }
 
@@ -59,9 +62,17 @@ atualizarColaborador()
 function visualizacoInfoSdr() {
 
     const dadosResumo = document.querySelectorAll('.validar-sdr');
-    
     dadosResumo.forEach(elemento => {
         elemento.classList.add('hidden');
     });
 
+    
+}
+function esconderBotaoNegociar() {
+
+    const botaoNegociar = document.getElementById('btn-negociar-proposta')
+    
+    botaoNegociar.classList.add('hidden')
+
+    
 }

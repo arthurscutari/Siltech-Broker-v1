@@ -96,12 +96,114 @@ valorFinalNegociacao.textContent = formatarMoeda(proposta.valorFinalProposta)
     let novaMargem = ((novoValor - custo) / novoValor) * 100;
 
     
-      if (formaPagamento1.value === "Cartão de Crédito") {
-        novaMargem -= 0.08;
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "1") {
+        novaMargem -= 3.14;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "2") {
+        novaMargem -= 4.41;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "3") {
+        novaMargem -= 5.2;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "4") {
+        novaMargem -= 6;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "5") {
+        novaMargem -= 6.79;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "6") {
+        novaMargem -= 7.58;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "7") {
+        novaMargem -= 8.52;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "8") {
+        novaMargem -= 9.31;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "9") {
+        novaMargem -= 10.1;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "10") {
+        novaMargem -= 10.9;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "11") {
+        novaMargem -= 11.69;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "12") {
+        novaMargem -= 12.48;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "13") {
+        novaMargem -= 13.27;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "14") {
+        novaMargem -= 14.07;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "15") {
+        novaMargem -= 14.86;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "16") {
+        novaMargem -= 15.65;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "17") {
+        novaMargem -= 16.44;
+    }
+    if (formaPagamento1.value === "Cartão de Crédito" && parcelasPagamento1.value === "18") {
+        novaMargem -= 17.23;
     }
 
-    if (formaPagamento2.value === "Cartão de Crédito") {
-        novaMargem -= 0.08;
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "1") {
+        novaMargem -= 3.14;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "2") {
+        novaMargem -= 4.41;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "3") {
+        novaMargem -= 5.2;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "4") {
+        novaMargem -= 6;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "5") {
+        novaMargem -= 6.79;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "6") {
+        novaMargem -= 7.58;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "7") {
+        novaMargem -= 8.52;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "8") {
+        novaMargem -= 9.31;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "9") {
+        novaMargem -= 10.1;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "10") {
+        novaMargem -= 10.9;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "11") {
+        novaMargem -= 11.69;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "12") {
+        novaMargem -= 12.48;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "13") {
+        novaMargem -= 13.27;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "14") {
+        novaMargem -= 14.07;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "15") {
+        novaMargem -= 14.86;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "16") {
+        novaMargem -= 15.65;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "17") {
+        novaMargem -= 16.44;
+    }
+    if (formaPagamento2.value === "Cartão de Crédito" && parcelasPagamento2.value === "18") {
+        novaMargem -= 17.23;
     }
     if (novaMargem < 0) {
         novaMargem = 0;
@@ -117,7 +219,17 @@ function inserirDesconto(){
     proposta.desconto = ((valorAtual - valorNegociado) / valorAtual) * 100;
 }
    //Calcular dados da variavel Proposta
+function inserirParcela () {
 
+  const formaPagamento = document.getElementById('forma-pagamento-1-negociacao')
+  const parcelaPagamento = document.getElementById('parcela-pagamento-1-negociacao')
+
+  if ( formaPagamento.value === "Cartão de Crédito" && parcelaPagamento.value === 1){
+
+    console.log('Mudou')
+  }
+
+}
    
      function atualizarDadosNavegacao(){
       inserirValorNegociado()
@@ -127,9 +239,10 @@ function inserirDesconto(){
       inserirFormaPagamento2()
       inserirParcelas1()
       inserirParcelas2()
+      inserirParcela ()
       inserirValorMcs() 
       inserirDesconto()
-
+      
       atualizarResumoNegociacao()
     }
     //Funções de atualização de resumo

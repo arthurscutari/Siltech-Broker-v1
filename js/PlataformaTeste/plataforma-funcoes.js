@@ -571,13 +571,13 @@ function espacoVazio(){
   const containerInstalacao = document.getElementById('c-instalacao')
   const telhado = document.getElementById('telhado-proposta')
   const containerTelhado = document.getElementById('c-telhado')
-
+  const msgErro = document.getElementById('mensagem-erro-proposta')
 
   if (nome.value === "") {
 
     containerNome.classList.add('erro-borda')
     // mensagemErro.classList.remove('hidden')
-    
+    msgErro.classList.remove("hidden")
     return campoVazio = "Sim"
   }
   //   if (canal.value === "") {
@@ -591,14 +591,16 @@ function espacoVazio(){
 
     containerCidade.classList.add('erro-borda')
     // mensagemErro.classList.remove('hidden')
-    
+        msgErro.classList.remove("hidden")
+
     return campoVazio = "Sim"
   }
    if (modulo.value === "") {
 
     containerModulo.classList.add('erro-borda')
     // mensagemErro.classList.remove('hidden')
-    
+        msgErro.classList.remove("hidden")
+
     return campoVazio = "Sim"
   }
   if (placas.textContent === "0") {
@@ -606,28 +608,32 @@ function espacoVazio(){
     containerConsumo.classList.add('erro-borda')
     containerPlacas.classList.add('erro-borda')
     // mensagemErro.classList.remove('hidden')
-    
+        msgErro.classList.remove("hidden")
+
     return campoVazio = "Sim"
   }
   if (preco.value === "") {
 
     containerPrecoKwh.classList.add('erro-borda')
     // mensagemErro.classList.remove('hidden')
-    
+        msgErro.classList.remove("hidden")
+
     return campoVazio = "Sim"
   }
    if (instalacao.value === "") {
 
     containerInstalacao.classList.add('erro-borda')
     // mensagemErro.classList.remove('hidden')
-    
+        msgErro.classList.remove("hidden")
+
     return campoVazio = "Sim"
   }
   if (telhado.value === "") {
 
     containerTelhado.classList.add('erro-borda')
     // mensagemErro.classList.remove('hidden')
-    
+        msgErro.classList.remove("hidden")
+
     return campoVazio = "Sim"
   }
   
@@ -645,6 +651,7 @@ function limparCamposValidados (){
   const containerPrecoKwh = document.getElementById('c-preco-kwh')
   const containerInstalacao = document.getElementById('c-instalacao')
   const containerTelhado = document.getElementById('c-telhado')
+  const msgErro = document.getElementById('mensagem-erro-proposta')
 
     containerNome.classList.remove('erro-borda')
     containerCidade.classList.remove('erro-borda')
@@ -654,4 +661,6 @@ function limparCamposValidados (){
     containerPrecoKwh.classList.remove('erro-borda')
     containerInstalacao.classList.remove('erro-borda')
     containerTelhado.classList.remove('erro-borda')
+          msgErro.classList.add('hidden')
+
 }

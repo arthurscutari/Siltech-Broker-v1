@@ -6,7 +6,7 @@ function enviarDadosLancamento() {
 
     proposta.tipo = "registrarLançamento"
 
-    const url = "https://script.google.com/macros/s/AKfycbyXRfH1QwCzoPUaS3jFkDUBP42nreLTUoizqjFUxsPxwTRFycQ8bF6rzRbbNucih6GV/exec"
+    const url = "https://script.google.com/macros/s/AKfycbyPJCPV2O5yQc_T2YBKGbRBu0euNQqv2xFZwMHCdrU-SZBhFr4N3YWKiasoFK-BnRVu/exec"
      fetch(url, {
             method: "POST",
             body: JSON.stringify(proposta)

@@ -37,7 +37,7 @@ let proposta = {
     contaComSiltech:0,
     economiaAnual:0,
     economiaEm15Anos:0,
-    valorFinalProposta:0,
+    valorFinalProposta:60000,
     //Calculos de Negociação
     desconto:0,
     formaDePagamento1:"",
@@ -198,7 +198,7 @@ gerarPdf.addEventListener('click', ()=>{
 
     localStorage.setItem('propostaGerada', JSON.stringify(proposta));
 
-    const url = "https://script.google.com/macros/s/AKfycbzW2J8R3V8Px79-LKCNB00XzcX9jeYXxFT_O1ZxKxQgDoBoZEUid7EG6YzoifIWw6d-eg/exec";
+    const url = "https://script.google.com/macros/s/AKfycbyPJCPV2O5yQc_T2YBKGbRBu0euNQqv2xFZwMHCdrU-SZBhFr4N3YWKiasoFK-BnRVu/exec";
 
         fetch(url, {
             method: "POST",
