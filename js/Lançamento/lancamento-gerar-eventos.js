@@ -19,14 +19,14 @@ const campoCepLancamento = document.getElementById('input-cep-lancamento')
 campoCepLancamento.addEventListener("input", () => {
 
     const cep = inputCepLancamento.value.replace(/\D/g, "");
-
-
-    
+    const resumoCepLancamento = document.getElementById('cep-resumo-lancamento')
+  proposta.cep = campoCepLancamento.value
+    resumoCepLancamento.textContent = proposta.cep
 
 
     if (cep.length === 8) {
         buscarCep(cep);
-        proposta.cep = campoCepLancamento.value
+        
 
     }
 
@@ -76,6 +76,10 @@ const swipeLocalLancamento = document.querySelector('.swipeLocal')
   const campoCanalLancamento = document.getElementById('input-canal-lancamento')
 
  campoCanalLancamento.addEventListener('change', attResumoCanalLancamento)
+
+  const campoConcessionariaLancamento = document.getElementById('input-concessionaria-lancamento')
+
+ campoConcessionariaLancamento.addEventListener('change', attResumoConcessionariaLancamento)
 
    const campoUnidadeLancamento = document.getElementById('input-unidade-lancamento')
 

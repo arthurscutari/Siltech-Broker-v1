@@ -10,14 +10,25 @@ function carregarDadosLancamento(){
     const resumoInversor = document.getElementById('inversor-resumo-lancamento')
     const resumoSistema = document.getElementById('sistema-resumo-lancamento')
     const resumoMcs = document.getElementById('mcs-resumo-lancamento')
-    const resumoValorNegociado = document.getElementById('valor-negociado--resumo-lancamento')
+    const resumoValorNegociado = document.getElementById('valor-negociado-resumo-lancamento')
+    const resumoTelhado = document.getElementById('telhado-resumo-lancamento')
+    const resumoValorInicial = document.getElementById('valor-inicial-resumo-lancamento')
+    const resumoDesconto = document.getElementById('desconto-resumo-lancamento')
+    const resumoFormaPagamento = document.getElementById('forma-pagamento-resumo-lancamento')
+    const resumoPromocao = document.getElementById('promocao-resumo-lancamento')
+
 
     resumoQuantidadePlaca.textContent = proposta.placas
     resumoInversor.textContent = proposta.inversor
-    resumoSistema.textContent = proposta.resumoSistema
+    resumoSistema.textContent = proposta.sistema
     resumoMcs.textContent = proposta.mcs
-    resumoValorNegociado = proposta.valorNegociado
+    resumoValorNegociado.textContent = formatarMoeda(proposta.valorNegociado)
+    resumoTelhado.textContent = proposta.telhado
 
+    resumoValorInicial.textContent = formatarMoeda(proposta.valorFinalProposta)
+    resumoDesconto.textContent = proposta.desconto.toFixed(1) + "%"
+    resumoFormaPagamento.textContent = proposta.formaDePagamento1
+    resumoPromocao.textContent = proposta.promocao
 
 }
 async function buscarCep(cep) {
@@ -126,13 +137,13 @@ function attResumoLocalObraLancamento(){
     if(swipeLocalLancamento.checked) {
 
 
-        proposta.localObra = "Sim"
-        resumoLocal.textContent = proposta.localObra
+        proposta.obra = "Sim"
+        resumoLocal.textContent = proposta.obra
     }
    else {
 
-        proposta.localObra = "Não"
-        resumoLocal.textContent = proposta.localObra
+        proposta.obra = "Não"
+        resumoLocal.textContent = proposta.obra
 
    }
       
@@ -237,7 +248,13 @@ function attResumoCanalLancamento() {
     proposta.canalLancamento = campoCanalLancamento.value
     resumoCanal.textContent = proposta.canalLancamento
 }
+function attResumoConcessionariaLancamento() {
 
+    const resumoConcessionaria = document.getElementById('concessionaria-resumo-lancamento')
+
+    proposta.concessionaria = campoConcessionariaLancamento.value
+    resumoConcessionaria.textContent = proposta.concessionaria
+}
 function attResumoUnidadeLancamento() {
 
     const resumoUnidade = document.getElementById('unidade-resumo-lancamento')
@@ -264,7 +281,6 @@ function attTextareaAdequacao(){
 
     proposta.obsAdequacao = textareaAdequacao.value
 }
-
 function attTextareaReforma(){
 
     proposta.obsReforma = textareaReforma.value

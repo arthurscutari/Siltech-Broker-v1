@@ -75,6 +75,7 @@ let proposta = {
     closer:"",
     bu:"",
     canalLancamento:"",
+    concessionaria:"",
     unidade:"",
     observacao:""
 
@@ -203,7 +204,7 @@ gerarPdf.addEventListener('click', ()=>{
 
     localStorage.setItem('propostaGerada', JSON.stringify(proposta));
 
-    const url = "https://script.google.com/macros/s/AKfycbzhNzbVVpwHhejc7j4xBEF020xWtomWGcFFI8QTQrvh6XP1gNULqajt2nN6bT8Igwl1-A/exec";
+    const url = "https://script.google.com/macros/s/AKfycbzooQvT8QGu8C08y1GLsYuYew22cFhAbVNuJVxB_hVVtVKNE4ReT5hNgAKyL2R3R2V2/exec";
 
         fetch(url, {
             method: "POST",
