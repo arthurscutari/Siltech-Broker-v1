@@ -76,3 +76,17 @@ function fecharModalNegociacao(){
       modalNegociacao.classList.add('hidden')
 
 }
+function attPagamento2 () {
+
+
+   const formaPagamento2 = document.getElementById('')
+   const valorPagamento2 = document.getElementById('')
+   const parcelaPagamento2 = document.getElementById('')
+
+   if (valorPagamento2 === 0) {
+
+      proposta.formaDePagamento2 = "Não necessário"
+      proposta.parcela2 = "Não necessário"
+   }
+
+}

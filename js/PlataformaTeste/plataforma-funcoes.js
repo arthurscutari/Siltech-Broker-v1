@@ -37,10 +37,9 @@ function calcularDados(){
   custoMercadoriaVendida() 
   valorFinalProposta() 
   custoExpansao() 
+  economiaAnual()
   economiaEm15Anos() 
-  economiaAnual() 
   custoRetorno()
-
   atualizarResumo()
   //Retirar borda de validação
 

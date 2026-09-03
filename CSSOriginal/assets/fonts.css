@@ -1,0 +1,39 @@
+.text-title {
+
+    font-size: 18px;
+}
+.text-subtitle {
+
+    font-size: 12px;
+}
+.text-large {
+
+    font-size: 16px;
+}
+.text-normal {
+
+    font-size: 14px;
+}
+.text-small {
+
+    font-size: 12px;
+}
+
+.label {
+
+    font-style: italic;
+    font-size: 10px;
+}
+
+.font-hard {
+
+    font-weight: 700 ;
+}
+.font-medium {
+
+    font-weight: 500 ;
+}
+.font-fine {
+
+    font-weight: 400 ;
+}

@@ -77,8 +77,8 @@ let proposta = {
     canalLancamento:"",
     concessionaria:"",
     unidade:"",
-    observacao:""
-
+    observacao:"",
+    meta:400000
 }
 //Código nome proposta
 const nomeFormularioProposta = document.getElementById('nome-proposta')

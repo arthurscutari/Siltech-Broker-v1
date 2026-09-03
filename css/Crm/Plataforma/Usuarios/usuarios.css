@@ -1,14 +1,3 @@
-.usuario-plataforma{
-
-    grid-column: 9/11;
-    grid-row: 1/2;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 8px 26px;
-    background-color: white;
-    border-bottom: 1px solid rgb(199, 199, 199); 
-}
 
 .c-items-usuario-plataforma{
 
@@ -32,9 +21,6 @@
 }
 .icone-usuarios-plataforma{
 
-        color:var(--cor-primaria);
-    font-size: 18px;
-    padding: 14px;
-    background-color: var(--cor-texto-secundaria);
-    border-radius: 6px;
+    color:var(--cor-primaria);
+    font-size: 22px;
 }

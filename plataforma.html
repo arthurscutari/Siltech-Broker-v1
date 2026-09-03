@@ -20,34 +20,30 @@
 <body>
   <section class="app-plataforma">
     <header class="header-plataforma">
-      <div class="c-icone-header-plataforma">
-          <i class="bi bi-columns-gap icone-header-plataforma" id="icone-header"></i>
-      </div>
-      <div  class="c-titulo-header-plataforma">
-        <h1 class="h1-header-plataforma" id="titulo-header">Proposta Comercial</h1>
-        <h3 class="h3-header-plataforma" id="subtitulo-header">Elabore uma proposta comercial preenchendo as informações abaixo.</h3>
-      </div>
+        <i class="bi bi-file-earmark-text icone-header-plataforma" id="icone-header"></i>
+        <h1 class="text-title color-first" id="titulo-header">Proposta Comercial</h1>
+        <h3 class="text-subtitle color-text-first font-fine" id="subtitulo-header">Elabore uma proposta comercial preenchendo as informações abaixo.</h3>
     </header>
     <div class="usuario-plataforma">
-      <div class="c-items-usuario-plataforma">
-        <h4 class="h4-usuario-plataforma" id="usuario-plataforma">Colaborador</h4>
-        <p class="p-usuario-plataforma" id="cargo-plataforma">Cargo</p>
+      <i class="bi bi-person icone-usuarios-plataforma"></i>
+      <div class="f-direction-collum flex-right ">
+        <h4 class="text-normal color-first" id="usuario-plataforma">Colaborador</h4>
+        <p class="text-small color-text-first" id="cargo-plataforma">Cargo</p>
       </div>
-        <i class="bi bi-person icone-usuarios-plataforma"></i>
     </div>
     <nav class="navegacao-plataforma">
-      <div class="c-items-navegacao-plataforma fundo-selecao" id="proposta-navegacao">
+      <div class="container-navegation-item fundo-selecao " id="proposta-navegacao">
         <i class="bi bi-file-earmark-text icone-navegacao cor-selecao" id="icone-proposta"></i>
-        <p href="" class="a-texto-navegacao-plataforma cor-selecao" id="texto-proposta">Proposta</p>
+        <p class="text-normal color-white cor-selecao" id="texto-proposta">Proposta</p>
       </div>
-      <div class="c-items-navegacao-plataforma" id="dashboard-navegacao">
+      <div class="container-navegation-item " id="dashboard-navegacao">
         <i class="bi bi-columns-gap icone-navegacao" id="icone-dashboard"></i>
-        <p href="" class="a-texto-navegacao-plataforma" id="texto-dashboard">Dashboard</p>
+        <p class="text-normal color-white" id="texto-dashboard">Dashboard</p>
       </div>
       
-      <div class="c-items-navegacao-plataforma" id="historico-navegacao">
+      <div class="container-navegation-item " id="historico-navegacao">
         <i class="bi bi-clock-history icone-navegacao" id="icone-historico"></i>
-        <p href="" class="a-texto-navegacao-plataforma" id="texto-historico">Histórico</p>
+        <p class="text-normal color-white" id="texto-historico">Histórico</p>
       </div>
    
     
@@ -55,22 +51,21 @@
     <div class="logo-plataforma">
       <img src="img/logo-siltech.png" alt="Logo Siltech" class="img-logo-plataforma">
         <div class="c-titulo-logo-plataforma">
-          <h5 class="h5-logo-plataforma">Siltech Solar</h5>
-          <h6 class="h6-logo-plataforma">CRM</h6>
+          <h5 class="text-small color-white ">Siltech Solar</h5>
         </div>
     </div>
     <div class="configuracao-plataforma">
       <div class="c-itens-configuracao-plataforma">
         <i class="bi bi-database-gear icone-navegacao"></i>
-        <a href="" class="a-texto-configuracao-plataforma">Ajuste</a>
+        <p class="text-normal color-white">Ajuste</p>
       </div>
       <div class="c-itens-configuracao-plataforma">
         <i class="bi bi-gear icone-navegacao"></i>
-        <a href="" class="a-texto-configuracao-plataforma">Configuração</a>
+        <p class="text-normal color-white">Configuração</p>
       </div>
        <div class="c-itens-configuracao-plataforma" id="botao-sair-plataforma">
         <i class="bi bi-box-arrow-left icone-navegacao"></i>
-        <a href="" class="a-texto-configuracao-plataforma">Sair</a>
+        <p class="text-normal color-white">Sair</p>
       </div>
     </div>
     <main class="main-plataforma">
@@ -104,6 +99,15 @@
                     <i class="bi bi-person-vcard icone-input-lancamento"></i>
                   </div>
                   <input type="text" placeholder="000.000.000-00" class="input-lancamento" id="input-cpf-lancamento">
+                </div>
+              </div>
+              <div class="input-grupo">
+                <label for="nome-inputa-lancamento" class="label-lancamento">Contato</label>
+                <div class="input-icone-grupo">
+                  <div class="container-icone-lancamento">
+                    <i class="bi bi-telephone icone-input-lancamento"></i>
+                  </div>
+                  <input type="text" placeholder="(00) 00000-0000" class="input-lancamento" id="input-cpf-lancamento">
                 </div>
               </div>
               <div class="input-grupo">
@@ -300,7 +304,7 @@
                   <select name="" id="input-closer-lancamento" class="input-lancamento">
                     <option value="">Selecione</option>
                     <option value="Pedro Brito">Pedro Brito</option>
-                    <option value="Pedro Brito">Gabriel Sato</option>
+                    <option value="Gabriel Sato">Gabriel Sato</option>
 
                   </select>
                 </div>
@@ -405,6 +409,12 @@
                       <p id="cliente-resumo-lancamento" class="p-resumo-resultado">-</p>
                     </div>
                   </div>
+                    <div class="card-resumo-item">                  
+                  <div class="resumo-dados">
+                    <p class="p-resumo-dados">Contato</p>
+                    <p id="contato-resumo-lancamento"class="p-resumo-resultado">-</p>
+                  </div>
+                    </div>
                     <div class="card-resumo-item">                  
                   <div class="resumo-dados">
                     <p class="p-resumo-dados">CPF</p>
@@ -1646,18 +1656,30 @@
           <div class="container-acoes">
             <i class="bi bi-clipboard2-check icone-proposta-modal"></i>
         <h2 class="h2-modal">Proposta gerada com sucesso!</h2> 
-        <p class="p-modal">Revise as informações da proposta antes de gerar o PDF final ou imprimir.
-         Caso encontre alguma divergência, clique refaça a proposta através do botão abaixo.</p>
+        <p class="p-modal">Revise as informações da proposta antes de gerar o PDF final ou imprimir.</p>
                  <button class="btn-negociar-proposta" id="btn-negociar-proposta"><i class="bi bi-suitcase-lg icone-card-negociacao"></i>Negociar Proposta</button>
                  <p class="p-dica-modal">Siga para o processo de  negociação da proposta.</p>
         <button class="btn-pdf-proposta" id="btn-baixar-proposta"><i class="bi bi-printer icone-card-negociacao"></i>Imprimir / Gerar PDF</button>
         <p class="p-dica-modal">Imprima ou gere o PDF para mostrar ao cliente.</p>
+        <button class="btn-pdf-proposta" id="btn-alterar-proposta"><i class="bi bi-clipboard-plus icone-card-negociacao"></i>Alterar Proposta</button>
+        <p class="p-dica-modal">Altere ou refaça a proposta com agilidade</p>
         <button class="btn-voltar-proposta" id="btn-nova-proposta"><i class="bi bi-clipboard icone-card-negociacao"></i>Nova Proposta</button>
         <p class="p-dica-modal">Limpar os dados e iniciar uma nova proposta</p>
           </div>
         
         </div>
         
+      </section>
+      <section class="container-finalizacao">
+          <div class="container-acoes">
+            <i class="bi bi-clipboard2-check icone-proposta-modal"></i>
+        <h2 class="h2-modal">Proposta gerada com sucesso!</h2> 
+        <p class="p-modal">Revise as informações da proposta antes de gerar o PDF final ou imprimir.</p>
+        <button class="btn-voltar-proposta" id="btn-nova-proposta"><i class="bi bi-clipboard icone-card-negociacao"></i>Nova Proposta</button>
+        <p class="p-dica-modal">Limpar os dados e iniciar uma nova proposta</p>
+        <button class="btn-voltar-proposta" id="btn-nova-proposta"><i class="bi bi-clipboard icone-card-negociacao"></i>Nova Proposta</button>
+        <p class="p-dica-modal">Limpar os dados e iniciar uma nova proposta</p>
+          </div>
       </section>
       <div class="fundo-modal-negociacao hidden " id="fundo-modal-negociacao">
         

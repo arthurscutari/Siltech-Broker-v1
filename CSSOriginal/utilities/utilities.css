@@ -1,0 +1,28 @@
+.f-direction-collum {
+
+    display: flex;
+    flex-direction: column;
+}
+.f-direction-row {
+
+    display: flex;
+    flex-direction: row;
+}
+.flex-center {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-right {
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.flex-left {
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}

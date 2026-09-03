@@ -105,8 +105,7 @@ function propostaSelecionado(){
     lancamentoSection.classList.remove('showGrid');
     containerPropostaPdf.classList.remove('showFlex')
 
-    limparCamposProposta()
-    limparCamposResumo()
+   
 }
 function historicoSelecionado(){
 

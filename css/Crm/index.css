@@ -4,6 +4,7 @@
 @import 'Main/Negociação/index.css';
 @import 'Main/Proposta/index.css';
 @import 'Main/Histórico/index.css';
+@import 'Main/Finalização/index.css';
 /*CSS do Layout da Plataforma*/
 @import 'Plataforma/index.css';
 
@@ -11,6 +12,7 @@
 
 @import 'Main/Pdf/index.css';
 
+@import '/CSSOriginal/main.css';
 
 .showFlex{
 

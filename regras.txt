@@ -1,0 +1,11 @@
+Algumas regras para manter a organização do código. 
+
+Atualizado em 26/06/2026
+
+- Nomeclatura das variaveis seguir esse modelo:
+
+.elemento-local-item
+
+Exemplo:
+
+.card-proposta-cliente

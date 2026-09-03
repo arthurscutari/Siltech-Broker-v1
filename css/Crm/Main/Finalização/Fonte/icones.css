@@ -1,0 +1,7 @@
+.icone-finalizacao{
+
+    font-size: 65px;
+    color: var(--cor-sucesso);
+    padding: 8px;
+    background-color: var(--cor-fundo);
+}

@@ -1,0 +1,20 @@
+.icon-nagivation {
+
+    height: 20px;
+    width: 20px;
+}
+.icon-title {
+
+    height: 20px;
+    width: 20px;
+
+}
+.icon-header{
+
+    height: 20px;
+    width: 20px;
+    background-color: var(--cor-fundo-texto);
+    padding: 8px;
+
+}
+
