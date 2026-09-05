@@ -55,6 +55,13 @@ function atualizarColaborador () {
         visualizacoInfoSdr()
         esconderBotaoNegociar()
     }
+    else if(usuario === 9){
+
+        colaborador.textContent = "Luiz Gustavo"
+        cargo.textContent = "Representante de Vendas"
+        visualizacoInfoSdr()
+        esconderBotaoNegociar()
+    }
 }
 
 atualizarColaborador()

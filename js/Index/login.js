@@ -70,6 +70,13 @@ else if(usuario.value === "gabriel.sato@siltechsolar.com.br" && senha.value === 
 
     window.location.href = "plataforma.html"
 }
+else if(usuario.value === "luiz.gustavo@siltechsolar.com.br" && senha.value === "sdr05siltech2026") {
+
+    localStorage.setItem('usuarioAtivo', '9')
+
+    window.location.href = "plataforma.html"
+}
+
 
 else if (usuario.value === "" && senha.value === ""){
 
